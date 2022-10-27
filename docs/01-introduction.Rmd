@@ -1,0 +1,22 @@
+# Introducción {-}
+
+Aprender estadísticas es sexy. Hal Varian, economista de Google, así lo cree. Durante una [entrevista en McKinsey Quarterly](http://www.mckinsey.com/industries/high-tech/our-insights/hal-varian-on-how-the-web-challenges-managers), Varian declaró: "Sigo diciendo que el trabajo sexy en los próximos diez años será el de estadístico. La gente piensa que estoy bromeando, pero ¿quién hubiera imaginado que los ingenieros informáticos serían el trabajo sexy de la década de 1990?" Varian tampoco es la única persona que expresa este sentimiento. Hans Rosling en el documental de la BBC de 2010 Joy of Stats^[Vea *Joy of Stats* en línea en [http://www.gapminder.org/videos/the-joy-of-stats/](http://www.gapminder .org/videos/the-joy-of-stats/)] se refirió a las estadísticas como el "tema más atractivo".
+
+Si crees que es el tema más sexy o no, es indiscutible que el uso de estadísticas y datos prevalece en la era de la información actual. Casi todas las personas del mundo se beneficiarán al aprender algunas ideas fundamentales de las estadísticas. Esto es cierto porque las estadísticas forman la base de nuestro mundo cotidiano tanto como la ciencia, la tecnología y la política. Google, Netflix, Twitter, Facebook, OKCupid, Match.com, Amazon, iTunes y el gobierno federal son solo algunas de las empresas y organizaciones que usan estadísticas a diario. El periodismo, las ciencias políticas, la biología, la sociología, la psicología, el diseño gráfico, la economía, las ciencias del deporte y la danza son disciplinas que han hecho uso de la metodología estadística.
+
+### Material del curso {-}
+
+Los materiales en este sitio le presentarán las ideas fundamentales que subyacen a la disciplina de la estadística. Además, han sido diseñados pensando en tu aprendizaje. Las lecturas del curso deben completarse fuera de clase y están destinadas a ayudarlo a aprender y ampliar las ideas, habilidades y conceptos que aprende en el aula. Las lecturas en sí mismas no son todas lecturas "tradicionales" en el sentido de palabras escritas en la pantalla, sino que a menudo se vinculan a videoclips, blogs y otro material multimedia.
+
+### Manual de Laboratorio {-}
+
+Este texto debe ir acompañado de un manual de laboratorio, diseñado para ayudarlo a aplicar las ideas fundamentales de la estadística. Sin embargo, este texto también se puede utilizar como un recurso independiente para ayudar a explicar aspectos clave de las estadísticas.
+
+El gran parte del material presentado en el manual de laboratorio requiere el uso de TinkerPlots&trade;. Algunos de los capítulos de este texto se refieren a Tinkerplots, pero Tinkerplots no es necesario para utilizar este texto.
+
+
+### Participación en el Proceso de Aprendizaje {-}
+
+Aprender algo nuevo requiere tiempo y esfuerzo, y esto es especialmente cierto en el aprendizaje de estadísticas, ya que no solo estás aprendiendo un conjunto de métodos, sino una forma disciplinada de pensar sobre el mundo. Cambiar sus hábitos mentales requerirá práctica continua. También requerirá mucha paciencia y persistencia.
+
+A medida que participe y utilice las habilidades, los conceptos y las ideas presentados en el material, se encontrará pensando en los datos y la evidencia de una manera diferente. Esto puede llevarlo a tomar decisiones o elecciones diferentes. Pero, incluso si este curso no cambia su mundo de la noche a la mañana, al menos podrá pensar críticamente sobre las inferencias y conclusiones extraídas de los datos.
