@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Introduction | Statistical Thinking: A Simulation Approach to Modeling Uncertainty</title>
-  <meta name="description" content="Introduction | Statistical Thinking: A Simulation Approach to Modeling Uncertainty" />
+  <title>Modeling &amp; Simulation | Statistical Thinking: A Simulation Approach to Modeling Uncertainty</title>
+  <meta name="description" content="Modeling &amp; Simulation | Statistical Thinking: A Simulation Approach to Modeling Uncertainty" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Introduction | Statistical Thinking: A Simulation Approach to Modeling Uncertainty" />
+  <meta property="og:title" content="Modeling &amp; Simulation | Statistical Thinking: A Simulation Approach to Modeling Uncertainty" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Introduction | Statistical Thinking: A Simulation Approach to Modeling Uncertainty" />
+  <meta name="twitter:title" content="Modeling &amp; Simulation | Statistical Thinking: A Simulation Approach to Modeling Uncertainty" />
   
   
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="modeling-simulation.html"/>
+<link rel="prev" href="introducción.html"/>
+<link rel="next" href="generating-data-from-models.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -90,12 +90,11 @@ $(document).ready(function()
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#licensing-and-attribution"><i class="fa fa-check"></i>Licensing and Attribution</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#colophon"><i class="fa fa-check"></i>Colophon</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i>Introduction</a>
+<li class="chapter" data-level="" data-path="introducción.html"><a href="introducción.html"><i class="fa fa-check"></i>Introducción</a>
 <ul>
-<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#course-material"><i class="fa fa-check"></i>Course Material</a></li>
-<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#tinkerplots-software"><i class="fa fa-check"></i>TinkerPlots™ Software</a></li>
-<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#lab-manual-and-data-sets"><i class="fa fa-check"></i>Lab Manual and Data Sets</a></li>
-<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#participation-in-the-learning-process"><i class="fa fa-check"></i>Participation in the Learning Process</a></li>
+<li class="chapter" data-level="" data-path="introducción.html"><a href="introducción.html#material-del-curso"><i class="fa fa-check"></i>Material del curso</a></li>
+<li class="chapter" data-level="" data-path="introducción.html"><a href="introducción.html#manual-de-laboratorio"><i class="fa fa-check"></i>Manual de Laboratorio</a></li>
+<li class="chapter" data-level="" data-path="introducción.html"><a href="introducción.html#participación-en-el-proceso-de-aprendizaje"><i class="fa fa-check"></i>Participación en el Proceso de Aprendizaje</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="modeling-simulation.html"><a href="modeling-simulation.html"><i class="fa fa-check"></i>Modeling &amp; Simulation</a>
 <ul>
@@ -131,6 +130,7 @@ $(document).ready(function()
 <li class="chapter" data-level="" data-path="quantifying-results-p-value.html"><a href="quantifying-results-p-value.html#adjustment-for-simulation-results"><i class="fa fa-check"></i>Adjustment for Simulation Results</a></li>
 <li class="chapter" data-level="" data-path="quantifying-results-p-value.html"><a href="quantifying-results-p-value.html#p-values-as-evidence"><i class="fa fa-check"></i>p-Values as Evidence</a></li>
 <li class="chapter" data-level="" data-path="quantifying-results-p-value.html"><a href="quantifying-results-p-value.html#six-principles-about-p-values"><i class="fa fa-check"></i>Six Principles about p-Values</a></li>
+<li class="chapter" data-level="" data-path="quantifying-results-p-value.html"><a href="quantifying-results-p-value.html#guidelines-for-interpreting-p-values"><i class="fa fa-check"></i>Guidelines for interpreting p-Values</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="internal-validity-evidence-and-random-assignment.html"><a href="internal-validity-evidence-and-random-assignment.html"><i class="fa fa-check"></i>Internal Validity Evidence and Random Assignment</a></li>
 <li class="chapter" data-level="" data-path="sampling-variation-and-the-bootstrap-test.html"><a href="sampling-variation-and-the-bootstrap-test.html"><i class="fa fa-check"></i>Sampling Variation and the Bootstrap Test</a>
@@ -178,39 +178,37 @@ $(document).ready(function()
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="introduction" class="section level1 unnumbered">
-<h1>Introduction</h1>
-<p>Learning statistics is sexy. Hal Varian, Google’s chief economist, believes this. During an <a href="http://www.mckinsey.com/industries/high-tech/our-insights/hal-varian-on-how-the-web-challenges-managers">interview in McKinsey Quarterly</a>, Varian stated, “I keep saying the sexy job in the next ten years will be statisticians. People think I’m joking, but who would’ve guessed that computer engineers would’ve been the sexy job of the 1990s?” Varian is not the only person to express this sentiment either. Hans Rosling in the 2010 BBC documentary Joy of Stats<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> referred to statistics as the “sexiest subject around”.</p>
-<p>Whether you believe it is the sexiest subject or not, it is incontrovertible that the use of statistics and data are prevalent in today’s information age. Almost every person on earth will benefit from learning some foundational ideas of statistics. This is true because statistics forms the basis of our everyday world just as much as do science, technology, and politics. Google, Netflix, Twitter, Facebook, OKCupid, Match.com, Amazon, iTunes, and the Federal Government are just a handful of the companies and organizations that use statistics on a daily basis. Journalism, political science, biology, sociology, psychology, graphic design, economics, sports science, and dance are all disciplines that have made use of statistical methodology.</p>
-<div id="course-material" class="section level3 unnumbered">
-<h3>Course Material</h3>
-<p>The materials on this website and in the lab manual will introduce you to the seminal ideas underlying the discipline of statistics. In addition, they have been designed with your learning in mind. For example, many of the class activities were developed using pedagogical principles, such as small group activities and discussion, that have been shown in research to improve student learning.</p>
-<p>Course readings should be completed outside of class and are intended to help you learn and extend the ideas, skills, and concepts you learn in the classroom. The readings themselves are not all “traditional” readings in the sense of words written on the screen, but instead often link to video clips, blogs and other multimedia material.</p>
+<div id="modeling-simulation" class="section level1 unnumbered">
+<h1>Modeling &amp; Simulation</h1>
+<blockquote>
+<p>There is mounting evidence that the “model-building era”” that dominated the theoretical activities of the sciences for a long time is about to be succeeded or at least lastingly supplemented by the “simulation era”.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></p>
+</blockquote>
+<p>Modeling is one of the most important topics you may ever learn. It is used in microbiology, macroeconomics, urban studies, sociology, psychology, public health, computer science, and of course, statistics. In fact, modeling is a method that is used in almost every discipline. Many think that it is an important skill to learn because it is so pervasive. While this is true, even more important is how closely the skills of modeling tie to the more general skills of problem solving. Starfield, Smith, and Bleloch (1994) summed this sentiment up nicely when they wrote, “learning to model is bound up with learning to solve problems and to think imaginatively and purposefully” (p. x).<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></p>
+<p>A model is a simplified representation of a system that can be used to promote an understanding of a more complex system. For example, meteorologists use computers to build models of the climate to understand and predict the weather. The computer model includes behaviors or properties which correspond, in some way, to the particular real-world system of climate. The computer models, however, do not include every possible detail about climate. All models leave things out and get some things—many things—wrong. This is because all models are simplifications of reality. Since all models are simplifications of reality there is always a trade-off as to what level of detail is included in the model. If too little detail is included in the model one runs the risk of missing relevant interactions and the resultant model does not promote understanding. If too much detail is included in the model, the model may become overly complicated and actually preclude the development of understanding.</p>
+<p>Models have many purposes, but are primarily used to better understand phenomena in the real-world. Common uses of models are for description, exploration, prediction, and classification. For example, Google builds models to understand and predict peoples’ internet searching tendencies. These models are then used to help Google carry out more efficient and better searches of information. As another example, Netflix builds models to understand the characteristics of movies that their customers have rated highly so that they can then recommend other movies that the person may enjoy. Amazon and Apple iTunes both use models in similar manners.</p>
+<div id="outline-and-goals-of-unit-1" class="section level3 unnumbered">
+<h3>Outline and Goals of Unit 1</h3>
+<p>In this unit, you will begin by exploring ideas of randomness. Randomness permeates, and is, in fact, fundamental to statistics. Then, you will learn how to use TinkerPlots™ to model several random processes and generate outcomes from those models. By generating data from different models, you will gain experience in considering the variation in outcomes that is produced by these random processes. This consideration will help you understand and overcome many misleading human intuitions about randomness.</p>
+<p>You will also be introduced to the Monte Carlo simulation process and learn how to carry out a Monte Carlo simulation using TinkerPlots™. This process allows you to quickly generate multiple data sets from a model in order to carry out hypothetical experiments. For example, we could ask the question: How likely is it to rain three out of the five days on my vacation given a particular forecast? By modeling the forecast and repeatedly generating data for the five days of vacation, we can then answer this question.</p>
+<p>As you progress through the unit, remember that the modeling process is a creative process that can often be very challenging. At times, this might lead to frustration as you are learning and practicing some of the material. But, as Mosteller et al. (1973) remind us, it is also a profitable experience since, “modeling is not only a technique of statistics…it is a method of study which can be applied in many other fields as well” (p. xii).<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a></p>
 </div>
-<div id="tinkerplots-software" class="section level3 unnumbered">
-<h3>TinkerPlots™ Software</h3>
-<p>Much of the material presented in the lab manual requires the use of TinkerPlots™. This software can be downloaded (for Mac or PC), and a license can be purchased from <a href="http://www.tinkerplots.com/">http://www.tinkerplots.com/</a>. If you have a Mac and are running a new version of the OS, download the <a href="ttp://www.tinkerplots.com/beta">most recent beta version</a> of TinkerPlots3.</p>
-</div>
-<div id="lab-manual-and-data-sets" class="section level3 unnumbered">
-<h3>Lab Manual and Data Sets</h3>
-<p>You will work from the lab manual every day in class. As such, you will need to bring a copy of the lab manual (physical or electronic) with you to class every day. To download a PDF copy of the lab manual, click this link: <a href="https://github.com/RaoVNV/statistical-thinking/blob/master/statistical-thinking-v4_3_Rao.pdf?raw=true">University of Minnesota - Spring 2022 - EPSY 3264 Section 002</a>.</p>
-<p>There are several data sets used in the lab manual, as well as in EPsy 3264 assignments. To download a ZIP file to your computer that includes all the data sets, click the link below. Once the ZIP file has been downloaded to your computer, double-click the ZIP file to unzip it and access the materials.</p>
-<ul>
-<li><a href="https://github.com/RaoVNV/statistical-thinking/blob/master/tp3-data.zip?raw=true">TinkerPlots 3 Data Files</a></li>
-</ul>
-</div>
-<div id="participation-in-the-learning-process" class="section level3 unnumbered">
-<h3>Participation in the Learning Process</h3>
-<p>The lab manual, instructors, and teaching assistants are all resources that are at your disposal to help you learn the material. In the end, however, you will have to do all of the hard work associated with actually learning that material. To successfully navigate this process, it is vital that you be an active participant in the learning process. Coming to class, participating in the activities and discussions, reading, completing the assignments, and asking questions are essential to successful learning.</p>
-<p>Learning anything new takes time and effort and this is especially true of learning statistics, as you are not just learning a set of methods, but rather a disciplined way of thinking about the world. Changing your habits of mind will take continual practice. It will also take a great deal of patience and persistence.</p>
-<p>As you engage in and use the skills, concepts and ideas introduced in the material, you will find yourself thinking about data and evidence in a different way. This may lead you to make different decisions or choices. But, even if this course does not change your world overnight, you will at the very least be able to critically think about inferences and conclusions drawn from data.</p>
+<div id="randomness" class="section level3 unnumbered">
+<h3>Randomness</h3>
+<p>One critical component of simulation is the random process used to generate data. To help you begin to understand randomness, watch the <a href="https://www.youtube.com/watch?v=H2lJLXS3AYM">Random Sequences: Human vs. Coin</a> YouTube video.</p>
+<p><br /></p>
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/H2lJLXS3AYM" frameborder="q" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</center>
 
 </div>
 </div>
 <div class="footnotes">
 <hr />
-<ol start="1">
-<li id="fn1"><p>Watch <em>Joy of Stats</em> online at <a href="http://www.gapminder.org/videos/the-joy-of-stats/">http://www.gapminder.org/videos/the-joy-of-stats/</a><a href="introduction.html#fnref1" class="footnote-back">↩︎</a></p></li>
+<ol start="2">
+<li id="fn2"><p>Hartmann, S. (2005). <em>The world as a process: Simulations in the natural and social sciences.</em> <a href="http://philsci-archive.pitt.edu/2412/">http://philsci-archive.pitt.edu/2412/</a><a href="modeling-simulation.html#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn3"><p>Starfield, A. M., Smith, K. A., &amp; Bleloch, A. L. (1994). <em>How to model it: Problem solving for the computer age.</em> Edina, MN: Burgess International Group, Inc.<a href="modeling-simulation.html#fnref3" class="footnote-back">↩︎</a></p></li>
+<li id="fn4"><p>Mosteller, F., Kruskal, W. H., Link, R. F., Pieters, R. S., &amp; Rising, G. R. (1973). <em>Statistics by example: Finding models.</em> Reading, MA: Addison–Wesley.<a href="modeling-simulation.html#fnref4" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
@@ -218,8 +216,8 @@ $(document).ready(function()
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="modeling-simulation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="introducción.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="generating-data-from-models.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -273,6 +271,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
