@@ -31,7 +31,7 @@ Este sitio es una versión en español basada en la versión más actual del *St
 
 ### Licencias y atribución {-}
 
-Derechos de autor &copiar; 2021 Catalizadores para el cambio
+Derechos de autor &copiar; 2022 Catalizadores para el cambio
 
 PUBLICADO POR CATALYST PRESS
 
@@ -39,7 +39,7 @@ PUBLICADO POR CATALYST PRESS
 
 Este trabajo está autorizado bajo una <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licencia internacional Creative Commons Attribution 4.0</a>. Usted es libre de compartir, remezclar y hacer uso comercial del trabajo con la condición de que proporcione la atribución adecuada. Para hacer referencia a este trabajo, utilice:
 
-- Zieffler, A., & Catalysts for Change. (2021). *Statistical Thinking: A simulation approach to uncertainty* (4.3th ed., V.N.V. Rao & P. Vivas Corrales, Trans.). Minneapolis, MN: Catalyst Press. [http://RaoVNV.github.io/pensamiento-estadistico/](http://RaoVNV.github.io/pensamiento-estadistico/)
+- Zieffler, A., & Catalysts for Change. (2022). *Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre* (4.3th ed., P. Vivas Corrales & V.N.V. Rao, Trans.). Minneapolis, MN: Catalyst Press. [http://RaoVNV.github.io/pensamiento-estadistico/](http://RaoVNV.github.io/pensamiento-estadistico/)
 
 El trabajo para crear el material que aparece en el libro fue posible gracias a la National Science Foundation (DUE–0814433).
 
