@@ -1,5 +1,5 @@
 ---
-title: "Statistical Thinking: A Simulation Approach to Modeling Uncertainty"
+title: "Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre"
 author: ""
 site: bookdown::bookdown_site
 documentclass: book
@@ -17,7 +17,7 @@ output:
 
 
 
-#  Front Matter {-}
+#  Materia Frontal {-}
 
 
 ```{r out.width="25%", echo=FALSE, fig.align='center'}
@@ -26,55 +26,36 @@ knitr::include_graphics("img/catalst-textbook-cover-v4_3.png")
 
 <br />
 
-This website is intended to serve as an organizational hub for the following sections of University of Minnesota's EPSY 3264 - Basic and Applied Statistics: 
-
-- Spring 2022 Section 002 (Vimal Rao)
-- Spring 2022 Section 003 (Regina Lisinker)
-
-This website is based on the most current version of the CATALST Project's *Statistical Thinking: A Simulation Approach to Modeling Uncertainty*. Here you will be able to access materials such as readings, data sets, and the lab manual. The website also includes helpful links and resources for each of the course topics.
-
-<br />
-
-The resources that accompany this website include:
-
-- A lab manual [PDF copy available here](https://github.com/RaoVNV/statistical-thinking/blob/master/statistical-thinking-v4_3_Rao.pdf?raw=true)
-- Data sets used in the lab manual:
-  + [TinkerPlots 3 Data Files](https://github.com/RaoVNV/statistical-thinking/blob/master/tp3-data.zip?raw=true)
+Este sitio es una versión en español basada en la versión más actual del *Statistical Thinking: A Simulation Approach to Modeling Uncertainty* del Proyecto CATALST, utilizado por la Universidad de Minnesota en el curso EPSY 3264 - Estadística Básica y Aplicada. Aquí podrá acceder a las lecturas del curso en español, así como a la versión original en inglés de los conjuntos de datos y el manual de laboratorio. El sitio web también incluye enlaces y recursos útiles para cada uno de los temas del curso.
 
 
-You can read more about these resources in the introduction.
+### Licencias y atribución {-}
 
-<br />
+Derechos de autor &copiar; 2021 Catalizadores para el cambio
 
-### Licensing and Attribution {-}
+PUBLICADO POR CATALYST PRESS
 
-Copyright &copy; 2021 Catalysts for Change
+<a rel="licencia" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licencia Creative Commons" style="border-width:0" src="https:/ /i.creativecommons.org/l/by/4.0/88x31.png" /></a>
 
-PUBLISHED BY CATALYST PRESS
+Este trabajo está autorizado bajo una <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licencia internacional Creative Commons Attribution 4.0</a>. Usted es libre de compartir, remezclar y hacer uso comercial del trabajo con la condición de que proporcione la atribución adecuada. Para hacer referencia a este trabajo, utilice:
 
-<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
+- Zieffler, A., & Catalysts for Change. (2021). *Statistical Thinking: A simulation approach to uncertainty* (4.3th ed., V.N.V. Rao & P. Vivas Corrales, Trans.). Minneapolis, MN: Catalyst Press. [http://RaoVNV.github.io/pensamiento-estadistico/](http://RaoVNV.github.io/pensamiento-estadistico/)
 
-This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. You are free to share, remix, and make commercial use of the work under the condition that you provide proper attribution. To reference this work, use:
+El trabajo para crear el material que aparece en el libro fue posible gracias a la National Science Foundation (DUE–0814433).
 
-- Zieffler, A., & Catalysts for Change. (2021). *Statistical Thinking: A simulation approach to uncertainty* (4.3th ed.). Minneapolis, MN: Catalyst Press. [http://zief0002.github.io/statistical-thinking/](http://zief0002.github.io/statistical-thinking/)
+El material de este sitio web y del manual de laboratorio es un reflejo directo de las ideas, el trabajo y el esfuerzo de varios Catalysts for Change. Incluyen (alfabéticamente): Ethan Brown, Jonathan Brown, Dan Butler, Tony Casci, Beth Chance, George Cobb, Robert delMas, Katherine Edwards, Michelle Everson, Jeffrey Finholm, Chris Fiscus, Elizabeth Fry, Joan Garfield, Theresa Gieschen, Meg Goerdt , Robert Gould, Adam Gust, Melissa Hanson, John Holcomb, Michael Huberty, Rebekah Isaak, Kari Johnson, Nicola Justice, Laura Le, Chelsey Legacy, Regina Lisinker, Suzanne Loch, Matthew Mullenbach, Michael Nguyen, Amy Okan, Vimal Rao, Allan Rossman, Anelise Sabbag, Pablo Vivas Corrales, Andrew Zieffler, and Laura Ziegler
 
-The work to create the material appearing in the book was made possible by the National Science Foundation (DUE–0814433). 
-
-The material on this website and in the lab manual is a direct reflection of the ideas, work, and effort of several Catalysts for Change. They include (alphabetically): Ethan Brown, Jonathan Brown, Dan Butler, Tony Casci, Beth Chance, George Cobb, Robert delMas, Katherine Edwards, Michelle Everson, Jeffrey Finholm, Chris Fiscus, Elizabeth Fry, Joan Garfield, Theresa Gieschen, Meg Goerdt, Robert Gould, Adam Gust, Melissa Hanson, John Holcomb, Michael Huberty, Rebekah Isaak, Kari Johnson, Nicola Justice, Laura Le, Chelsey Legacy, Regina Lisinker, Suzanne Loch, Matthew Mullenbach, Michael Nguyen, Amy Okan, Vimal Rao, Allan Rossman, Anelise Sabbag, Pablo Vivas, Andrew Zieffler, and Laura Ziegler
-
-
-Additionally, some of the activities presented in the lab manual were originally developed by Beth Chance, George Cobb, John Holcomb, and Allan Rossman as part of their NSF-funded project [Concepts of Statistical Inference: A Randomization-Based Curriculum](http://statweb.calpoly.edu/csi/) (NSF CCLI- DUE-0633349). 
 
 <br />
 
 
-### Colophon {-}
+### Colofón {-}
 
-There are two [Google Fonts](https://fonts.google.com/) used on the website. The headings use [Playfair Display](https://fonts.google.com/specimen/Playfair+Display) and the display text is [Alegreya](https://fonts.google.com/specimen/Alegreya).
+Hay dos [Google Fonts](https://fonts.google.com/) que se utilizan en el sitio web. Los encabezados usan [Playfair Display](https://fonts.google.com/specimen/Playfair+Display) y el texto de visualización es [Alegreya](https://fonts.google.com/specimen/Alegreya).
 
-Icons used on the website are:
+Los iconos utilizados en el sitio web son:
 
-- [Key](https://thenounproject.com/iconproducer/collection/keys/?oq=key&cidx=0&i=713748) by Iconic from the [Noun Project](https://thenounproject.com/)
+- [Clave](https://thenounproject.com/iconproducer/collection/keys/?oq=key&cidx=0&i=713748) por Iconic de [Noun Project](https://thenounproject.com/)
 
 
 
