@@ -25,17 +25,3 @@ Supongamos que nuestra hipotética persona investigadora utilizó un diseño fue
 En realidad, no. Y la razón es la variación experimental. Consideremos la situación en la que el tratamiento no tiene absolutamente NINGÚN EFECTO. En otras palabras, no hace nada. En ese supuesto, los grupos de tratamiento y de control deberían mejorar aproximadamente al mismo ritmo. En el supuesto de que el tratamiento no tenga ningún efecto, las diferencias entre el grupo de tratamiento y el de control no dependen del medicamento para el resfriado. Se deben únicamente al azar. De forma similar a los estudios que vimos en la Unidad 2, tenemos que averiguar cuánta variación aleatoria se espera antes de poder decir si la diferencia de 8 personas voluntarias es realmente una mejora. 
 
 Una diferencia clave entre este tipo de estudio y los de la Unidad 2 es que la variación aleatoria surge de la asignación a grupos en estos estudios, mientras que en la Unidad 2, la variación aleatoria surgió debido al muestreo de una población mayor. Cuando la variación por azar se debe a la asignación de los participantes a los grupos, se denomina *variación experimental* en lugar de *variación por muestreo*. 
-
-### Esquema y objetivos de la Unidad 3 {-}
-
-El siguiente esquema describe las lecturas del curso, las actividades en clase y las tareas de la Unidad 3.
-
-<br />
-
-```{r out.width="65%", echo=FALSE, fig.align='left'}
-knitr::include_graphics("img/unit-03-outline.png")
-```
-
-<br />
-
-En las lecturas, actividades del curso y asignaciones de la Unidad 3, explorará el proceso de modelar la variación experimental para poder evaluar las diferencias observadas entre grupos. Usted aprenderá acerca de la prueba de aleatorización (un método de Monte Carlo para evaluar si un resultado observado en compatible con la variación experimental de un modelo hipotetizado) y cómo llevar a cabo esta prueba utilizando TinkerPlots&trade;.

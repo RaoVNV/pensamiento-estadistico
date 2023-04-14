@@ -10,14 +10,14 @@ Los materiales de este sitio web y del manual de laboratorio te presentarán las
 
 Las lecturas del curso deben realizarse fuera de clase y están pensadas para ayudarte a aprender y ampliar las ideas, habilidades y conceptos que aprende en el aula. Las lecturas en sí no son todas lecturas "tradicionales" en el sentido de palabras escritas en la pantalla, sino que a menudo enlazan con videoclips, blogs y otro material multimedia. 
 
-### Software TinkerPlots 3&trade {-}
+### Software TinkerPlots 3&trade; {-}
 
 Gran parte del material presentado en el manual de laboratorio requiere el uso de TinkerPlots 3&trade;. Este software puede descargarse (para Mac o PC), y puede adquirirse una licencia en [http://www.tinkerplots.com/](http://www.tinkerplots.com/).
 
 
 ### Manual de Laboratorio y Conjuntos de Datos {-}
 
-Trabajarás con el manual de laboratorio todos los días en clase. Por lo tanto, deberás traer una copia del manual de laboratorio (física o electrónica) a clase todos los días. Para descargar una copia en PDF del manual de laboratorio, haga clic en este enlace: [https://github.com/zief0002/statistical-thinking/blob/master/statistical-thinking-v4_3.pdf?raw=true](https://github.com/zief0002/statistical-thinking/blob/master/statistical-thinking-v4_3.pdf?raw=true).
+Trabajarás con el manual de laboratorio todos los días en clase. Por lo tanto, deberás traer una copia del manual de laboratorio (física o electrónica) a clase todos los días. Para descargar una copia en PDF del manual de laboratorio, haga clic en este enlace: [https://github.com/zief0002/statistical-thinking/blob/master/statistical-thinking-v4_3.pdf?raw=true](https://github.com/zief0002/statistical-thinking/blob/master/statistical-thinking-v4_3.pdf?raw=true)^[Este manual de laboratorio es el versión inglés].
 
 Hay varios conjuntos de datos utilizados en el manual de laboratorio, así como en las tareas de EPSY 3264. Para descargar en su ordenador un archivo ZIP que incluye todos los conjuntos de datos, haga clic en uno de los enlaces siguientes. Una vez descargado el archivo ZIP en su ordenador, haga doble clic en el archivo ZIP para descomprimirlo y acceder a los materiales.
 

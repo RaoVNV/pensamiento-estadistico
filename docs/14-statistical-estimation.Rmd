@@ -55,7 +55,7 @@ $$
 Aunque las personas profesionales en estadística tienden a utilizar dos errores estándar para calcular la estimación de la incertidumbre, se trata de una elección un tanto arbitraria. Algunas personas investigadoras eligen uno o tres errores estándar.
 
 
-####  ¿Qué es el Error Estándar?
+### ¿Qué es el Error Estándar? {-}
 
 El error estándar es sólo un nombre elegante para la desviación estándar cuando la distribución se compone de estadísticas (por ejemplo, promedios, porcentajes). En otras palabras, la desviación estándar de un conjunto de resultados simulados. Esto significa que, en la práctica, podemos utilizar el bootstrap para modelizar la variación del muestreo, obtener la desviación típica de los resultados bootstrap y utilizarla junto con la estimación de los datos observados para obtener un intervalo de compatibilidad.
 

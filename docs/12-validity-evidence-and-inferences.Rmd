@@ -99,7 +99,7 @@ Basándose en el extracto sobre el diseño de este estudio, intente identificar
 - Resultados y evidencia estadística. (Sugerencia: se informa de varias comparaciones).
 
 <div class="msg_list">
-<button class="msg_head">Click Here to<br />Show/Hide Responses.</button>
+<button class="msg_head">Haga click aquí para <br />mostrar/ocultar respuestas</button>
 
 <div class="msg_body">
 - La población a la que las personas investigadoras desean generalizar sus resultados es la de todos los lactantes atópicos.
@@ -114,7 +114,7 @@ Basándose en el extracto sobre el diseño de este estudio, intente identificar
 Teniendo en cuenta esta información, ¿cómo serían sus barómetros de pruebas de validez? 
 
 <div class="msg_list">
-<button class="msg_head">Click Here to<br />Show/Hide Barometers.</button>
+<button class="msg_head">Haga clic aquí para<br />mostrar/ocultar barómetros</button>
 
 <div class="msg_body">
 
@@ -156,7 +156,7 @@ Basándose en el extracto sobre el diseño de este estudio, intente identificar
 
 
 <div class="msg_list">
-<button class="msg_head">Click Here to<br />Show/Hide Responses.</button>
+<button class="msg_head">Haga clic aquí para<br />mostrar/ocultar respuestas</button>
 
 <div class="msg_body">
 - La población a la que las personas investigadoras quieren generalizar sus resultados son todos los hogares de Estados Unidos.
@@ -171,7 +171,7 @@ Basándose en el extracto sobre el diseño de este estudio, intente identificar
 Teniendo en cuenta esta información, ¿cómo serían sus barómetros de pruebas de validez? 
 
 <div class="msg_list">
-<button class="msg_head">Click Here to<br />Show/Hide Barometers.</button>
+<button class="msg_head">Haga clic aquí para<br />mostrar/ocultar barómetros</button>
 
 <div class="msg_body">
 
