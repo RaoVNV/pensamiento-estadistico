@@ -6,4 +6,4 @@ fig:unnamed-chunk-6
 fig:bias-keys
 fig:unbiased-keys
 fig:uncertainty-keys
-what-is-the-standard-error
+qué-es-el-error-estándar
