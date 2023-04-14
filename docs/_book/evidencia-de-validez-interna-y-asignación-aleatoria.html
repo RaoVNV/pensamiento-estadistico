@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Introducción | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre</title>
-  <meta name="description" content="Introducción | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
+  <title>Evidencia de Validez Interna y Asignación Aleatoria | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre</title>
+  <meta name="description" content="Evidencia de Validez Interna y Asignación Aleatoria | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
   <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Introducción | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
+  <meta property="og:title" content="Evidencia de Validez Interna y Asignación Aleatoria | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Introducción | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
+  <meta name="twitter:title" content="Evidencia de Validez Interna y Asignación Aleatoria | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
   
   
   
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="modelización-y-simulación.html"/>
+<link rel="prev" href="cuantificando-resultados-p-value.html"/>
+<link rel="next" href="variación-muestral-y-el-la-prueba-de-bootstrap.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -174,48 +174,41 @@ $(document).ready(function()
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="introducción" class="section level1 unnumbered hasAnchor">
-<h1>Introducción<a href="introducción.html#introducción" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Aprender estadística es sexy. Hal Varian, economista jefe de Google, así lo cree. Durante una <a href="http://www.mckinsey.com/industries/high-tech/our-insights/hal-varian-on-how-the-web-challenges-managers">entrevista en McKinsey Quarterly</a>, Varian declaró: “Sigo diciendo que el trabajo sexy de los próximos diez años será el de profesional en estadística. La gente cree que bromeo, pero ¿quién hubiera imaginado que las personas profesionales en ingenieria informática sería el trabajo sexy de los noventa?”. Varian tampoco es la única persona que expresa este sentimiento. Hans Rosling, en el documental de la BBC de 2010 Joy of Stats<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> se refirió a la estadística como el “tema más sexy que existe”.</p>
-<p>Se crea o no que es la asignatura más sexy, es incontrovertible que el uso de estadísticas y datos prevalece en la actual era de la información. A casi todos los habitantes del planeta les vendrá bien aprender algunas nociones básicas de estadística. Esto es cierto porque la estadística constituye la base de nuestro mundo cotidiano tanto como la ciencia, la tecnología y la política. Google, Netflix, Twitter, Facebook, OKCupid, Match.com, Amazon, iTunes y el Gobierno Federal son sólo algunas de las empresas y organizaciones que utilizan la estadística a diario. El periodismo, las ciencias políticas, la biología, la sociología, la psicología, el diseño gráfico, la economía, las ciencias del deporte y la danza son disciplinas que han hecho uso de la metodología estadística.</p>
-<div id="materiales-del-curso" class="section level3 unnumbered hasAnchor">
-<h3>Materiales del curso<a href="introducción.html#materiales-del-curso" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Los materiales de este sitio web y del manual de laboratorio te presentarán las ideas fundamentales que subyacen a la disciplina estadística. Además, se han diseñado pensando en tu aprendizaje. Por ejemplo, muchas de las actividades de clase se han desarrollado utilizando principios pedagógicos, como las actividades en grupos pequeños y la discusión, que han demostrado en la investigación que mejoran el aprendizaje de las personas estudiantes.</p>
-<p>Las lecturas del curso deben realizarse fuera de clase y están pensadas para ayudarte a aprender y ampliar las ideas, habilidades y conceptos que aprende en el aula. Las lecturas en sí no son todas lecturas “tradicionales” en el sentido de palabras escritas en la pantalla, sino que a menudo enlazan con videoclips, blogs y otro material multimedia.</p>
-</div>
-<div id="software-tinkerplots-3trade" class="section level3 unnumbered hasAnchor">
-<h3>Software TinkerPlots 3&amp;trade<a href="introducción.html#software-tinkerplots-3trade" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Gran parte del material presentado en el manual de laboratorio requiere el uso de TinkerPlots 3™. Este software puede descargarse (para Mac o PC), y puede adquirirse una licencia en <a href="http://www.tinkerplots.com/">http://www.tinkerplots.com/</a>.</p>
-</div>
-<div id="manual-de-laboratorio-y-conjuntos-de-datos" class="section level3 unnumbered hasAnchor">
-<h3>Manual de Laboratorio y Conjuntos de Datos<a href="introducción.html#manual-de-laboratorio-y-conjuntos-de-datos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Trabajarás con el manual de laboratorio todos los días en clase. Por lo tanto, deberás traer una copia del manual de laboratorio (física o electrónica) a clase todos los días. Para descargar una copia en PDF del manual de laboratorio, haga clic en este enlace: <a href="https://github.com/zief0002/statistical-thinking/blob/master/statistical-thinking-v4_3.pdf?raw=true">https://github.com/zief0002/statistical-thinking/blob/master/statistical-thinking-v4_3.pdf?raw=true</a>.</p>
-<p>Hay varios conjuntos de datos utilizados en el manual de laboratorio, así como en las tareas de EPSY 3264. Para descargar en su ordenador un archivo ZIP que incluye todos los conjuntos de datos, haga clic en uno de los enlaces siguientes. Una vez descargado el archivo ZIP en su ordenador, haga doble clic en el archivo ZIP para descomprimirlo y acceder a los materiales.</p>
+<div id="evidencia-de-validez-interna-y-asignación-aleatoria" class="section level1 unnumbered hasAnchor">
+<h1>Evidencia de Validez Interna y Asignación Aleatoria<a href="evidencia-de-validez-interna-y-asignación-aleatoria.html#evidencia-de-validez-interna-y-asignación-aleatoria" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Las personas investigadoras en medicina pueden estar interesadas en demostrar que un fármaco ayuda a mejorar la salud de las personas (la causa de la mejora es el fármaco), mientras que las personas investigadoras en educacion pueden estar interesadas en demostrar que una innovación curricular mejora el aprendizaje del alumnado (la innovación curricular causa la mejora del aprendizaje).
+Para atribuir una relación causal, la persona investigadora debe establecer tres criterios:</p>
 <ul>
-<li>Archivos de datos <a href="https://github.com/zief0002/statistical-thinking/blob/master/tp3-data.zip?raw=true">TinkerPlots 3</a></li>
+<li><strong>Precedencia temporal:</strong> La causa debe producirse ANTES que el efecto.</li>
+<li><strong>Covariación de la causa y el efecto:</strong> Tiene que haber una relación correlacional entre la causa y el efecto.</li>
+<li><strong>No hay explicaciones alternativas plausibles:</strong> Es necesario descartar TODAS las demás explicaciones posibles del efecto.</li>
 </ul>
-</div>
-<div id="participación-en-el-proceso-de-aprendizaje" class="section level3 unnumbered hasAnchor">
-<h3>Participación en el Proceso de Aprendizaje<a href="introducción.html#participación-en-el-proceso-de-aprendizaje" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>El manual de laboratorio, el profesorado y asistentes del cruso son recursos que están a tu disposición para ayudarte a aprender la materia. Al final, sin embargo, tendrás que hacer todo el trabajo duro asociado con el aprendizaje real de ese material. Para superar con éxito este proceso, es fundamental que participes activamente en él. Venir a clase, participar en las actividades y discusiones, leer, completar las tareas y hacer preguntas son esenciales para el éxito del aprendizaje.</p>
-<p>Aprender cualquier cosa nueva requiere tiempo y esfuerzo, y esto es especialmente cierto en el caso de la estadística, ya que no se trata sólo de aprender una serie de métodos, sino más bien una forma disciplinada de pensar sobre el mundo. Cambiar los hábitos mentales requiere una práctica continua. También requerirá mucha paciencia y persistencia.</p>
-<p>A medida que vayas aprendiendo y utilizando las habilidades, conceptos e ideas que se presentan en este material, te darás cuenta de que piensas en los datos y las pruebas de una manera diferente. Esto puede llevarte a tomar decisiones u opciones diferentes. Pero, aunque este curso no cambie tu mundo de la noche a la mañana, al menos serás capaz de pensar críticamente sobre las inferencias y conclusiones extraídas de los datos.</p>
+<p>Debido a este tercer criterio, atribuir una relación causa-efecto es muy difícil. (Puede obtener más información sobre cada uno de estos criterios en el <a href="https://www.socialresearchmethods.net/kb/causeeff.php">Web Center for Social Research Methods</a>.</p>
+<p>Los estudios experimentales tienen su punto fuerte en el cumplimiento de este tercer criterio. Para descartar TODAS las demás explicaciones posibles del efecto, el grupo de control y el grupo de tratamiento tienen que ser “idénticos” con respecto a todas las características posibles (aparte del tratamiento) que podrían explicar las diferencias. De este modo, la única característica que será diferente es que el grupo de tratamiento recibe el tratamiento y el grupo de control no. Si hay diferencias en el resultado, entonces debe ser atribuible al tratamiento, porque las otras posibles explicaciones quedan descartadas.</p>
+<p>Por lo tanto, la clave está en hacer que los grupos de control y de tratamiento sean “idénticos” al formarlos. Algo que facilita (ligeramente) esta tarea es que no tienen que ser exactamente idénticos, sólo <a href="https://www.socialresearchmethods.net/kb/expequi.php">probabilísticamente equivalentes</a>. Esto significa, por ejemplo, que si desea emparejar grupos en función de la edad, no es necesario que los dos grupos tengan distribuciones de edad idénticas; sólo tendrían que tener aproximadamente la misma edad MEDIA. Aquí aproximadamente significa “las edades medias deberían ser las mismas dentro de lo que esperamos debido al error de muestreo”.</p>
+<p>Ahora sólo tenemos que crear los grupos de forma que tengan, de media, las mismas características &amp;hellip para TODAS LAS CARACTERÍSTICAS POSIBLES que podrían explicar las diferencias en el resultado.</p>
+<p>Resulta que crear grupos probabilísticamente equivalentes es un problema realmente difícil. Un método que funciona bastante bien es asignar aleatoriamente a las personas participantes a los grupos. Esto funciona mejor cuando se dispone de muestras de gran tamaño, pero incluso con muestras pequeñas la asignación aleatoria tiene la ventaja de al menos <em>eliminar el sesgo sistemático</em> entre los dos grupos (cualquier diferencia se debe al azar y probablemente se igualará entre los grupos). Como señala <a href="https://en.wikipedia.org/wiki/Random_assignment">la página de Wikipedia sobre asignación aleatoria</a>,</p>
+<blockquote>
+<p>La asignación aleatoria de las personas participantes contribuye a garantizar que las diferencias entre los grupos y dentro de ellos no sean sistemáticas al inicio del experimento. Así, cualquier diferencia entre los grupos registrada al final del experimento puede atribuirse con mayor seguridad a los procedimientos experimentales o al tratamiento. &amp;hellip La asignación aleatoria no garantiza que los grupos estén emparejados o sean equivalentes. Los grupos pueden diferir en algún atributo preexistente debido al azar. El uso de la asignación aleatoria no puede eliminar esta posibilidad, pero la reduce en gran medida.</p>
+</blockquote>
+<p>La validez interna es el grado en que las inferencias de causa y efecto son precisas y significativas. La atribución causal es el objetivo de muchos investigadores. Por lo tanto, al utilizar la asignación aleatoria tenemos un grado bastante alto de evidencia de validez interna; tenemos una creencia mucho mayor en las inferencias causales. De forma muy parecida a las pruebas utilizadas en un tribunal de justicia, es útil pensar en las pruebas de validez en un continuo. Visualizaremos este continuo como un barómetro. Por ejemplo, un barómetro que visualice las pruebas de validez interna para un estudio que empleó la asignación aleatoria en el diseño podría ser:</p>
+<p><br /></p>
+<p><img src="img/internal-validity-evidence-barometer.png" width="70%" style="display: block; margin: auto;" /></p>
+<p><br /></p>
+<p>El grado de evidencia de validez interna es alto (en el tercio superior). El grado depende de otros factores, como el tamaño de la muestra.</p>
+<p>Para saber más sobre la asignación aleatoria, puede leer lo siguiente:</p>
+<ul>
+<li>El informe de investigación <a href="http://www.childtrends.org/wp-content/uploads/2008/01/Random-Assigment-Evaluations.pdf">Random Assignment Evaluation Studies: A Guide for Out-of-School Time Program Practitioners</a></li>
+</ul>
 
-</div>
-</div>
-<div class="footnotes">
-<hr />
-<ol start="1">
-<li id="fn1"><p>Vea <em>Joy of Stats</em> en línea en <a href="http://www.gapminder.org/videos/the-joy-of-stats/">http://www.gapminder.org/videos/the-joy-of-stats/</a><a href="introducción.html#fnref1" class="footnote-back">↩︎</a></p></li>
-</ol>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="modelización-y-simulación.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="cuantificando-resultados-p-value.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="variación-muestral-y-el-la-prueba-de-bootstrap.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

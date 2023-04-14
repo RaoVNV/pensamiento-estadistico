@@ -1,19 +1,18 @@
-# Describing Distributions {-}
+# Describiendo Distribuciones {-}
 
-One of the important steps in any statistical analysis is that of summarizing data. It is good practice to examine both a graphical and a numerical summarization of your data. These summaries are often part of the evidence that researchers use to support any conclusions drawn from the data. They also allow researchers to discover structure that might have otherwise been overlooked in the raw data that was actually collected. Lastly, both graphical and numerical summaries of the data often point to other analyses that may be undertaken with the data.
+Un paso importante en cualquier análisis estadístico es el de resumir los datos. Es una buena práctica examinar tanto un resumen gráfico como uno numérico de los datos. Estos resúmenes suelen formar parte de las pruebas que las personas investigadoras utilizan para respaldar las conclusiones extraídas de los datos. También permiten a las personas investigadores descubrir estructuras que, de otro modo, podrían haberse pasado por alto en los datos brutos recopilados. Por último, los resúmenes gráficos y numéricos de los datos a menudo apuntan a otros análisis que pueden realizarse con los datos.
 
-Once raw data has been collected in a study, it can be overwhelming to pull any kind of meaning out of it. For example, it is not uncommon for Google to be dealing with millions of cases. How can Google&mdash;or any researcher for that matter&mdash;go from all of that raw data to something that can help them answer their research questions?
+Una vez recogidos los datos brutos en un estudio, puede resultar abrumador extraer de ellos cualquier tipo de significado. Por ejemplo, no es raro que Google maneje millones de casos. ¿Cómo puede Google, o cualquier persona investigadora, pasar de todos esos datos brutos a algo que le ayude a responder a sus preguntas de investigación?
 
-Rather than examining all of those cases individually, researchers examine the data collectively, often by plotting it. This is what is meant by a graphical summary of the data; it is quite literally, a picture of the distribution.
+En lugar de examinar todos esos casos individualmente, las personas investigadores examinan los datos de forma colectiva, a menudo representándolos gráficamente. Esto es lo que se entiende por resumen gráfico de los datos; es, literalmente, una imagen de la distribución.
 
-There are many, many different types of plots that have been created to graphically summarize data. Each can provide a slightly different representation of the data. Metaphorically, you can imagine each of these different plot types as a different photo taken of the exact same person. Some may be color, others black and white. Some may be taken from different perspectives, angles or distances. While all photographs "summarize" the same person, you may notice characteristics of that person in some photos that are not evident in others. Many of the photos, however, will show the same thing. 
+Se han creado muchísimos tipos de gráficos para resumir los datos. Cada uno de ellos puede proporcionar una representación ligeramente diferente de los datos. Metafóricamente, se puede imaginar cada uno de estos diferentes tipos de gráficos como una foto diferente tomada a la misma persona. Algunas pueden ser en color, otras en blanco y negro. Algunas pueden tomarse desde perspectivas, ángulos o distancias diferentes. Aunque todas las fotografías "resumen" a la misma persona, es posible que observe características de esa persona en algunas fotos que no son evidentes en otras. Sin embargo, muchas de las fotos mostrarán lo mismo. 
 
+### Forma {-}
 
-### Shape {-}
+El gráfico de puntos que proporciona TinkerPlots&trade; es un gráfico muy útil. ^[TinkerPlots&trade; también proporciona otros tipos de gráficos, como el gráfico de caja (a veces llamado gráfico de caja y bigotes) y el gráfico de sombrero (una variación del gráfico de caja)]. Nos permite resumir la forma de la distribución muy fácilmente. La forma se utiliza para describir la simetría de una distribución. Como es de esperar, las distribuciones simétricas tienen la misma forma a ambos lados del centro. (Otra forma de pensar en esto es que si doblara la distribución por el centro, la mitad doblada de la distribución se alinearía bastante bien sobre la otra mitad). Por ejemplo, las distribuciones "en forma de campana" ("aproximadamente normales") son simétricas.
 
-The dot plot that TinkerPlots&trade; provides is a very useful plot.^[TinkerPlots&trade; also provides other types of plots, including the box plot (sometimes called the box-and-whiskers plot) and the hat plot (a variation of the box plot).] It allows us to summarize the shape of the distribution very easily. Shape is used to describe a distribution’s symmetry. As you might expect, symmetric distributions are shaped the same on either side of the center. (Another way of thinking about this is that if you folded the distribution at the center, the folded half of the distribution would align pretty well on top of the other half.) For example, "bell-shaped" ("approximately normal") distributions are symmetric. 
-
-When a distribution is asymmetric, it is referred to as a **skewed** distribution. The distribution shown in Figure 1 is a skewed distribution. In this distribution, there appears to be a longer tail on the right side of the distribution. Because the tail is on the right side of the distribution, statisticians would say it is "skewed to the right" or "positively skewed". In a similar way, a distribution that tails to the left is "skewed to the left" or "negatively skewed".
+Cuando una distribución es asimétrica, se denomina **distribución sesgada**. La distribución de la Figura 1 es una distribución asimétrica. En esta distribución, parece haber una cola más larga en el lado derecho de la distribución. Como la cola está en el lado derecho de la distribución, los estadísticos dirían que está "sesgada a la derecha" o "sesgada positivamente". Del mismo modo, una distribución que tiene la cola a la izquierda está "sesgada a la izquierda" o "sesgada negativamente".
 
 <br />
 
@@ -24,11 +23,11 @@ knitr::include_graphics("img/skewed-right.png")
 <br />
 
 
-### Location {-}
+### Posición {-}
 
-Aside from the overall shape of the distribution, it is also useful to summarize the location of the distribution. The location of the distribution provides a summarization of a so-called "typical" value for the data. A "typical" value can be estimated from the plot of the distribution. You can also use more formally calculated summaries of the location such as the mean, median, or mode. These values are easily calculated using TinkerPlots&trade;.
+Aparte de la forma general de la distribución, también es útil resumir la posición de la distribución. La posición de la distribución proporciona un resumen del denominado valor "típico" de los datos. Un valor "típico" puede obtenerse a partir del gráfico de la distribución. También se pueden utilizar resúmenes de la posición calculados de manera más formal, como la media, la mediana o la moda. Estos valores se calculan fácilmente utilizando TinkerPlots&trade;.
 
-When looking at a plot of a distribution, data analysts often consider the number of modes or "humps" that are seen in a plot of the distribution. Here, the concept of mode is slightly different (although related) to the concept of mode that you may have learned in previous mathematics or statistics courses. The mode of a distribution gives a general sense of the values or measurements that occur frequently. This may be a single number, but many times is not. For example, the first hump of the distribution shown in the figure below suggests that values around nine are very common. The actual value of nine, however, may only show up once or twice in the data.
+Al observar un gráfico de una distribución, los analistas de datos a menudo consideran el número de modas o "motañas" que se ven en un gráfico de la distribución. Aquí, el concepto de moda es ligeramente diferente (aunque relacionado) al concepto de moda que usted puede haber aprendido en cursos previos de matemáticas o estadística. La moda de una distribución da una idea general de los valores o medidas que ocurren con frecuencia. Puede ser un único número, pero muchas veces no lo es. Por ejemplo, la primera montaña de la distribución mostrada en la figura siguiente sugiere que los valores en torno a nueve son muy comunes. Sin embargo, es posible que el valor real de nueve sólo aparezca una o dos veces en los datos.
 
 <br />
 
@@ -38,13 +37,13 @@ knitr::include_graphics("img/bimodal.png")
 
 <br />
 
-A distribution can be **unimodal** (one mode), **bimodal** (two modes), **multimodal** (many modes), or **uniform** (no modes). The distribution shown above is bimodal&mdash;notice there are two humps. Uniform distributions have roughly the same frequency for all possible values (they look essentially flat) and thus have no modes.
+Una distribución puede ser **unimodal** (una moda), **bimodal** (dos modas), **multimodal** (muchas modas) o **uniforme** (sin modas). La distribución mostrada arriba es bimodal&mdash;observa que hay dos montañas. Las distribuciones uniformes tienen aproximadamente la misma frecuencia para todos los valores posibles (parecen esencialmente planas) y, por tanto, no tienen modas.
 
-### Variation {-}
+### Variación {-}
 
-A third characteristic of a distribution that should be summarized is the variation. Summarizing the variation gives an indication of how variable the data are. One method of numerically summarizing the variability in the data is to quantify how close the observations are relative to the "typical" value on average. Are the observations for the most part close to the "typical" value? Far away from the "typical" value? How close?
+Una tercera característica de una distribución que debe resumirse es la variación o variabilidad. Resumir la variación da una indicación de lo variables que son los datos. Un método para resumir numéricamente la variabilidad de los datos consiste en cuantificar la proximidad de las observaciones con respecto al valor "típico" medio. ¿Están las observaciones en su mayoría cerca del valor "típico"? ¿Están lejos del valor "típico"? ¿Qué tan cerca?
 
-It turns out, that the shape of the distribution also helps describe the variation in the data. For example, "bell-shaped" distributions have most observations close to the "typical" value, and more extreme observations show up both below and above the "typical" value (the variation is the same on both sides of the "typical" value). Whereas skewed distributions have many observations near the "typical" value, but extreme values only deviate from this value in one direction (there is more variation in the data on one side of the "typical" value than the other).
+Resulta que la forma de la distribución también ayuda a describir la variación de los datos. Por ejemplo, las distribuciones "en forma de campana" tienen la mayoría de las observaciones cerca del valor "típico", y las observaciones más extremas aparecen tanto por debajo como por encima del valor "típico" (la variación es la misma a ambos lados del valor "típico"). Mientras que las distribuciones sesgadas tienen muchas observaciones cerca del valor "típico", pero los valores extremos sólo se desvían de este valor en una dirección (hay más variación en los datos a un lado del valor "típico" que al otro).
 
 
 <br />
@@ -55,11 +54,11 @@ knitr::include_graphics("img/skewed-right.png")
 
 <br />
 
-One thing that affects the variation, and should be described is whether there are observations that stand out from the other observations. Often these observations have extremely large or small values relative to the other observations. These observations are referred to as **potential outliers**, or **extreme cases**. For example, in the positively skewed distribution shown previously, the observation that has a value near 10 would likely be considered a potential outlier.
+Una cosa que afecta la variación, y que debe describirse, es si hay observaciones que sobresalen de las demás observaciones. A menudo, estas observaciones tienen valores extremadamente grandes o pequeños en relación con las demás observaciones. Estas observaciones se denominan **posibles valores atípicos**, o **casos extremos**. Por ejemplo, en la distribución sesgada positivamente mostrada anteriormente, la observación que tiene un valor cercano a 10 probablemente se consideraría un valor atípico potencial.
 
-### Putting It All Together {-}
+### Uniéndolo todo {-}
 
-[Rotten Tomatoes](https://www.rottentomatoes.com/) is a website which aggregates movie critics' reviews of films. The website marks each review as either positive or negative and then gives the film a score based on the percentage of positive reviews. In addition to the critics' score, each film is also given a score based on reviews from the general public using the same methodology (reviews are tabulated so that the score represents the percentage of positive reviews from the general public). The plot shown below shows a dot plot of the distribution of the general public's scores for 134 movies released in 2009.
+[Rotten Tomatoes](https://www.rottentomatoes.com/) es un sitio web que recopila críticas de películas. El sitio web califica cada crítica como positiva o negativa y luego da a la película una puntuación basada en el porcentaje de críticas positivas. Además de la puntuación de los críticos, cada película también recibe una puntuación basada en las críticas del público general utilizando la misma metodología (las críticas se tabulan de forma que la puntuación represente el porcentaje de críticas positivas del público general). El gráfico siguiente muestra la distribución de las puntuaciones del público en general para 134 películas estrenadas en 2009.
 
 <br />
 
@@ -69,9 +68,8 @@ knitr::include_graphics("img/rotton-tomatoes.png")
 
 <br />
 
-A written description of the distribution might read as follows:
+Una descripción escrita de la distribución podría ser la siguiente:
 
-> The distribution of scores for this sample of 134 movies is fairly symmetric. The median score for these movies is near 60, indicating that a typical movie released in 2009 is positively reviewed by about 60% of the public. The distribution also indicates that there is variation in the movies’ scores. Most of the movies in the sample have a score between 35 and 85, suggesting large differences in the public’s opinion of the quality of these movies.
+> La distribución de las puntuaciones de esta muestra de 134 películas es bastante simétrica. La puntuación media de estas películas se aproxima a 60, lo que indica que una película típica estrenada en 2009 recibe críticas positivas de aproximadamente el 60% del público. La distribución también indica que hay variación en las puntuaciones de las películas. La mayoría de las películas de la muestra tienen una puntuación entre 35 y 85, lo que sugiere grandes diferencias en la opinión del público sobre la calidad de estas películas.
 
-
-Notice that the description includes a description of the distribution's shape, location, and variation. It also incorporates the context of the data, in this case film scores. This helps a reader to interpret the description.
+Observe que la descripción incluye una descripción de la forma, la ubicación y la variación de la distribución. También incorpora el contexto de los datos, en este caso las puntuaciones de las películas. Esto ayuda al lector a interpretar la descripción.

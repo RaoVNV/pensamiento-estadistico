@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Introducción | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre</title>
-  <meta name="description" content="Introducción | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
+  <title>Simulación de Monte Carlo | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre</title>
+  <meta name="description" content="Simulación de Monte Carlo | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
   <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Introducción | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
+  <meta property="og:title" content="Simulación de Monte Carlo | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Introducción | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
+  <meta name="twitter:title" content="Simulación de Monte Carlo | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
   
   
   
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="modelización-y-simulación.html"/>
+<link rel="prev" href="generación-de-datos-a-partir-de-modelos.html"/>
+<link rel="next" href="modelizando-variación-muestral.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -174,39 +174,83 @@ $(document).ready(function()
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="introducción" class="section level1 unnumbered hasAnchor">
-<h1>Introducción<a href="introducción.html#introducción" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Aprender estadística es sexy. Hal Varian, economista jefe de Google, así lo cree. Durante una <a href="http://www.mckinsey.com/industries/high-tech/our-insights/hal-varian-on-how-the-web-challenges-managers">entrevista en McKinsey Quarterly</a>, Varian declaró: “Sigo diciendo que el trabajo sexy de los próximos diez años será el de profesional en estadística. La gente cree que bromeo, pero ¿quién hubiera imaginado que las personas profesionales en ingenieria informática sería el trabajo sexy de los noventa?”. Varian tampoco es la única persona que expresa este sentimiento. Hans Rosling, en el documental de la BBC de 2010 Joy of Stats<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> se refirió a la estadística como el “tema más sexy que existe”.</p>
-<p>Se crea o no que es la asignatura más sexy, es incontrovertible que el uso de estadísticas y datos prevalece en la actual era de la información. A casi todos los habitantes del planeta les vendrá bien aprender algunas nociones básicas de estadística. Esto es cierto porque la estadística constituye la base de nuestro mundo cotidiano tanto como la ciencia, la tecnología y la política. Google, Netflix, Twitter, Facebook, OKCupid, Match.com, Amazon, iTunes y el Gobierno Federal son sólo algunas de las empresas y organizaciones que utilizan la estadística a diario. El periodismo, las ciencias políticas, la biología, la sociología, la psicología, el diseño gráfico, la economía, las ciencias del deporte y la danza son disciplinas que han hecho uso de la metodología estadística.</p>
-<div id="materiales-del-curso" class="section level3 unnumbered hasAnchor">
-<h3>Materiales del curso<a href="introducción.html#materiales-del-curso" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Los materiales de este sitio web y del manual de laboratorio te presentarán las ideas fundamentales que subyacen a la disciplina estadística. Además, se han diseñado pensando en tu aprendizaje. Por ejemplo, muchas de las actividades de clase se han desarrollado utilizando principios pedagógicos, como las actividades en grupos pequeños y la discusión, que han demostrado en la investigación que mejoran el aprendizaje de las personas estudiantes.</p>
-<p>Las lecturas del curso deben realizarse fuera de clase y están pensadas para ayudarte a aprender y ampliar las ideas, habilidades y conceptos que aprende en el aula. Las lecturas en sí no son todas lecturas “tradicionales” en el sentido de palabras escritas en la pantalla, sino que a menudo enlazan con videoclips, blogs y otro material multimedia.</p>
-</div>
-<div id="software-tinkerplots-3trade" class="section level3 unnumbered hasAnchor">
-<h3>Software TinkerPlots 3&amp;trade<a href="introducción.html#software-tinkerplots-3trade" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Gran parte del material presentado en el manual de laboratorio requiere el uso de TinkerPlots 3™. Este software puede descargarse (para Mac o PC), y puede adquirirse una licencia en <a href="http://www.tinkerplots.com/">http://www.tinkerplots.com/</a>.</p>
-</div>
-<div id="manual-de-laboratorio-y-conjuntos-de-datos" class="section level3 unnumbered hasAnchor">
-<h3>Manual de Laboratorio y Conjuntos de Datos<a href="introducción.html#manual-de-laboratorio-y-conjuntos-de-datos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Trabajarás con el manual de laboratorio todos los días en clase. Por lo tanto, deberás traer una copia del manual de laboratorio (física o electrónica) a clase todos los días. Para descargar una copia en PDF del manual de laboratorio, haga clic en este enlace: <a href="https://github.com/zief0002/statistical-thinking/blob/master/statistical-thinking-v4_3.pdf?raw=true">https://github.com/zief0002/statistical-thinking/blob/master/statistical-thinking-v4_3.pdf?raw=true</a>.</p>
-<p>Hay varios conjuntos de datos utilizados en el manual de laboratorio, así como en las tareas de EPSY 3264. Para descargar en su ordenador un archivo ZIP que incluye todos los conjuntos de datos, haga clic en uno de los enlaces siguientes. Una vez descargado el archivo ZIP en su ordenador, haga doble clic en el archivo ZIP para descomprimirlo y acceder a los materiales.</p>
+<div id="simulación-de-monte-carlo" class="section level1 unnumbered hasAnchor">
+<h1>Simulación de Monte Carlo<a href="simulación-de-monte-carlo.html#simulación-de-monte-carlo" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>La simulación de Monte Carlo es un método que las personas profesionales en estadística utilizan para comprender los fenómenos del mundo real. En la simulación de Monte Carlo, se utiliza un modelo para generar múltiples (a veces millones) conjuntos de datos. Al examinar los conjuntos de datos producidos (o los resúmenes de los conjuntos de datos producidos), las personas investigadoras pueden obtener información y predecir lo que podría ocurrir en el mundo real en un conjunto determinado de circunstancias. En el siguiente artículo puede leer sobre los fascinantes orígenes de la simulación de Montecarlo:</p>
 <ul>
-<li>Archivos de datos <a href="https://github.com/zief0002/statistical-thinking/blob/master/tp3-data.zip?raw=true">TinkerPlots 3</a></li>
+<li><a href="http://www.webpages.uidaho.edu/~stevel/565/literature/The%20Beginning%20of%20Monte%20Carlo%20Method.pdf">El comienzo del método Monte Carlo</a></li>
 </ul>
+<div id="ejemplo-de-estudio-de-simulación-monte-carlo" class="section level3 unnumbered hasAnchor">
+<h3>Ejemplo de estudio de simulación Monte Carlo<a href="simulación-de-monte-carlo.html#ejemplo-de-estudio-de-simulación-monte-carlo" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>En 1978, China introdujo la política del “hijo único” para aliviar los problemas sociales, económicos y medioambientales del país. Según Wikipedia,<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a></p>
+<blockquote>
+<p>La política restringe oficialmente el número de hijos que pueden tener las parejas urbanas casadas a uno, aunque permite exenciones para varios casos, como las parejas rurales, las minorías étnicas y los padres sin hermanos propios. Un portavoz del Comité de la Política de Hijo Único ha dicho que aproximadamente el 35,9% de la población china está actualmente sujeta a la restricción del hijo único.</p>
+</blockquote>
+<p>Aunque el gobierno chino ha sugerido que la política ha evitado más de 250 millones de nacimientos desde su implantación hasta el año 2000, la política es controvertida tanto dentro como fuera de China por la forma en que se ha aplicado. También han surgido preocupaciones sobre las posibles consecuencias económicas y sociales negativas, en parte porque muchas familias estaban decididas a tener un hijo. Los investigadores se han preguntado cómo cambiarían las cosas si en lugar de una política de un solo hijo, un país adoptara una política de “un niño”. Una política de “un niño” permitiría a las familias seguir teniendo hijos hasta que tuvieran un niño. Si el primer hijo de una familia es un niño, se restringiría la posibilidad de tener más hijos. Sin embargo, si el primer hijo fuera una niña, la familia podría seguir teniendo hijos hasta que naciera un niño. Por ejemplo, podrían plantear la pregunta,</p>
+<!-- <div class="image"> -->
+<!--   <img src="img/speech-bubble.png" /> -->
+<!--   <span class="oval-thought" style="margin-top:20px;"><center><span style="font-size: .9em;">Si China adoptara la política de "un niño", ¿Cómo afectaría <br /> esta política al número medio de hijos por familia, que actualmente es de 1,6?^[[World Factbook](https://www.cia.gov/library/publications/the-world-factbook/fields/2127.html)]?</span></center></span> -->
+<!-- </div> -->
+<center>
+<blockquote class="oval-thought">
+<p>
+<br />Si China adoptara la política de “un niño”, ¿Cómo afectaría esta política al número medio de hijos por familia, que actualmente es de 1,6?<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a><br /><br />
+</p>
+</blockquote>
+</center>
+<p><br /></p>
+<p>Una forma de estudiar esta pregunta (sin implementar realmente la política) sería realizar un estudio de simulación modelando este escenario y generando muchos conjuntos de datos a partir del modelo. Considere por un minuto cómo se podría modelizar la cantidad de hijos que tendría una familia en particular.</p>
+<p>Una forma de modelizar esto es escribir la palabra <strong>niño</strong> en una ficha y la palabra <strong>niña</strong> en otra ficha y colocar esas dos fichas en un sombrero. Después de mezclar las tarjetas, puedes sacar una única tarjeta del sombrero. Si la tarjeta tiene escrita la palabra <strong>niño</strong>, la “familia” simulada tendría un hijo. Si la tarjeta tiene escrita la palabra <strong>niña</strong>, se registraría una marca de recuento y se volvería a colocar la tarjeta en el sombrero. A continuación, se vuelven a mezclar las tarjetas y se extrae otra tarjeta. Si la segunda tarjeta extraída tiene escrita la palabra <strong>niño</strong>, la “familia” simulada tendría dos hijos. Si la segunda tarjeta tiene escrita la palabra <strong>niña</strong>, se registra otra marca de recuento y la tarjeta se vuelve a colocar en el sombrero. Este proceso continuaría hasta que se sacara la tarjeta <strong>niño</strong>. La siguiente tabla muestra los resultados tras realizar este proceso para tres familias simuladas.</p>
+<p><br /></p>
+<table>
+<caption><span id="tab:unnamed-chunk-1">Table 1: </span>El número registrado de niñas y niños para tres familias simuladas.</caption>
+<thead>
+<tr class="header">
+<th align="left">Familia</th>
+<th align="left">Niña</th>
+<th align="left">Niño</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Familia #1</td>
+<td align="left">✔</td>
+<td align="left">✔</td>
+</tr>
+<tr class="even">
+<td align="left">Familia #2</td>
+<td align="left"></td>
+<td align="left">✔</td>
+</tr>
+<tr class="odd">
+<td align="left">Familia #3</td>
+<td align="left">✔✔</td>
+<td align="left">✔</td>
+</tr>
+</tbody>
+</table>
+<p><br /></p>
+<p>Podríamos realizar esta simulación para muchas familias, digamos 500 familias, y utilizar los resultados para dar una respuesta a la pregunta de investigación. Es de imaginar que la realización de esta sencilla simulación se convertiría rápidamente en algo muy tedioso. Los estudios de simulación como éste suelen llevarse a cabo mediante programas informáticos. En esta unidad, aprenderás a utilizar un programa informático llamado TinkerPlots™ para modelizar procesos en el mundo real y llevar a cabo estudios de simulación.</p>
 </div>
-<div id="participación-en-el-proceso-de-aprendizaje" class="section level3 unnumbered hasAnchor">
-<h3>Participación en el Proceso de Aprendizaje<a href="introducción.html#participación-en-el-proceso-de-aprendizaje" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>El manual de laboratorio, el profesorado y asistentes del cruso son recursos que están a tu disposición para ayudarte a aprender la materia. Al final, sin embargo, tendrás que hacer todo el trabajo duro asociado con el aprendizaje real de ese material. Para superar con éxito este proceso, es fundamental que participes activamente en él. Venir a clase, participar en las actividades y discusiones, leer, completar las tareas y hacer preguntas son esenciales para el éxito del aprendizaje.</p>
-<p>Aprender cualquier cosa nueva requiere tiempo y esfuerzo, y esto es especialmente cierto en el caso de la estadística, ya que no se trata sólo de aprender una serie de métodos, sino más bien una forma disciplinada de pensar sobre el mundo. Cambiar los hábitos mentales requiere una práctica continua. También requerirá mucha paciencia y persistencia.</p>
-<p>A medida que vayas aprendiendo y utilizando las habilidades, conceptos e ideas que se presentan en este material, te darás cuenta de que piensas en los datos y las pruebas de una manera diferente. Esto puede llevarte a tomar decisiones u opciones diferentes. Pero, aunque este curso no cambie tu mundo de la noche a la mañana, al menos serás capaz de pensar críticamente sobre las inferencias y conclusiones extraídas de los datos.</p>
+<div id="supuestos-de-la-simulación-monte-carlo" class="section level3 unnumbered hasAnchor">
+<h3>Supuestos de la simulación Monte Carlo<a href="simulación-de-monte-carlo.html#supuestos-de-la-simulación-monte-carlo" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>“Espera”, dices. “¡Aunque llevara a cabo esta simulación, seguiría sin poder dar una respuesta a la pregunta de investigación! No refleja la realidad. Algunas familias pueden querer no tener hijos, mientras que otras pueden dejar de tener hijos después de que nazca una niña. ¿Y qué pasa con los partos múltiples?”.</p>
+<p>Tal vez incluso te cuestiones si la probabilidad de tener un niño o de tener una niña es realmente de 50:50. Todos estos puntos son válidos y probablemente afecten a los resultados de la simulación, lo que a su vez afecta a las inferencias y conclusiones que se extraen.</p>
+<p>Aunque el modelo utilizado en el ejemplo del “un niño” es demasiado simplista para sacar cualquier tipo de conclusiones útiles sobre la aplicación de esa política en China, podría proporcionar un punto de partida útil para introducir complejidades adicionales. Incluso en los problemas de modelización más complicados, los investigadores suelen hacer muchas suposiciones simplificadoras. (Recuérdese que todos los modelos -incluso los que parecen bastante complejos- son simplificaciones de la realidad y se equivocan en muchas cosas). Con suficiente simplificación , se puede construir y estudiar un modelo. El modelo se evalúa y a menudo se revisa o actualiza a medida que ciertos supuestos se consideran sostenibles y otros no. Debido a este proceso, los estudios de simulación suelen ser iterativos en su desarrollo. Este proceso de iteración continúa hasta que se desarrolla un nivel adecuado de comprensión y se puede responder a la pregunta de investigación.</p>
+</div>
+<div id="la-simulación-monte-carlo-simulation-en-la-práctica" class="section level3 unnumbered hasAnchor">
+<h3>La Simulación Monte Carlo Simulation en la Práctica<a href="simulación-de-monte-carlo.html#la-simulación-monte-carlo-simulation-en-la-práctica" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>En la práctica, las personas profesionales en estadística suelen utilizar modelos increíblemente complejos para generar sus datos. Por ejemplo, Electronic Arts, la empresa de videojuegos que está detrás de títulos como <em>Madden</em>, <em>NHL</em> y <em>FIFA</em>, utiliza la telemetría del juego (la transmisión de datos de un ejecutable del juego para su registro y análisis) para modelizar los patrones de juego de las personas que los juegan e identificar los elementos de sus juegos que están altamente asociados con la retención de las personas que los juegan.<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a></p>
+<p>Al comprender el comportamiento de las personas que juegan y los patrones comunes que se utilizan, las personas desarrolladoras de juegos de Electronic Arts pueden centrar su atención en características más relevantes en futuras iteraciones del juego y, en última instancia, reducir los costes de producción. Por ejemplo, en la examinación de <em>Madden NFL 11</em>, Electronic Arts utilizó 46 características para modelizar las preferencias de las personas que juegan, incluyendo su uso del control, su rendimiento y su estilo de juego. Este es sólo un ejemplo del uso de la simulación en los videojuegos.</p>
 
 </div>
 </div>
 <div class="footnotes">
 <hr />
-<ol start="1">
-<li id="fn1"><p>Vea <em>Joy of Stats</em> en línea en <a href="http://www.gapminder.org/videos/the-joy-of-stats/">http://www.gapminder.org/videos/the-joy-of-stats/</a><a href="introducción.html#fnref1" class="footnote-back">↩︎</a></p></li>
+<ol start="4">
+<li id="fn4"><p>Política del hijo único. (2015, 30 de mayo). En Wikipedia, La enciclopedia libre. Recuperado a las 18:02, 1 de junio de 2015, de <a href="http://en.wikipedia.org/w/index.php?title=One-child_policy&amp;oldid=664745432">http://en.wikipedia.org/w/index.php?title=One-child_policy&amp;oldid=664745432</a><a href="simulación-de-monte-carlo.html#fnref4" class="footnote-back">↩︎</a></p></li>
+<li id="fn5"><p><a href="https://www.cia.gov/library/publications/the-world-factbook/fields/2127.html">World Factbook</a><a href="simulación-de-monte-carlo.html#fnref5" class="footnote-back">↩︎</a></p></li>
+<li id="fn6"><p>Weber, B. G., John, M., Mateas, M., &amp; Jhala, A. (2011). <em>Modeling player retention in Madden NFL 11.</em> Presentado en Innovative Applications of Artificial Intelligence. <a href="http://users.soe.ucsc.edu/~bweber/pubs/madden11retention.pdf">http://users.soe.ucsc.edu/~bweber/pubs/madden11retention.pdf</a><a href="simulación-de-monte-carlo.html#fnref6" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
@@ -214,8 +258,8 @@ $(document).ready(function()
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="modelización-y-simulación.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="generación-de-datos-a-partir-de-modelos.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="modelizando-variación-muestral.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

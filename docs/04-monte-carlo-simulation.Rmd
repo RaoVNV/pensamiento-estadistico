@@ -1,67 +1,64 @@
-#  Monte Carlo Simulation {-}
+#  Simulación de Monte Carlo {-}
 
-Monte Carlo simulation is one method that statisticians use to understand real-world phenomena. In Monte Carlo simulation, a model is used to generate multiple (sometimes millions) of data sets. By examining the data sets produced (or summaries of the data sets produced), researchers can draw insight about and predict what might happen in the real-world under a given set of circumstances. You can read about the fascinating origins of Monte Carlo simulation in the following article: 
+La simulación de Monte Carlo es un método que las personas profesionales en estadística utilizan para comprender los fenómenos del mundo real. En la simulación de Monte Carlo, se utiliza un modelo para generar múltiples (a veces millones) conjuntos de datos. Al examinar los conjuntos de datos producidos (o los resúmenes de los conjuntos de datos producidos), las personas investigadoras pueden obtener información y predecir lo que podría ocurrir en el mundo real en un conjunto determinado de circunstancias. En el siguiente artículo puede leer sobre los fascinantes orígenes de la simulación de Montecarlo: 
 
-- [The Beginning of the Monte Carlo Method](http://www.webpages.uidaho.edu/~stevel/565/literature/The%20Beginning%20of%20Monte%20Carlo%20Method.pdf)
+- [El comienzo del método Monte Carlo](http://www.webpages.uidaho.edu/~stevel/565/literature/The%20Beginning%20of%20Monte%20Carlo%20Method.pdf)
 
 
-### Example of a Monte Carlo Simulation Study {-}
+### Ejemplo de estudio de simulación Monte Carlo {-}
 
-In 1978, China introduced the "one-child" policy in order to alleviate social, economic, and environmental problems in China. According to Wikipedia,^[One-child policy. (2015, May 30). In Wikipedia, The Free Encyclopedia. Retrieved 18:02, June 1, 2015, from [http://en.wikipedia.org/w/index.php?title=One-child_policy&oldid=664745432](http://en.wikipedia.org/w/index.php?title=One-child_policy&oldid=664745432)]
+En 1978, China introdujo la política del "hijo único" para aliviar los problemas sociales, económicos y medioambientales del país. Según Wikipedia,^[Política del hijo único. (2015, 30 de mayo). En Wikipedia, La enciclopedia libre. Recuperado a las 18:02, 1 de junio de 2015, de [http://en.wikipedia.org/w/index.php?title=One-child_policy&oldid=664745432](http://en.wikipedia.org/w/index.php?title=One-child_policy&oldid=664745432)]
 
-> The policy officially restricts the number of children married urban couples can have to one, although it allows exemptions for several cases, including rural couples, ethnic minorities, and parents without any siblings themselves. A spokesperson of the Committee on the One-Child Policy has said that approximately 35.9% of China's population is currently subject to the one-child restriction.
+> La política restringe oficialmente el número de hijos que pueden tener las parejas urbanas casadas a uno, aunque permite exenciones para varios casos, como las parejas rurales, las minorías étnicas y los padres sin hermanos propios. Un portavoz del Comité de la Política de Hijo Único ha dicho que aproximadamente el 35,9% de la población china está actualmente sujeta a la restricción del hijo único.
 
-Although the Chinese government has suggested that the policy has prevented more than 250 million births from its implementation to 2000, the policy is controversial both within and outside of China because of the manner in which the policy has been implemented. There have also been concerns raised about potential negative economic and social consequences, in part because many families were determined to have a son. Scholars have wondered how things would change if instead of a one-child policy, a country adopted a "one son" policy. A "one son" policy would allow families to keep having children until they had a son. If a family's first child is a boy, they would be restricted from having more children. If, however, the first child was a daughter, the family could continue having children until a son was born. For example, they might ask the question,
+Aunque el gobierno chino ha sugerido que la política ha evitado más de 250 millones de nacimientos desde su implantación hasta el año 2000, la política es controvertida tanto dentro como fuera de China por la forma en que se ha aplicado. También han surgido preocupaciones sobre las posibles consecuencias económicas y sociales negativas, en parte porque muchas familias estaban decididas a tener un hijo. Los investigadores se han preguntado cómo cambiarían las cosas si en lugar de una política de un solo hijo, un país adoptara una política de "un niño". Una política de "un niño" permitiría a las familias seguir teniendo hijos hasta que tuvieran un niño. Si el primer hijo de una familia es un niño, se restringiría la posibilidad de tener más hijos. Sin embargo, si el primer hijo fuera una niña, la familia podría seguir teniendo hijos hasta que naciera un niño. Por ejemplo, podrían plantear la pregunta,
 
 
 <!-- <div class="image"> -->
 <!--   <img src="img/speech-bubble.png" /> -->
-<!--   <span class="oval-thought" style="margin-top:20px;"><center><span style="font-size: .9em;">If China adopted a "one son" policy, how would the policy <br /> affect the average number of children per family, which is currently 1.6^[[World Factbook](https://www.cia.gov/library/publications/the-world-factbook/fields/2127.html)]?</span></center></span> -->
+<!--   <span class="oval-thought" style="margin-top:20px;"><center><span style="font-size: .9em;">Si China adoptara la política de "un niño", ¿Cómo afectaría <br /> esta política al número medio de hijos por familia, que actualmente es de 1,6?^[[World Factbook](https://www.cia.gov/library/publications/the-world-factbook/fields/2127.html)]?</span></center></span> -->
 <!-- </div> -->
 
 <center>
 <blockquote class="oval-thought">
-  <p><br />If China adopted a "one son" policy, how would the policy affect the average number of children per family, which is currently 1.6?^[[World Factbook](https://www.cia.gov/library/publications/the-world-factbook/fields/2127.html)]<br /><br /></p>
+  <p><br />Si China adoptara la política de "un niño", ¿Cómo afectaría esta política al número medio de hijos por familia, que actualmente es de 1,6?^[[World Factbook](https://www.cia.gov/library/publications/the-world-factbook/fields/2127.html)]<br /><br /></p>
 </blockquote>
 </center>
 
 <br />
 
-One way in which this question could be studied (without actually implementing the policy) would be to conduct a simulation study by modeling this situation and generating many data sets from the model. Consider for a minute how you might model the number of children a particular family would have. 
+Una forma de estudiar esta pregunta (sin implementar realmente la política) sería realizar un estudio de simulación modelando este escenario y generando muchos conjuntos de datos a partir del modelo. Considere por un minuto cómo se podría modelizar la cantidad de hijos que tendría una familia en particular.
 
-One way to model this is to write the word **boy** on one index card and the word **girl** on another index card and to place those two index cards in a hat. After mixing up the index cards, you could draw a single card from the hat. If the card has the word **boy** written on it, the simulated "family" would be reported to have one child. If the card has the word **girl** written on it, a tally mark could be recorded and the index card would be replaced in the hat. The cards could then be remixed and another card would be drawn. If the second card drawn has the word **boy** written on it, the simulated "family" would be reported to have two children. If the second card has the word **girl** written on it, another tally mark could be recorded and the index card would again be replaced in the hat. This process would continue until the **boy** card was drawn. The table below shows the results after carrying out this process for three simulated families.
+Una forma de modelizar esto es escribir la palabra **niño** en una ficha y la palabra **niña** en otra ficha y colocar esas dos fichas en un sombrero. Después de mezclar las tarjetas, puedes sacar una única tarjeta del sombrero. Si la tarjeta tiene escrita la palabra **niño**, la "familia" simulada tendría un hijo. Si la tarjeta tiene escrita la palabra **niña**, se registraría una marca de recuento y se volvería a colocar la tarjeta en el sombrero. A continuación, se vuelven a mezclar las tarjetas y se extrae otra tarjeta. Si la segunda tarjeta extraída tiene escrita la palabra **niño**, la "familia" simulada tendría dos hijos. Si la segunda tarjeta tiene escrita la palabra **niña**, se registra otra marca de recuento y la tarjeta se vuelve a colocar en el sombrero. Este proceso continuaría hasta que se sacara la tarjeta **niño**. La siguiente tabla muestra los resultados tras realizar este proceso para tres familias simuladas.
 
 <br />
 
 ```{r echo=FALSE}
 d = data.frame(
-  Family = c("Family #1", "Family #2", "Family #3"),
-  Girl   = c("&#10004;", "", "&#10004;&#10004;"),
-  Boy    = c("&#10004;", "&#10004;", "&#10004;")
+  Familia = c("Familia #1", "Familia #2", "Familia #3"),
+  Niña   = c("&#10004;", "", "&#10004;&#10004;"),
+  Niño    = c("&#10004;", "&#10004;", "&#10004;")
 )
-
 knitr::kable(
   d, booktabs = TRUE,
-  caption = 'The recorded number of girls and boys for three simulated families.'
+  caption = 'El número registrado de niñas y niños para tres familias simuladas.'
 )
 ```
 
 <br />
 
-We could carry out this simulation for many families, say 500 families, and use the results to provide an answer to the research question. You can imagine that carrying out even this simple simulation would quickly become quite tedious. Simulation studies, such as this, are typically carried out using computer programs. In this unit, you will learn to use a computer program called TinkerPlots&trade; to model processes in the real-world and carry out simulation studies. 
+Podríamos realizar esta simulación para muchas familias, digamos 500 familias, y utilizar los resultados para dar una respuesta a la pregunta de investigación. Es de imaginar que la realización de esta sencilla simulación se convertiría rápidamente en algo muy tedioso. Los estudios de simulación como éste suelen llevarse a cabo mediante programas informáticos. En esta unidad, aprenderás a utilizar un programa informático llamado TinkerPlots&trade; para modelizar procesos en el mundo real y llevar a cabo estudios de simulación. 
 
-### Monte Carlo Simulation Assumptions {-}
+### Supuestos de la simulación Monte Carlo {-}
 
-"Wait," you say. "Even if I carried out this simulation, I still would not be able to provide an answer to the research question! It doesn't reflect reality! Some families may not want to have any children, while others might be happy to stop after a girl was born. What about multiple births?"
+"Espera", dices. "¡Aunque llevara a cabo esta simulación, seguiría sin poder dar una respuesta a la pregunta de investigación! No refleja la realidad. Algunas familias pueden querer no tener hijos, mientras que otras pueden dejar de tener hijos después de que nazca una niña. ¿Y qué pasa con los partos múltiples?".
 
-Maybe you are even questioning whether the probability of having a boy or having a girl is really 50:50. These are all valid points, and all would likely affect the results of the simulation, which in turn affects the inferences and conclusions that are drawn.
+Tal vez incluso te cuestiones si la probabilidad de tener un niño o de tener una niña es realmente de 50:50. Todos estos puntos son válidos y probablemente afecten a los resultados de la simulación, lo que a su vez afecta a las inferencias y conclusiones que se extraen.
 
-While the model used in the "one son" example is overly simplistic for drawing any sorts of meaningful conclusions about implementing such a policy in China, it could, however, provide a useful starting point for introducing additional complexity. Even in the most enormously complicated modeling problem, researchers often make many simplifying assumptions. (Remember that all models—even those that seem quite complex—are simplifications of reality and get many things wrong.) With enough simplification, a model can be constructed and studied. The model is evaluated and often revised or updated as certain assumptions are deemed tenable and others are not. Because of this process, simulation studies are generally iterative in their development. This iteration process continues until an adequate level of understanding is developed and the research question can be answered.
+Aunque el modelo utilizado en el ejemplo del "un niño" es demasiado simplista para sacar cualquier tipo de conclusiones útiles sobre la aplicación de esa política en China, podría proporcionar un punto de partida útil para introducir complejidades adicionales. Incluso en los problemas de modelización más complicados, los investigadores suelen hacer muchas suposiciones simplificadoras. (Recuérdese que todos los modelos -incluso los que parecen bastante complejos- son simplificaciones de la realidad y se equivocan en muchas cosas). Con suficiente simplificación , se puede construir y estudiar un modelo. El modelo se evalúa y a menudo se revisa o actualiza a medida que ciertos supuestos se consideran sostenibles y otros no. Debido a este proceso, los estudios de simulación suelen ser iterativos en su desarrollo. Este proceso de iteración continúa hasta que se desarrolla un nivel adecuado de comprensión y se puede responder a la pregunta de investigación.
 
-### Monte Carlo Simulation in Practice {-}
+### La Simulación Monte Carlo Simulation en la Práctica {-}
 
-In practice, statisticians often use incredibly complex models to generate their data. As an example, Electronic Arts, the video game company behind titles such as *Madden*, *NHL* and *FIFA*, uses game telemetry (the transmission of data from a game executable for recording and analysis) to model the gameplay patterns of players and identify the elements of their games that are highly correlated with player retention.^[Weber, B. G., John, M., Mateas, M., &amp; Jhala, A. (2011). *Modeling player retention in Madden NFL 11.*  Presented at Innovative Applications of Artificial Intelligence. [http://users.soe.ucsc.edu/~bweber/pubs/madden11retention.pdf](http://users.soe.ucsc.edu/~bweber/pubs/madden11retention.pdf)] 
+En la práctica, las personas profesionales en estadística suelen utilizar modelos increíblemente complejos para generar sus datos. Por ejemplo, Electronic Arts, la empresa de videojuegos que está detrás de títulos como *Madden*, *NHL* y *FIFA*, utiliza la telemetría del juego (la transmisión de datos de un ejecutable del juego para su registro y análisis) para modelizar los patrones de juego de las personas que los juegan e identificar los elementos de sus juegos que están altamente asociados con la retención de las personas que los juegan.^[Weber, B. G., John, M., Mateas, M., &amp; Jhala, A. (2011). *Modeling player retention in Madden NFL 11.* Presentado en Innovative Applications of Artificial Intelligence. [http://users.soe.ucsc.edu/~bweber/pubs/madden11retention.pdf](http://users.soe.ucsc.edu/~bweber/pubs/madden11retention.pdf)]
 
-By understanding the behavior of players and the common patterns that are used, Electronic Arts game developers can focus their attention on more relevant features in future iterations of the game and ultimately reduce production costs. For example, in their examination of *Madden NFL 11*, Electronic Arts used 46 features to model players' preferences, including their control usage, performance, and play-calling style. This is but one example of using simulation in video games. 
-
-
+Al comprender el comportamiento de las personas que juegan y los patrones comunes que se utilizan, las personas desarrolladoras de juegos de Electronic Arts pueden centrar su atención en características más relevantes en futuras iteraciones del juego y, en última instancia, reducir los costes de producción. Por ejemplo, en la examinación de *Madden NFL 11*, Electronic Arts utilizó 46 características para modelizar las preferencias de las personas que juegan, incluyendo su uso del control, su rendimiento y su estilo de juego. Este es sólo un ejemplo del uso de la simulación en los videojuegos.

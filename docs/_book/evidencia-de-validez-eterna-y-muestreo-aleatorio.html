@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Introducción | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre</title>
-  <meta name="description" content="Introducción | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
+  <title>Evidencia de Validez Eterna y Muestreo Aleatorio | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre</title>
+  <meta name="description" content="Evidencia de Validez Eterna y Muestreo Aleatorio | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
   <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Introducción | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
+  <meta property="og:title" content="Evidencia de Validez Eterna y Muestreo Aleatorio | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Introducción | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
+  <meta name="twitter:title" content="Evidencia de Validez Eterna y Muestreo Aleatorio | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
   
   
   
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="modelización-y-simulación.html"/>
+<link rel="prev" href="variación-muestral-y-el-la-prueba-de-bootstrap.html"/>
+<link rel="next" href="pruebas-de-validez-e-inferencias.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -136,8 +136,10 @@ $(document).ready(function()
 <ul>
 <li class="chapter" data-level="" data-path="variación-muestral-y-el-la-prueba-de-bootstrap.html"><a href="variación-muestral-y-el-la-prueba-de-bootstrap.html#variación-muestral"><i class="fa fa-check"></i>Variación Muestral</a></li>
 <li class="chapter" data-level="" data-path="variación-muestral-y-el-la-prueba-de-bootstrap.html"><a href="variación-muestral-y-el-la-prueba-de-bootstrap.html#bootstrapping"><i class="fa fa-check"></i>Bootstrapping</a></li>
-<li class="chapter" data-level="" data-path="variación-muestral-y-el-la-prueba-de-bootstrap.html"><a href="variación-muestral-y-el-la-prueba-de-bootstrap.html#outline-and-goals-of-unit-4"><i class="fa fa-check"></i>Outline and Goals of Unit 4</a></li>
-<li class="chapter" data-level="" data-path="variación-muestral-y-el-la-prueba-de-bootstrap.html"><a href="variación-muestral-y-el-la-prueba-de-bootstrap.html#sesgo-estadístico"><i class="fa fa-check"></i>Sesgo Estadístico</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="evidencia-de-validez-eterna-y-muestreo-aleatorio.html"><a href="evidencia-de-validez-eterna-y-muestreo-aleatorio.html"><i class="fa fa-check"></i>Evidencia de Validez Eterna y Muestreo Aleatorio</a>
+<ul>
+<li class="chapter" data-level="" data-path="evidencia-de-validez-eterna-y-muestreo-aleatorio.html"><a href="evidencia-de-validez-eterna-y-muestreo-aleatorio.html#sesgo-estadístico"><i class="fa fa-check"></i>Sesgo Estadístico</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="pruebas-de-validez-e-inferencias.html"><a href="pruebas-de-validez-e-inferencias.html"><i class="fa fa-check"></i>Pruebas de validez e inferencias</a>
 <ul>
@@ -174,48 +176,61 @@ $(document).ready(function()
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="introducción" class="section level1 unnumbered hasAnchor">
-<h1>Introducción<a href="introducción.html#introducción" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Aprender estadística es sexy. Hal Varian, economista jefe de Google, así lo cree. Durante una <a href="http://www.mckinsey.com/industries/high-tech/our-insights/hal-varian-on-how-the-web-challenges-managers">entrevista en McKinsey Quarterly</a>, Varian declaró: “Sigo diciendo que el trabajo sexy de los próximos diez años será el de profesional en estadística. La gente cree que bromeo, pero ¿quién hubiera imaginado que las personas profesionales en ingenieria informática sería el trabajo sexy de los noventa?”. Varian tampoco es la única persona que expresa este sentimiento. Hans Rosling, en el documental de la BBC de 2010 Joy of Stats<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> se refirió a la estadística como el “tema más sexy que existe”.</p>
-<p>Se crea o no que es la asignatura más sexy, es incontrovertible que el uso de estadísticas y datos prevalece en la actual era de la información. A casi todos los habitantes del planeta les vendrá bien aprender algunas nociones básicas de estadística. Esto es cierto porque la estadística constituye la base de nuestro mundo cotidiano tanto como la ciencia, la tecnología y la política. Google, Netflix, Twitter, Facebook, OKCupid, Match.com, Amazon, iTunes y el Gobierno Federal son sólo algunas de las empresas y organizaciones que utilizan la estadística a diario. El periodismo, las ciencias políticas, la biología, la sociología, la psicología, el diseño gráfico, la economía, las ciencias del deporte y la danza son disciplinas que han hecho uso de la metodología estadística.</p>
-<div id="materiales-del-curso" class="section level3 unnumbered hasAnchor">
-<h3>Materiales del curso<a href="introducción.html#materiales-del-curso" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Los materiales de este sitio web y del manual de laboratorio te presentarán las ideas fundamentales que subyacen a la disciplina estadística. Además, se han diseñado pensando en tu aprendizaje. Por ejemplo, muchas de las actividades de clase se han desarrollado utilizando principios pedagógicos, como las actividades en grupos pequeños y la discusión, que han demostrado en la investigación que mejoran el aprendizaje de las personas estudiantes.</p>
-<p>Las lecturas del curso deben realizarse fuera de clase y están pensadas para ayudarte a aprender y ampliar las ideas, habilidades y conceptos que aprende en el aula. Las lecturas en sí no son todas lecturas “tradicionales” en el sentido de palabras escritas en la pantalla, sino que a menudo enlazan con videoclips, blogs y otro material multimedia.</p>
+<div id="evidencia-de-validez-eterna-y-muestreo-aleatorio" class="section level1 unnumbered hasAnchor">
+<h1>Evidencia de Validez Eterna y Muestreo Aleatorio<a href="evidencia-de-validez-eterna-y-muestreo-aleatorio.html#evidencia-de-validez-eterna-y-muestreo-aleatorio" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>En la inferencia estadística, la generalización se refiere al proceso de utilizar datos de muestra para extraer conclusiones sobre la población más amplia de la que se extrajo la muestra. Los datos de la muestra proporcionan a las personas profesionales en estadística una estimación de la “verdad” exacta sobre la población. Por ejemplo, los datos recogidos de 1.000 estadounidenses sobre sus preferencias de voto pueden utilizarse para inferir las preferencias de voto de toda la población estadounidense. A las personas profesionales en estadística les suele interesar hacer inferencias sobre alguna medida resumen de la población, una media o un porcentaje de población. (<em>Vocabulario:</em> Las medidas de resumen de la población se denominan <strong>parámetros</strong>. Las estimaciones muestrales de los parámetros se denominan <strong>estadísticos</strong>).</p>
+<p>¿Hasta qué punto es útil un estadístico muestral a la hora de estimar un parámetro poblacional? ¿Se pueden hacer inferencias razonables sobre una población a partir de los datos de una muestra? Esta pregunta es el núcleo de la ponderación de las pruebas sobre la validez externa. La validez externa es el grado en que las generalizaciones a una población más amplia son precisas y significativas.</p>
+<p>Hay dos aspectos estadísticos que debemos tener en cuenta al evaluar las pruebas de validez externa: la variación muestral y el sesgo. La variación muestral es la idea de que las estadísticas de diferentes muestras varían. Por ejemplo, siguiendo con el ejemplo anterior, diferentes muestras de 1.000 estadounidenses producirían diferentes estimaciones de las preferencias de voto. Esta variación debe tenerse en cuenta a la hora de realizar las estimaciones. Una forma de pensar en la variación del muestreo es relacionarla con la calidad de la precisión. (Nos centraremos más en esto en la Unidad 5).</p>
+<p>La segunda característica estadística a la que debemos prestar atención es el sesgo. El sesgo estadístico se produce cuando los estadísticos de la muestra difieren sistemáticamente del parámetro de la población. La clave aquí es la palabra “sistemáticamente”. Esto implica que hay algo en el proceso subyacente (aparte de la variación aleatoria) que afecta al proceso de estimación.</p>
+<div id="sesgo-estadístico" class="section level3 unnumbered hasAnchor">
+<h3>Sesgo Estadístico<a href="evidencia-de-validez-eterna-y-muestreo-aleatorio.html#sesgo-estadístico" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Para ayudarte a pensar en el sesgo, imagine que una persona, Arthur Dent, ha perdido sus llaves. La ubicación real de las llaves, la Biblioteca, es similar al parámetro de población. Arthur cree que ha perdido las llaves en el supermercado y busca en varios lugares alrededor del supermercado. Los lugares en los que Arthur busca son como las estadísticas muestrales.</p>
+<p><br /></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:bias-keys"></span>
+<img src="img/bias-keys.png" alt="This figure is a metaphor for statistical bias." width="70%" />
+<p class="caption">
+Figure 1: This figure is a metaphor for statistical bias.
+</p>
 </div>
-<div id="software-tinkerplots-3trade" class="section level3 unnumbered hasAnchor">
-<h3>Software TinkerPlots 3&amp;trade<a href="introducción.html#software-tinkerplots-3trade" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Gran parte del material presentado en el manual de laboratorio requiere el uso de TinkerPlots 3™. Este software puede descargarse (para Mac o PC), y puede adquirirse una licencia en <a href="http://www.tinkerplots.com/">http://www.tinkerplots.com/</a>.</p>
+<p><br /></p>
+<p>La figura <a href="evidencia-de-validez-eterna-y-muestreo-aleatorio.html#fig:bias-keys">1</a> es una metáfora del concepto de sesgo estadístico. Las ubicaciones de búsqueda de Arthur (estadísticas muestrales) están sistemáticamente en el lugar equivocado. Por término medio, el lugar en el que Arthur buscó (el centro del círculo amarillo) no es la ubicación real de las teclas. Compárelo con los lugares de búsqueda de la figura (fig:unbiased-keys).</p>
+<p><br /></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unbiased-keys"></span>
+<img src="img/unbiased-keys.png" alt="This figure is a metaphor for unbiasedness." width="70%" />
+<p class="caption">
+Figure 2: This figure is a metaphor for unbiasedness.
+</p>
 </div>
-<div id="manual-de-laboratorio-y-conjuntos-de-datos" class="section level3 unnumbered hasAnchor">
-<h3>Manual de Laboratorio y Conjuntos de Datos<a href="introducción.html#manual-de-laboratorio-y-conjuntos-de-datos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Trabajarás con el manual de laboratorio todos los días en clase. Por lo tanto, deberás traer una copia del manual de laboratorio (física o electrónica) a clase todos los días. Para descargar una copia en PDF del manual de laboratorio, haga clic en este enlace: <a href="https://github.com/zief0002/statistical-thinking/blob/master/statistical-thinking-v4_3.pdf?raw=true">https://github.com/zief0002/statistical-thinking/blob/master/statistical-thinking-v4_3.pdf?raw=true</a>.</p>
-<p>Hay varios conjuntos de datos utilizados en el manual de laboratorio, así como en las tareas de EPSY 3264. Para descargar en su ordenador un archivo ZIP que incluye todos los conjuntos de datos, haga clic en uno de los enlaces siguientes. Una vez descargado el archivo ZIP en su ordenador, haga doble clic en el archivo ZIP para descomprimirlo y acceder a los materiales.</p>
-<ul>
-<li>Archivos de datos <a href="https://github.com/zief0002/statistical-thinking/blob/master/tp3-data.zip?raw=true">TinkerPlots 3</a></li>
-</ul>
+<p><br /></p>
+<p>La figura <a href="evidencia-de-validez-eterna-y-muestreo-aleatorio.html#fig:unbiased-keys">2</a> es una metáfora del insesgamiento. En promedio, donde Arthur buscó es la ubicación de las claves. Hay un par de conceptos más sobre los que esta metáfora puede ayudarnos a pensar.</p>
+<ol style="list-style-type: decimal">
+<li><p>Incluso en la figura (fig:unbiased-keys), ninguna de las ubicaciones reales de búsqueda estaba justo en las llaves. Algunos estaban demasiado a la izquierda y otros demasiado a la derecha. Sin embargo, EN PROMEDIO, las posiciones de búsqueda “encontraron” las llaves. La forma en que definimos insesgado es que la MEDIA de las estadísticas está en el parámetro de población.</p></li>
+<li><p>La media no tiene nada que ver con el tamaño del círculo amarillo. (El tamaño del círculo está relacionado con la cantidad de variación muestral, un concepto que trataremos en la Unidad 5). Las dos figuras siguientes también ilustran el insesgamiento (izquierda) y el sesgo (derecha), a pesar del tamaño del círculo amarillo.</p></li>
+</ol>
+<div style="float: left; margin-right: 5px;">
+<p><img src="img/unbiased-keys-02.png" width="45%" />
+<img src="img/bias-keys-02.png" width="45%" /></p>
 </div>
-<div id="participación-en-el-proceso-de-aprendizaje" class="section level3 unnumbered hasAnchor">
-<h3>Participación en el Proceso de Aprendizaje<a href="introducción.html#participación-en-el-proceso-de-aprendizaje" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>El manual de laboratorio, el profesorado y asistentes del cruso son recursos que están a tu disposición para ayudarte a aprender la materia. Al final, sin embargo, tendrás que hacer todo el trabajo duro asociado con el aprendizaje real de ese material. Para superar con éxito este proceso, es fundamental que participes activamente en él. Venir a clase, participar en las actividades y discusiones, leer, completar las tareas y hacer preguntas son esenciales para el éxito del aprendizaje.</p>
-<p>Aprender cualquier cosa nueva requiere tiempo y esfuerzo, y esto es especialmente cierto en el caso de la estadística, ya que no se trata sólo de aprender una serie de métodos, sino más bien una forma disciplinada de pensar sobre el mundo. Cambiar los hábitos mentales requiere una práctica continua. También requerirá mucha paciencia y persistencia.</p>
-<p>A medida que vayas aprendiendo y utilizando las habilidades, conceptos e ideas que se presentan en este material, te darás cuenta de que piensas en los datos y las pruebas de una manera diferente. Esto puede llevarte a tomar decisiones u opciones diferentes. Pero, aunque este curso no cambie tu mundo de la noche a la mañana, al menos serás capaz de pensar críticamente sobre las inferencias y conclusiones extraídas de los datos.</p>
+<div style="clear: both;">
+<ol start="3" style="list-style-type: decimal">
+<li>El último concepto sobre el sesgo que hay que señalar es que el sesgo (o la falta de sesgo) es una propiedad del método de muestreo. La razón por la que los lugares de búsqueda no estaban en el lugar correcto es que el método utilizado por Arthur para elegir los lugares de búsqueda estaba sesgado. Pensó que había perdido las llaves en el supermercado, así que buscó allí.</li>
+</ol>
+</div>
+<p>Un método de muestreo insesgado es el muestreo aleatorio o probabilístico. El muestreo aleatorio utiliza el azar para seleccionar las unidades de muestreo (participantes) de la población general. Cuando se ha empleado el muestreo aleatorio en un estudio, el insesgamiento del método de muestreo es una prueba contundente de validez externa; creemos mucho más en las generalizaciones a la población más amplia. En nuestro barómetro de validez estaríamos en el tercio superior (dependiendo de otros factores como el tamaño de la muestra).</p>
+<p><br /></p>
+<p><img src="img/external-validity-evidence-barometer.png" width="70%" style="display: block; margin: auto;" /></p>
+<p><br /></p>
+<p>En este curso, analizaremos y utilizaremos el <a href="https://en.wikipedia.org/wiki/Simple_random_sample">muestreo aleatorio simple</a>. Para extraer una muestra aleatoria simple necesitamos una lista de TODOS los miembros de la población. Esta lista se denomina <em>marco de muestreo</em> o <em>marco muestral</em>. (Obtener un marco de muestreo puede ser muy difícil. Intente obtener una lista de todas las personas que viven en Estados Unidos). A continuación, empleamos el azar para extraer las unidades de muestreo, con la salvedad de que cada unidad del marco de muestreo tiene las mismas probabilidades de ser extraída.</p>
 
 </div>
-</div>
-<div class="footnotes">
-<hr />
-<ol start="1">
-<li id="fn1"><p>Vea <em>Joy of Stats</em> en línea en <a href="http://www.gapminder.org/videos/the-joy-of-stats/">http://www.gapminder.org/videos/the-joy-of-stats/</a><a href="introducción.html#fnref1" class="footnote-back">↩︎</a></p></li>
-</ol>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="modelización-y-simulación.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="variación-muestral-y-el-la-prueba-de-bootstrap.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="pruebas-de-validez-e-inferencias.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

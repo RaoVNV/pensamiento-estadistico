@@ -1,10 +1,10 @@
-# Generating Data from Models {-}
+# Generación de Datos a partir de Modelos {-}
 
-One core skill of a practicing statistician is to be able to generate random data from a model. Most of the models you will encounter in this course are referred to as *probability models*. That is just a fancy way of associating probabilities with different events, or outcomes, in a model. 
+Una de las habilidades principales de una persona profesional en estadística aplicada es poder generar datos aleatorios a partir de un modelo. La mayoría de los modelos que encontrarás en este curso se denominan *modelos de probabilidad* o *modelos probabilísticos*. Lo anterior es sólo una forma elegante de asociar probabilidades con diferentes eventos o resultados en un modelo.
 
-For example, the model of flipping a "fair" coin is a probability model. There are two events/outcomes in the model: heads and tails. Each of these outcomes has a probability of 0.5 associated with it. (Note that although we could say 50%, that probabilities are on the scale from 0 to 1, so are defined using decimal values.) 
+Por ejemplo, el modelo de lanzar una moneda "justa" es un modelo de probabilidad. Hay dos eventos/resultados en el modelo: cara y cruz. Cada uno de estos resultados tiene asociada una probabilidad de 0,5. (Tenga en cuenta que aunque podríamos decir 50%, las probabilidades están en la escala de 0 a 1, por lo que se definen usando valores decimales).
 
-In the in-class activity, *Generating Random Data*, you will create several probability models to generate data about cats. To prepare for this activity, watch the [Probability Simulation](http://www.tinkerplots.com/movies/probability-simulation) TinkerPlots&trade; tutorial video.
+En la actividad de clase: *Generación de datos aleatorios*, crearás varios modelos probabilísticos para generar datos sobre gatos. Para prepararse para esta actividad, vea el vídeo tutorial [Simulación de Probabilidad](http://www.tinkerplots.com/movies/probability-simulation) TinkerPlots&trade;.
 
 
 <br />

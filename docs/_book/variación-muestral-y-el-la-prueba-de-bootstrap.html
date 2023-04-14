@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Introducción | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre</title>
-  <meta name="description" content="Introducción | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
+  <title>Variación Muestral y el la Prueba de Bootstrap | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre</title>
+  <meta name="description" content="Variación Muestral y el la Prueba de Bootstrap | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
   <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Introducción | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
+  <meta property="og:title" content="Variación Muestral y el la Prueba de Bootstrap | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Introducción | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
+  <meta name="twitter:title" content="Variación Muestral y el la Prueba de Bootstrap | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
   
   
   
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="modelización-y-simulación.html"/>
+<link rel="prev" href="evidencia-de-validez-interna-y-asignación-aleatoria.html"/>
+<link rel="next" href="pruebas-de-validez-e-inferencias.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -136,7 +136,6 @@ $(document).ready(function()
 <ul>
 <li class="chapter" data-level="" data-path="variación-muestral-y-el-la-prueba-de-bootstrap.html"><a href="variación-muestral-y-el-la-prueba-de-bootstrap.html#variación-muestral"><i class="fa fa-check"></i>Variación Muestral</a></li>
 <li class="chapter" data-level="" data-path="variación-muestral-y-el-la-prueba-de-bootstrap.html"><a href="variación-muestral-y-el-la-prueba-de-bootstrap.html#bootstrapping"><i class="fa fa-check"></i>Bootstrapping</a></li>
-<li class="chapter" data-level="" data-path="variación-muestral-y-el-la-prueba-de-bootstrap.html"><a href="variación-muestral-y-el-la-prueba-de-bootstrap.html#outline-and-goals-of-unit-4"><i class="fa fa-check"></i>Outline and Goals of Unit 4</a></li>
 <li class="chapter" data-level="" data-path="variación-muestral-y-el-la-prueba-de-bootstrap.html"><a href="variación-muestral-y-el-la-prueba-de-bootstrap.html#sesgo-estadístico"><i class="fa fa-check"></i>Sesgo Estadístico</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="pruebas-de-validez-e-inferencias.html"><a href="pruebas-de-validez-e-inferencias.html"><i class="fa fa-check"></i>Pruebas de validez e inferencias</a>
@@ -174,48 +173,41 @@ $(document).ready(function()
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="introducción" class="section level1 unnumbered hasAnchor">
-<h1>Introducción<a href="introducción.html#introducción" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Aprender estadística es sexy. Hal Varian, economista jefe de Google, así lo cree. Durante una <a href="http://www.mckinsey.com/industries/high-tech/our-insights/hal-varian-on-how-the-web-challenges-managers">entrevista en McKinsey Quarterly</a>, Varian declaró: “Sigo diciendo que el trabajo sexy de los próximos diez años será el de profesional en estadística. La gente cree que bromeo, pero ¿quién hubiera imaginado que las personas profesionales en ingenieria informática sería el trabajo sexy de los noventa?”. Varian tampoco es la única persona que expresa este sentimiento. Hans Rosling, en el documental de la BBC de 2010 Joy of Stats<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> se refirió a la estadística como el “tema más sexy que existe”.</p>
-<p>Se crea o no que es la asignatura más sexy, es incontrovertible que el uso de estadísticas y datos prevalece en la actual era de la información. A casi todos los habitantes del planeta les vendrá bien aprender algunas nociones básicas de estadística. Esto es cierto porque la estadística constituye la base de nuestro mundo cotidiano tanto como la ciencia, la tecnología y la política. Google, Netflix, Twitter, Facebook, OKCupid, Match.com, Amazon, iTunes y el Gobierno Federal son sólo algunas de las empresas y organizaciones que utilizan la estadística a diario. El periodismo, las ciencias políticas, la biología, la sociología, la psicología, el diseño gráfico, la economía, las ciencias del deporte y la danza son disciplinas que han hecho uso de la metodología estadística.</p>
-<div id="materiales-del-curso" class="section level3 unnumbered hasAnchor">
-<h3>Materiales del curso<a href="introducción.html#materiales-del-curso" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Los materiales de este sitio web y del manual de laboratorio te presentarán las ideas fundamentales que subyacen a la disciplina estadística. Además, se han diseñado pensando en tu aprendizaje. Por ejemplo, muchas de las actividades de clase se han desarrollado utilizando principios pedagógicos, como las actividades en grupos pequeños y la discusión, que han demostrado en la investigación que mejoran el aprendizaje de las personas estudiantes.</p>
-<p>Las lecturas del curso deben realizarse fuera de clase y están pensadas para ayudarte a aprender y ampliar las ideas, habilidades y conceptos que aprende en el aula. Las lecturas en sí no son todas lecturas “tradicionales” en el sentido de palabras escritas en la pantalla, sino que a menudo enlazan con videoclips, blogs y otro material multimedia.</p>
+<div id="variación-muestral-y-el-la-prueba-de-bootstrap" class="section level1 unnumbered hasAnchor">
+<h1>Variación Muestral y el la Prueba de Bootstrap<a href="variación-muestral-y-el-la-prueba-de-bootstrap.html#variación-muestral-y-el-la-prueba-de-bootstrap" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>En la Unidad 3, descubrimos que, incluso bajo la hipótesis nula de ausencia de diferencias de grupo, las medias de grupo de los estudios aleatorizados varían debido a la variación experimental. Es decir, la variación en el resultado se produce debido a la asignación aleatoria. Recordemos que en la Unidad 2, la variación aleatoria fue una función del proceso de muestreo; diferentes muestras extraídas de la población (modelo) produjeron diferentes resultados. Cuando los resultados varían debido al proceso de muestreo, la variación aleatoria se denomina <strong>variación muestral</strong>.</p>
+<div id="variación-muestral" class="section level3 unnumbered hasAnchor">
+<h3>Variación Muestral<a href="variación-muestral-y-el-la-prueba-de-bootstrap.html#variación-muestral" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Algunos diseños para la comparación de grupos también se ven afectados por la variación del muestreo. Por ejemplo, un diseño que emplea el muestreo aleatorio para obtener observaciones se vería inherentemente afectado por la variación del muestreo. Consideremos el siguiente estudio, que examina si los nombres de los bebés son cada vez más cortos con el paso del tiempo.</p>
+<blockquote>
+<p>La Administración de la Seguridad Social (SSA) proporciona datos históricos sobre los nombres de todos los bebés nacidos en Estados Unidos. Los investigadores utilizaron la población de todos los nombres que figuraban al menos cinco veces en la base de datos de la SSA para tomar muestras aleatorias de 25 nombres de bebés nacidos en 1945 y 25 nombres de bebés nacidos en 1995. Se calculó la longitud (en letras) de cada nombre y se compararon las dos muestras.</p>
+</blockquote>
+<p><br /></p>
+<p><img src="img/babynames-data.png" width="50%" style="display: block; margin: auto;" /></p>
+<p><br /></p>
+<p>El gráfico anterior muestra la distribución de la longitud de los nombres en las dos muestras. Los bebés nacidos en 1995 tienen nombres más cortos, en promedio, que los bebés nacidos en 1945. Esta diferencia de medias es de 0,72. ¿Es esta diferencia una prueba de que los nombres de los bebés son cada vez más cortos?</p>
+<p>Para responder a esta pregunta, tenemos que saber cuánta variación esperamos en las diferencias de medias debido al azar. Aquí, el azar es una función del proceso de muestreo aleatorio; nótese que no hay asignación aleatoria a grupos (año) en estos datos. De forma similar a la prueba de aleatorización, necesitamos especificar un modelo de “no diferencia” y luego simular a partir de él. Pero, en la simulación, necesitamos modelar el muestreo aleatorio que se utilizó para generar los datos, no la asignación aleatoria a los grupos.</p>
 </div>
-<div id="software-tinkerplots-3trade" class="section level3 unnumbered hasAnchor">
-<h3>Software TinkerPlots 3&amp;trade<a href="introducción.html#software-tinkerplots-3trade" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Gran parte del material presentado en el manual de laboratorio requiere el uso de TinkerPlots 3™. Este software puede descargarse (para Mac o PC), y puede adquirirse una licencia en <a href="http://www.tinkerplots.com/">http://www.tinkerplots.com/</a>.</p>
-</div>
-<div id="manual-de-laboratorio-y-conjuntos-de-datos" class="section level3 unnumbered hasAnchor">
-<h3>Manual de Laboratorio y Conjuntos de Datos<a href="introducción.html#manual-de-laboratorio-y-conjuntos-de-datos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Trabajarás con el manual de laboratorio todos los días en clase. Por lo tanto, deberás traer una copia del manual de laboratorio (física o electrónica) a clase todos los días. Para descargar una copia en PDF del manual de laboratorio, haga clic en este enlace: <a href="https://github.com/zief0002/statistical-thinking/blob/master/statistical-thinking-v4_3.pdf?raw=true">https://github.com/zief0002/statistical-thinking/blob/master/statistical-thinking-v4_3.pdf?raw=true</a>.</p>
-<p>Hay varios conjuntos de datos utilizados en el manual de laboratorio, así como en las tareas de EPSY 3264. Para descargar en su ordenador un archivo ZIP que incluye todos los conjuntos de datos, haga clic en uno de los enlaces siguientes. Una vez descargado el archivo ZIP en su ordenador, haga doble clic en el archivo ZIP para descomprimirlo y acceder a los materiales.</p>
-<ul>
-<li>Archivos de datos <a href="https://github.com/zief0002/statistical-thinking/blob/master/tp3-data.zip?raw=true">TinkerPlots 3</a></li>
-</ul>
-</div>
-<div id="participación-en-el-proceso-de-aprendizaje" class="section level3 unnumbered hasAnchor">
-<h3>Participación en el Proceso de Aprendizaje<a href="introducción.html#participación-en-el-proceso-de-aprendizaje" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>El manual de laboratorio, el profesorado y asistentes del cruso son recursos que están a tu disposición para ayudarte a aprender la materia. Al final, sin embargo, tendrás que hacer todo el trabajo duro asociado con el aprendizaje real de ese material. Para superar con éxito este proceso, es fundamental que participes activamente en él. Venir a clase, participar en las actividades y discusiones, leer, completar las tareas y hacer preguntas son esenciales para el éxito del aprendizaje.</p>
-<p>Aprender cualquier cosa nueva requiere tiempo y esfuerzo, y esto es especialmente cierto en el caso de la estadística, ya que no se trata sólo de aprender una serie de métodos, sino más bien una forma disciplinada de pensar sobre el mundo. Cambiar los hábitos mentales requiere una práctica continua. También requerirá mucha paciencia y persistencia.</p>
-<p>A medida que vayas aprendiendo y utilizando las habilidades, conceptos e ideas que se presentan en este material, te darás cuenta de que piensas en los datos y las pruebas de una manera diferente. Esto puede llevarte a tomar decisiones u opciones diferentes. Pero, aunque este curso no cambie tu mundo de la noche a la mañana, al menos serás capaz de pensar críticamente sobre las inferencias y conclusiones extraídas de los datos.</p>
+<div id="bootstrapping" class="section level3 unnumbered hasAnchor">
+<h3>Bootstrapping<a href="variación-muestral-y-el-la-prueba-de-bootstrap.html#bootstrapping" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Si tuviéramos la población más grande de todos los nombres de bebés de 1945 y 1995, podríamos combinarlos todos y extraer dos muestras aleatorias de tamaño 25 de esta megapoblación; una muestra la etiquetamos como “1945” y la otra como “1995”. (Combinamos las dos poblaciones porque el modelo hipotético de “sin diferencias” implica que en realidad sólo hay una población; ninguna diferencia entre las dos poblaciones). Podríamos hacer esto muchas veces, recogiendo cada vez la diferencia en las longitudes medias de los nombres entre las dos muestras. Trazando la diferencia de medias y calculando la desviación estándar de estas diferencias, podríamos cuantificar la cantidad de variación que esperamos sólo debido a la variación del muestreo.</p>
+<p>Por desgracia, no disponemos de la población de nombres de bebés de 1945 y 1995. Lo que tenemos es una muestra aleatoria de esos nombres. Así que vamos a combinar los nombres de nuestras dos muestras para formar una “megapoblación”. A continuación, vamos a extraer dos muestras aleatorias de tamaño 25 de esta “megapoblación”.</p>
+<p>Un momento. Cuando combinamos nuestras dos muestras, nuestra “megapoblación” sólo tenía 50 nombres. Si extraemos dos muestras, cada una de tamaño 25, de esta “megapoblación”, ¿no es toda la “megapoblación”? Si hacemos eso, ¿no es lo mismo que la prueba de aleatorización? ¿Cómo nos permite modelizar el error de muestreo? Después de todo, la prueba de aleatorización ayuda a modelar el error experimental.</p>
+<p>Todo esto es cierto. Sin embargo, podemos modelar el error de muestreo con un giro. Cuando extraemos nuestros 25 nombres para cada muestra de nuestra “megapoblación”, muestreamos CON REEMPLAZO. De este modo, imitamos la extracción de muestras aleatorias de una población mayor sin necesitar realmente dicha población. Se trata de un método realmente ingenioso llamado <strong>bootstrapping</strong> desarrollado por Brad Efron a finales de la década de 1970. El gran descubrimiento de Efron fue que mediante el bootstrapping (muestreo con sustitución) a partir de una muestra aleatoria, se podía obtener una buena estimación de la variación muestral.</p>
 
 </div>
+<div id="sesgo-estadístico" class="section level3 unnumbered hasAnchor">
+<h3>Sesgo Estadístico<a href="variación-muestral-y-el-la-prueba-de-bootstrap.html#sesgo-estadístico" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+
 </div>
-<div class="footnotes">
-<hr />
-<ol start="1">
-<li id="fn1"><p>Vea <em>Joy of Stats</em> en línea en <a href="http://www.gapminder.org/videos/the-joy-of-stats/">http://www.gapminder.org/videos/the-joy-of-stats/</a><a href="introducción.html#fnref1" class="footnote-back">↩︎</a></p></li>
-</ol>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="modelización-y-simulación.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="evidencia-de-validez-interna-y-asignación-aleatoria.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="pruebas-de-validez-e-inferencias.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

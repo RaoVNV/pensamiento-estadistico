@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Introducción | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre</title>
-  <meta name="description" content="Introducción | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
+  <title>Describiendo Distribuciones | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre</title>
+  <meta name="description" content="Describiendo Distribuciones | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
   <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Introducción | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
+  <meta property="og:title" content="Describiendo Distribuciones | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Introducción | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
+  <meta name="twitter:title" content="Describiendo Distribuciones | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
   
   
   
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="modelización-y-simulación.html"/>
+<link rel="prev" href="modelizando-variación-muestral.html"/>
+<link rel="next" href="variación-experimental-y-la-prueba-de-aleatoriedad.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -174,39 +174,76 @@ $(document).ready(function()
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="introducción" class="section level1 unnumbered hasAnchor">
-<h1>Introducción<a href="introducción.html#introducción" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Aprender estadística es sexy. Hal Varian, economista jefe de Google, así lo cree. Durante una <a href="http://www.mckinsey.com/industries/high-tech/our-insights/hal-varian-on-how-the-web-challenges-managers">entrevista en McKinsey Quarterly</a>, Varian declaró: “Sigo diciendo que el trabajo sexy de los próximos diez años será el de profesional en estadística. La gente cree que bromeo, pero ¿quién hubiera imaginado que las personas profesionales en ingenieria informática sería el trabajo sexy de los noventa?”. Varian tampoco es la única persona que expresa este sentimiento. Hans Rosling, en el documental de la BBC de 2010 Joy of Stats<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> se refirió a la estadística como el “tema más sexy que existe”.</p>
-<p>Se crea o no que es la asignatura más sexy, es incontrovertible que el uso de estadísticas y datos prevalece en la actual era de la información. A casi todos los habitantes del planeta les vendrá bien aprender algunas nociones básicas de estadística. Esto es cierto porque la estadística constituye la base de nuestro mundo cotidiano tanto como la ciencia, la tecnología y la política. Google, Netflix, Twitter, Facebook, OKCupid, Match.com, Amazon, iTunes y el Gobierno Federal son sólo algunas de las empresas y organizaciones que utilizan la estadística a diario. El periodismo, las ciencias políticas, la biología, la sociología, la psicología, el diseño gráfico, la economía, las ciencias del deporte y la danza son disciplinas que han hecho uso de la metodología estadística.</p>
-<div id="materiales-del-curso" class="section level3 unnumbered hasAnchor">
-<h3>Materiales del curso<a href="introducción.html#materiales-del-curso" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Los materiales de este sitio web y del manual de laboratorio te presentarán las ideas fundamentales que subyacen a la disciplina estadística. Además, se han diseñado pensando en tu aprendizaje. Por ejemplo, muchas de las actividades de clase se han desarrollado utilizando principios pedagógicos, como las actividades en grupos pequeños y la discusión, que han demostrado en la investigación que mejoran el aprendizaje de las personas estudiantes.</p>
-<p>Las lecturas del curso deben realizarse fuera de clase y están pensadas para ayudarte a aprender y ampliar las ideas, habilidades y conceptos que aprende en el aula. Las lecturas en sí no son todas lecturas “tradicionales” en el sentido de palabras escritas en la pantalla, sino que a menudo enlazan con videoclips, blogs y otro material multimedia.</p>
+<div id="describiendo-distribuciones" class="section level1 unnumbered hasAnchor">
+<h1>Describiendo Distribuciones<a href="describiendo-distribuciones.html#describiendo-distribuciones" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Un paso importante en cualquier análisis estadístico es el de resumir los datos. Es una buena práctica examinar tanto un resumen gráfico como uno numérico de los datos. Estos resúmenes suelen formar parte de las pruebas que las personas investigadoras utilizan para respaldar las conclusiones extraídas de los datos. También permiten a las personas investigadores descubrir estructuras que, de otro modo, podrían haberse pasado por alto en los datos brutos recopilados. Por último, los resúmenes gráficos y numéricos de los datos a menudo apuntan a otros análisis que pueden realizarse con los datos.</p>
+<p>Una vez recogidos los datos brutos en un estudio, puede resultar abrumador extraer de ellos cualquier tipo de significado. Por ejemplo, no es raro que Google maneje millones de casos. ¿Cómo puede Google, o cualquier persona investigadora, pasar de todos esos datos brutos a algo que le ayude a responder a sus preguntas de investigación?</p>
+<p>En lugar de examinar todos esos casos individualmente, las personas investigadores examinan los datos de forma colectiva, a menudo representándolos gráficamente. Esto es lo que se entiende por resumen gráfico de los datos; es, literalmente, una imagen de la distribución.</p>
+<p>Se han creado muchísimos tipos de gráficos para resumir los datos. Cada uno de ellos puede proporcionar una representación ligeramente diferente de los datos. Metafóricamente, se puede imaginar cada uno de estos diferentes tipos de gráficos como una foto diferente tomada a la misma persona. Algunas pueden ser en color, otras en blanco y negro. Algunas pueden tomarse desde perspectivas, ángulos o distancias diferentes. Aunque todas las fotografías “resumen” a la misma persona, es posible que observe características de esa persona en algunas fotos que no son evidentes en otras. Sin embargo, muchas de las fotos mostrarán lo mismo.</p>
+<div id="forma" class="section level3 unnumbered hasAnchor">
+<h3>Forma<a href="describiendo-distribuciones.html#forma" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>El gráfico de puntos que proporciona TinkerPlots™ es un gráfico muy útil. <a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a>. Nos permite resumir la forma de la distribución muy fácilmente. La forma se utiliza para describir la simetría de una distribución. Como es de esperar, las distribuciones simétricas tienen la misma forma a ambos lados del centro. (Otra forma de pensar en esto es que si doblara la distribución por el centro, la mitad doblada de la distribución se alinearía bastante bien sobre la otra mitad). Por ejemplo, las distribuciones “en forma de campana” (“aproximadamente normales”) son simétricas.</p>
+<p>Cuando una distribución es asimétrica, se denomina <strong>distribución sesgada</strong>. La distribución de la Figura 1 es una distribución asimétrica. En esta distribución, parece haber una cola más larga en el lado derecho de la distribución. Como la cola está en el lado derecho de la distribución, los estadísticos dirían que está “sesgada a la derecha” o “sesgada positivamente”. Del mismo modo, una distribución que tiene la cola a la izquierda está “sesgada a la izquierda” o “sesgada negativamente”.</p>
+<p><br /></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-1"></span>
+<img src="img/skewed-right.png" alt="This distribution is skewed to the right, or positively skewed." width="50%" />
+<p class="caption">
+Figure 1: This distribution is skewed to the right, or positively skewed.
+</p>
 </div>
-<div id="software-tinkerplots-3trade" class="section level3 unnumbered hasAnchor">
-<h3>Software TinkerPlots 3&amp;trade<a href="introducción.html#software-tinkerplots-3trade" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Gran parte del material presentado en el manual de laboratorio requiere el uso de TinkerPlots 3™. Este software puede descargarse (para Mac o PC), y puede adquirirse una licencia en <a href="http://www.tinkerplots.com/">http://www.tinkerplots.com/</a>.</p>
+<p><br /></p>
 </div>
-<div id="manual-de-laboratorio-y-conjuntos-de-datos" class="section level3 unnumbered hasAnchor">
-<h3>Manual de Laboratorio y Conjuntos de Datos<a href="introducción.html#manual-de-laboratorio-y-conjuntos-de-datos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Trabajarás con el manual de laboratorio todos los días en clase. Por lo tanto, deberás traer una copia del manual de laboratorio (física o electrónica) a clase todos los días. Para descargar una copia en PDF del manual de laboratorio, haga clic en este enlace: <a href="https://github.com/zief0002/statistical-thinking/blob/master/statistical-thinking-v4_3.pdf?raw=true">https://github.com/zief0002/statistical-thinking/blob/master/statistical-thinking-v4_3.pdf?raw=true</a>.</p>
-<p>Hay varios conjuntos de datos utilizados en el manual de laboratorio, así como en las tareas de EPSY 3264. Para descargar en su ordenador un archivo ZIP que incluye todos los conjuntos de datos, haga clic en uno de los enlaces siguientes. Una vez descargado el archivo ZIP en su ordenador, haga doble clic en el archivo ZIP para descomprimirlo y acceder a los materiales.</p>
-<ul>
-<li>Archivos de datos <a href="https://github.com/zief0002/statistical-thinking/blob/master/tp3-data.zip?raw=true">TinkerPlots 3</a></li>
-</ul>
+<div id="posición" class="section level3 unnumbered hasAnchor">
+<h3>Posición<a href="describiendo-distribuciones.html#posición" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Aparte de la forma general de la distribución, también es útil resumir la posición de la distribución. La posición de la distribución proporciona un resumen del denominado valor “típico” de los datos. Un valor “típico” puede obtenerse a partir del gráfico de la distribución. También se pueden utilizar resúmenes de la posición calculados de manera más formal, como la media, la mediana o la moda. Estos valores se calculan fácilmente utilizando TinkerPlots™.</p>
+<p>Al observar un gráfico de una distribución, los analistas de datos a menudo consideran el número de modas o “motañas” que se ven en un gráfico de la distribución. Aquí, el concepto de moda es ligeramente diferente (aunque relacionado) al concepto de moda que usted puede haber aprendido en cursos previos de matemáticas o estadística. La moda de una distribución da una idea general de los valores o medidas que ocurren con frecuencia. Puede ser un único número, pero muchas veces no lo es. Por ejemplo, la primera montaña de la distribución mostrada en la figura siguiente sugiere que los valores en torno a nueve son muy comunes. Sin embargo, es posible que el valor real de nueve sólo aparezca una o dos veces en los datos.</p>
+<p><br /></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
+<img src="img/bimodal.png" alt="A bimodal distribution showing two modes. One mode is around 9, and the other is near 12." width="50%" />
+<p class="caption">
+Figure 2: A bimodal distribution showing two modes. One mode is around 9, and the other is near 12.
+</p>
 </div>
-<div id="participación-en-el-proceso-de-aprendizaje" class="section level3 unnumbered hasAnchor">
-<h3>Participación en el Proceso de Aprendizaje<a href="introducción.html#participación-en-el-proceso-de-aprendizaje" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>El manual de laboratorio, el profesorado y asistentes del cruso son recursos que están a tu disposición para ayudarte a aprender la materia. Al final, sin embargo, tendrás que hacer todo el trabajo duro asociado con el aprendizaje real de ese material. Para superar con éxito este proceso, es fundamental que participes activamente en él. Venir a clase, participar en las actividades y discusiones, leer, completar las tareas y hacer preguntas son esenciales para el éxito del aprendizaje.</p>
-<p>Aprender cualquier cosa nueva requiere tiempo y esfuerzo, y esto es especialmente cierto en el caso de la estadística, ya que no se trata sólo de aprender una serie de métodos, sino más bien una forma disciplinada de pensar sobre el mundo. Cambiar los hábitos mentales requiere una práctica continua. También requerirá mucha paciencia y persistencia.</p>
-<p>A medida que vayas aprendiendo y utilizando las habilidades, conceptos e ideas que se presentan en este material, te darás cuenta de que piensas en los datos y las pruebas de una manera diferente. Esto puede llevarte a tomar decisiones u opciones diferentes. Pero, aunque este curso no cambie tu mundo de la noche a la mañana, al menos serás capaz de pensar críticamente sobre las inferencias y conclusiones extraídas de los datos.</p>
+<p><br /></p>
+<p>Una distribución puede ser <strong>unimodal</strong> (una moda), <strong>bimodal</strong> (dos modas), <strong>multimodal</strong> (muchas modas) o <strong>uniforme</strong> (sin modas). La distribución mostrada arriba es bimodal—observa que hay dos montañas. Las distribuciones uniformes tienen aproximadamente la misma frecuencia para todos los valores posibles (parecen esencialmente planas) y, por tanto, no tienen modas.</p>
+</div>
+<div id="variación" class="section level3 unnumbered hasAnchor">
+<h3>Variación<a href="describiendo-distribuciones.html#variación" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Una tercera característica de una distribución que debe resumirse es la variación o variabilidad. Resumir la variación da una indicación de lo variables que son los datos. Un método para resumir numéricamente la variabilidad de los datos consiste en cuantificar la proximidad de las observaciones con respecto al valor “típico” medio. ¿Están las observaciones en su mayoría cerca del valor “típico”? ¿Están lejos del valor “típico”? ¿Qué tan cerca?</p>
+<p>Resulta que la forma de la distribución también ayuda a describir la variación de los datos. Por ejemplo, las distribuciones “en forma de campana” tienen la mayoría de las observaciones cerca del valor “típico”, y las observaciones más extremas aparecen tanto por debajo como por encima del valor “típico” (la variación es la misma a ambos lados del valor “típico”). Mientras que las distribuciones sesgadas tienen muchas observaciones cerca del valor “típico”, pero los valores extremos sólo se desvían de este valor en una dirección (hay más variación en los datos a un lado del valor “típico” que al otro).</p>
+<p><br /></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-3"></span>
+<img src="img/skewed-right.png" alt="Most of the observations in this distribution are clustered between 0 and 2. There are some observations greater than 2 (up to 10), although these are rare." width="50%" />
+<p class="caption">
+Figure 3: Most of the observations in this distribution are clustered between 0 and 2. There are some observations greater than 2 (up to 10), although these are rare.
+</p>
+</div>
+<p><br /></p>
+<p>Una cosa que afecta la variación, y que debe describirse, es si hay observaciones que sobresalen de las demás observaciones. A menudo, estas observaciones tienen valores extremadamente grandes o pequeños en relación con las demás observaciones. Estas observaciones se denominan <strong>posibles valores atípicos</strong>, o <strong>casos extremos</strong>. Por ejemplo, en la distribución sesgada positivamente mostrada anteriormente, la observación que tiene un valor cercano a 10 probablemente se consideraría un valor atípico potencial.</p>
+</div>
+<div id="uniéndolo-todo" class="section level3 unnumbered hasAnchor">
+<h3>Uniéndolo todo<a href="describiendo-distribuciones.html#uniéndolo-todo" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><a href="https://www.rottentomatoes.com/">Rotten Tomatoes</a> es un sitio web que recopila críticas de películas. El sitio web califica cada crítica como positiva o negativa y luego da a la película una puntuación basada en el porcentaje de críticas positivas. Además de la puntuación de los críticos, cada película también recibe una puntuación basada en las críticas del público general utilizando la misma metodología (las críticas se tabulan de forma que la puntuación represente el porcentaje de críticas positivas del público general). El gráfico siguiente muestra la distribución de las puntuaciones del público en general para 134 películas estrenadas en 2009.</p>
+<p><br /></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
+<img src="img/rotton-tomatoes.png" alt="The scores for 134 movies released in 2009 based on the general public’s reviews. The scores represent the percentage of positive reviews for each movie." width="50%" />
+<p class="caption">
+Figure 4: The scores for 134 movies released in 2009 based on the general public’s reviews. The scores represent the percentage of positive reviews for each movie.
+</p>
+</div>
+<p><br /></p>
+<p>Una descripción escrita de la distribución podría ser la siguiente:</p>
+<blockquote>
+<p>La distribución de las puntuaciones de esta muestra de 134 películas es bastante simétrica. La puntuación media de estas películas se aproxima a 60, lo que indica que una película típica estrenada en 2009 recibe críticas positivas de aproximadamente el 60% del público. La distribución también indica que hay variación en las puntuaciones de las películas. La mayoría de las películas de la muestra tienen una puntuación entre 35 y 85, lo que sugiere grandes diferencias en la opinión del público sobre la calidad de estas películas.</p>
+</blockquote>
+<p>Observe que la descripción incluye una descripción de la forma, la ubicación y la variación de la distribución. También incorpora el contexto de los datos, en este caso las puntuaciones de las películas. Esto ayuda al lector a interpretar la descripción.</p>
 
 </div>
 </div>
 <div class="footnotes">
 <hr />
-<ol start="1">
-<li id="fn1"><p>Vea <em>Joy of Stats</em> en línea en <a href="http://www.gapminder.org/videos/the-joy-of-stats/">http://www.gapminder.org/videos/the-joy-of-stats/</a><a href="introducción.html#fnref1" class="footnote-back">↩︎</a></p></li>
+<ol start="4">
+<li id="fn4"><p>TinkerPlots™ también proporciona otros tipos de gráficos, como el gráfico de caja (a veces llamado gráfico de caja y bigotes) y el gráfico de sombrero (una variación del gráfico de caja)<a href="describiendo-distribuciones.html#fnref4" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
@@ -214,8 +251,8 @@ $(document).ready(function()
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="modelización-y-simulación.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="modelizando-variación-muestral.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="variación-experimental-y-la-prueba-de-aleatoriedad.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

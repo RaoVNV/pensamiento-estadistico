@@ -1,25 +1,25 @@
-# Internal Validity Evidence and Random Assignment {-}
+# Evidencia de Validez Interna y Asignación Aleatoria {-}
 
-Medical researchers may be interested in showing that a drug helps improve people's health (the cause of improvement is the drug), while educational researchers may be interested in showing a curricular innovation improves students' learning (the curricular innovation causes improved learning). 
-To attribute a causal relationship, there are three criteria a researcher needs to establish:
+Las personas investigadoras en medicina pueden estar interesadas en demostrar que un fármaco ayuda a mejorar la salud de las personas (la causa de la mejora es el fármaco), mientras que las personas investigadoras en educacion pueden estar interesadas en demostrar que una innovación curricular mejora el aprendizaje del alumnado (la innovación curricular causa la mejora del aprendizaje). 
+Para atribuir una relación causal, la persona investigadora debe establecer tres criterios:
 
-- **Temporal Precedence:** The cause needs to happen BEFORE the effect.
-- **Covariation of the Cause and Effect:** There needs to be a correlational relationship between the cause and effect.
-- **No Plausible Alternative Explanations:** ALL other possible explanations for the effect need to be ruled out.
+- **Precedencia temporal:** La causa debe producirse ANTES que el efecto.
+- **Covariación de la causa y el efecto:** Tiene que haber una relación correlacional entre la causa y el efecto.
+- **No hay explicaciones alternativas plausibles:** Es necesario descartar TODAS las demás explicaciones posibles del efecto.
 
-Because of this third criteria, attributing a cause-and-effect relationship is very difficult. (You can read more about each of these criteria at the [Web Center for Social Research Methods](https://www.socialresearchmethods.net/kb/causeeff.php).)
+Debido a este tercer criterio, atribuir una relación causa-efecto es muy difícil. (Puede obtener más información sobre cada uno de estos criterios en el [Web Center for Social Research Methods](https://www.socialresearchmethods.net/kb/causeeff.php).
 
-Experimental studies have their strength in meeting this third criteria. To rule out ALL other possible explanations for the effect, the control group and the treatment group need to be "identical" with respect to every possible characteristic (aside from the treatment) that could explain differences. This way the only characteristic that will be different is that the treatment group gets the treatment and the control group doesn't. If there are differences in the outcome, then it must be attributable to the treatment, because the other possible explanations are ruled out.
+Los estudios experimentales tienen su punto fuerte en el cumplimiento de este tercer criterio. Para descartar TODAS las demás explicaciones posibles del efecto, el grupo de control y el grupo de tratamiento tienen que ser "idénticos" con respecto a todas las características posibles (aparte del tratamiento) que podrían explicar las diferencias. De este modo, la única característica que será diferente es que el grupo de tratamiento recibe el tratamiento y el grupo de control no. Si hay diferencias en el resultado, entonces debe ser atribuible al tratamiento, porque las otras posibles explicaciones quedan descartadas.
 
-So, the key is to make the control and treatment groups "identical" when you are forming them. One thing that makes this task (slightly) easier is that they don't have to be exactly identical, only [probabilistically equivalent](https://www.socialresearchmethods.net/kb/expequi.php). This means, for example, that if you were matching groups on age that you don't need the two groups to have identical age distributions; they would only need to have roughly the same AVERAGE age. Here roughly means "the average ages should be the same within what we expect because of sampling error."
+Por lo tanto, la clave está en hacer que los grupos de control y de tratamiento sean "idénticos" al formarlos. Algo que facilita (ligeramente) esta tarea es que no tienen que ser exactamente idénticos, sólo [probabilísticamente equivalentes](https://www.socialresearchmethods.net/kb/expequi.php). Esto significa, por ejemplo, que si desea emparejar grupos en función de la edad, no es necesario que los dos grupos tengan distribuciones de edad idénticas; sólo tendrían que tener aproximadamente la misma edad MEDIA. Aquí aproximadamente significa "las edades medias deberían ser las mismas dentro de lo que esperamos debido al error de muestreo".
 
-Now we just need to create the groups so that they have, on average, the same characteristics &hellip; for EVERY POSSIBLE CHARCTERISTIC that could explain differences in the outcome. Zoinks!^[According to [Wiktionary](https://en.wiktionary.org/wiki/zoinks) the earliest usage of the work "zoinks" was by Norville "Shaggy" Rogers on the show Scooby-Doo.] 
+Ahora sólo tenemos que crear los grupos de forma que tengan, de media, las mismas características &hellip para TODAS LAS CARACTERÍSTICAS POSIBLES que podrían explicar las diferencias en el resultado. 
 
-It turns out that creating probabilistically equivalent groups is a really difficult problem. One method that works pretty well for doing this is to randomly assign participants to the groups. This works best when you have large sample sizes, but even with small sample sizes random assignment has the advantage of at least *removing the systematic bias* between the two groups (any differences are due to chance and will probably even out between the groups). As [Wikipedia's page on random assignment](https://en.wikipedia.org/wiki/Random_assignment) points out,
+Resulta que crear grupos probabilísticamente equivalentes es un problema realmente difícil. Un método que funciona bastante bien es asignar aleatoriamente a las personas participantes a los grupos. Esto funciona mejor cuando se dispone de muestras de gran tamaño, pero incluso con muestras pequeñas la asignación aleatoria tiene la ventaja de al menos *eliminar el sesgo sistemático* entre los dos grupos (cualquier diferencia se debe al azar y probablemente se igualará entre los grupos). Como señala [la página de Wikipedia sobre asignación aleatoria](https://en.wikipedia.org/wiki/Random_assignment),
 
-> Random assignment of participants helps to ensure that any differences between and within the groups are not systematic at the outset of the experiment. Thus, any differences between groups recorded at the end of the experiment can be more confidently attributed to the experimental procedures or treatment. &hellip; Random assignment does not guarantee that the groups are matched or equivalent. The groups may still differ on some preexisting attribute due to chance. The use of random assignment cannot eliminate this possibility, but it greatly reduces it.
+> La asignación aleatoria de las personas participantes contribuye a garantizar que las diferencias entre los grupos y dentro de ellos no sean sistemáticas al inicio del experimento. Así, cualquier diferencia entre los grupos registrada al final del experimento puede atribuirse con mayor seguridad a los procedimientos experimentales o al tratamiento. &hellip La asignación aleatoria no garantiza que los grupos estén emparejados o sean equivalentes. Los grupos pueden diferir en algún atributo preexistente debido al azar. El uso de la asignación aleatoria no puede eliminar esta posibilidad, pero la reduce en gran medida.
 
-Internal validity is the degree to which cause-and-effect inferences are accurate and meaningful. Causal attribution is the goal for many researchers. Thus, by using random assignment we have a pretty high degree of evidence for internal validity; we have a much higher belief in causal inferences. Much like evidence used in a court of law, it is useful to think about validity evidence on a continuum. We will visualize this continuum as a barometer. For example, a barometer visualizing the internal validity evidence for a study that employed random assignment in the design might be:
+La validez interna es el grado en que las inferencias de causa y efecto son precisas y significativas. La atribución causal es el objetivo de muchos investigadores. Por lo tanto, al utilizar la asignación aleatoria tenemos un grado bastante alto de evidencia de validez interna; tenemos una creencia mucho mayor en las inferencias causales. De forma muy parecida a las pruebas utilizadas en un tribunal de justicia, es útil pensar en las pruebas de validez en un continuo. Visualizaremos este continuo como un barómetro. Por ejemplo, un barómetro que visualice las pruebas de validez interna para un estudio que empleó la asignación aleatoria en el diseño podría ser:
 
 <br />
 
@@ -30,11 +30,8 @@ knitr::include_graphics("img/internal-validity-evidence-barometer.png")
 <br />
 
 
-The degree of internal validity evidence is high (in the upper-third). How high depends on other factors such as sample size.
+El grado de evidencia de validez interna es alto (en el tercio superior). El grado depende de otros factores, como el tamaño de la muestra.
 
-To learn more about random assignment, you can read the following:
+Para saber más sobre la asignación aleatoria, puede leer lo siguiente:
 
-- The research report, [Random Assignment Evaluation Studies: A Guide for Out-of-School Time Program Practitioners](http://www.childtrends.org/wp-content/uploads/2008/01/Random-Assigment-Evaluations.pdf)
-
-
-
+- El informe de investigación [Random Assignment Evaluation Studies: A Guide for Out-of-School Time Program Practitioners](http://www.childtrends.org/wp-content/uploads/2008/01/Random-Assigment-Evaluations.pdf)

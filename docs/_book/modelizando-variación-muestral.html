@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Introducción | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre</title>
-  <meta name="description" content="Introducción | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
+  <title>Modelizando Variación Muestral | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre</title>
+  <meta name="description" content="Modelizando Variación Muestral | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
   <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Introducción | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
+  <meta property="og:title" content="Modelizando Variación Muestral | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Introducción | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
+  <meta name="twitter:title" content="Modelizando Variación Muestral | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
   
   
   
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="modelización-y-simulación.html"/>
+<link rel="prev" href="simulación-de-monte-carlo.html"/>
+<link rel="next" href="describiendo-distribuciones.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -174,39 +174,55 @@ $(document).ready(function()
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="introducción" class="section level1 unnumbered hasAnchor">
-<h1>Introducción<a href="introducción.html#introducción" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Aprender estadística es sexy. Hal Varian, economista jefe de Google, así lo cree. Durante una <a href="http://www.mckinsey.com/industries/high-tech/our-insights/hal-varian-on-how-the-web-challenges-managers">entrevista en McKinsey Quarterly</a>, Varian declaró: “Sigo diciendo que el trabajo sexy de los próximos diez años será el de profesional en estadística. La gente cree que bromeo, pero ¿quién hubiera imaginado que las personas profesionales en ingenieria informática sería el trabajo sexy de los noventa?”. Varian tampoco es la única persona que expresa este sentimiento. Hans Rosling, en el documental de la BBC de 2010 Joy of Stats<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> se refirió a la estadística como el “tema más sexy que existe”.</p>
-<p>Se crea o no que es la asignatura más sexy, es incontrovertible que el uso de estadísticas y datos prevalece en la actual era de la información. A casi todos los habitantes del planeta les vendrá bien aprender algunas nociones básicas de estadística. Esto es cierto porque la estadística constituye la base de nuestro mundo cotidiano tanto como la ciencia, la tecnología y la política. Google, Netflix, Twitter, Facebook, OKCupid, Match.com, Amazon, iTunes y el Gobierno Federal son sólo algunas de las empresas y organizaciones que utilizan la estadística a diario. El periodismo, las ciencias políticas, la biología, la sociología, la psicología, el diseño gráfico, la economía, las ciencias del deporte y la danza son disciplinas que han hecho uso de la metodología estadística.</p>
-<div id="materiales-del-curso" class="section level3 unnumbered hasAnchor">
-<h3>Materiales del curso<a href="introducción.html#materiales-del-curso" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Los materiales de este sitio web y del manual de laboratorio te presentarán las ideas fundamentales que subyacen a la disciplina estadística. Además, se han diseñado pensando en tu aprendizaje. Por ejemplo, muchas de las actividades de clase se han desarrollado utilizando principios pedagógicos, como las actividades en grupos pequeños y la discusión, que han demostrado en la investigación que mejoran el aprendizaje de las personas estudiantes.</p>
-<p>Las lecturas del curso deben realizarse fuera de clase y están pensadas para ayudarte a aprender y ampliar las ideas, habilidades y conceptos que aprende en el aula. Las lecturas en sí no son todas lecturas “tradicionales” en el sentido de palabras escritas en la pantalla, sino que a menudo enlazan con videoclips, blogs y otro material multimedia.</p>
-</div>
-<div id="software-tinkerplots-3trade" class="section level3 unnumbered hasAnchor">
-<h3>Software TinkerPlots 3&amp;trade<a href="introducción.html#software-tinkerplots-3trade" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Gran parte del material presentado en el manual de laboratorio requiere el uso de TinkerPlots 3™. Este software puede descargarse (para Mac o PC), y puede adquirirse una licencia en <a href="http://www.tinkerplots.com/">http://www.tinkerplots.com/</a>.</p>
-</div>
-<div id="manual-de-laboratorio-y-conjuntos-de-datos" class="section level3 unnumbered hasAnchor">
-<h3>Manual de Laboratorio y Conjuntos de Datos<a href="introducción.html#manual-de-laboratorio-y-conjuntos-de-datos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Trabajarás con el manual de laboratorio todos los días en clase. Por lo tanto, deberás traer una copia del manual de laboratorio (física o electrónica) a clase todos los días. Para descargar una copia en PDF del manual de laboratorio, haga clic en este enlace: <a href="https://github.com/zief0002/statistical-thinking/blob/master/statistical-thinking-v4_3.pdf?raw=true">https://github.com/zief0002/statistical-thinking/blob/master/statistical-thinking-v4_3.pdf?raw=true</a>.</p>
-<p>Hay varios conjuntos de datos utilizados en el manual de laboratorio, así como en las tareas de EPSY 3264. Para descargar en su ordenador un archivo ZIP que incluye todos los conjuntos de datos, haga clic en uno de los enlaces siguientes. Una vez descargado el archivo ZIP en su ordenador, haga doble clic en el archivo ZIP para descomprimirlo y acceder a los materiales.</p>
+<div id="modelizando-variación-muestral" class="section level1 unnumbered hasAnchor">
+<h1>Modelizando Variación Muestral<a href="modelizando-variación-muestral.html#modelizando-variación-muestral" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>En las actividades y asignaciones del curso, has utilizado modelos de probabilidad para generar resultados aleatorios. También has aprendido a utilizar la simulación Monte Carlo para generar muchos conjuntos de datos a partir de un modelo dado. Este es el mismo tipo de proceso que realizan las personas investigadoras, científicas y las personas profesionales en estadística cuando evalúan (o prueban) hipótesis sobre el mundo.</p>
+<p>Para ilustrar las ideas subyacentes a las pruebas de hipótesis, piense en cómo podrías probar si una moneda es justa (no trucada). Podrías haber sugerido algo parecido a “lanzar la moneda muchas veces y llevar la cuenta del número de caras y cruces”. Supongamos que lanzas la moneda 100 veces y el resultado es 53 caras y 47 cruces ¿Diría que la moneda es “injusta”? ¿Y si en lugar de eso hubieras obtenido 65 caras y 35 colas? ¿Diría ahora que la moneda es “injusta”? ¿Y si hubieras obtenido 84 caras y sólo 16 colas?</p>
+<p>El primer resultado de 53 caras y 47 cruces probablemente no te pareció tan descabellado, y probablemente te sentirías conforme diciendo que la moneda que produjo tal resultado es, muy probablemente, “justa”. Por otro lado, los resultados de 65 caras y 35 cruz—y especialmente 84 caras y 16 cruz—probablemente te hicieron sentir inconforme a la hora de declarar que la moneda es “justa”.</p>
+<p>¿Por qué sucede esto? Porque tienes un modelo mental de la distribución de caras y cruces que esperas cuando la moneda realmente ES “justa”. Si el resultado observado de los 100 lanzamientos de la moneda es compatible con el modelo de una moneda “justa”, podría concluir que la moneda es “justa”. Por ejemplo, el resultado de 53 caras de 100 lanzamientos se aproxima mucho a la proporción 50:50 de caras y cruces, y probablemente se pueda afirmar que una moneda “justa” podría haber producido el conjunto de lanzamientos en cuestión. En este caso, los datos son compatibles con el modelo de “moneda justa”.</p>
+<p>Si el resultado observado se desvía de lo esperado según el modelo de una moneda “justa”, por ejemplo los dos resultados de 65 caras y 84 caras, se podría acabar rechazando la hipótesis de que la moneda era “justa”. En estos dos casos, los datos son incompatibles (o al menos mucho menos compatibles) con el modelo de “moneda justa”.</p>
+<p>Una cosa de la que te habrás dado cuenta es que esperamos variaciones en los resultados sólo por el azar (aleatoriedad). Aunque la moneda fuera realmente “justa”, no esperamos obtener exactamente 50 caras cada vez que lanzamos 100 veces la moneda. Esta variación en el número de caras que obtenemos cada vez que lanzamos 100 veces la moneda se denomina <strong>variación muestral</strong>; es la variación que surge porque estamos generando diferentes muestras del modelo (o población).</p>
+<p>Saber algo sobre cuánta variación de muestreo se espera es la forma en que podemos juzgar si los datos son compatibles o incompatibles con el modelo; es la razón por la que crees que 53 caras serían compatibles con una moneda “justa”, pero 65 caras parecen menos compatibles con ese modelo, y 84 caras aún menos. Por suerte, podemos obtener una indicación de cuánta variación muestral cabe esperar utilizando la simulación de Montecarlo.</p>
+<div id="procesos-de-simulacion-para-evaluar-hipotesis" class="section level3 unnumbered hasAnchor">
+<h3>Procesos de Simulacion para Evaluar Hipotesis<a href="modelizando-variación-muestral.html#procesos-de-simulacion-para-evaluar-hipotesis" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>El proceso que utilizaremos para evaluar una hipótesis es el siguiente:</p>
+<ol style="list-style-type: decimal">
+<li>Crear un modelo que se ajuste a la hipótesis que se desea evaluar.</li>
+<li>Utilice el modelo seleccionado para generar muchos, muchos conjuntos de datos (simulación Monte Carlo). Los resultados que recoja y agrupe de estos ensayos te darán una idea de la variación que cabría esperar según el modelo hipotetizado.</li>
+<li>Evalúe si los resultados observados en los datos reales (no en los simulados) son compatibles con los resultados esperados del modelo. Esto actúa como prueba de apoyo (o no apoyo) de la hipótesis.</li>
+</ol>
+<p>Para ayudarte a recordar este proceso, puedes utilizar la siguiente simplificación:</p>
 <ul>
-<li>Archivos de datos <a href="https://github.com/zief0002/statistical-thinking/blob/master/tp3-data.zip?raw=true">TinkerPlots 3</a></li>
+<li>Modelizar</li>
+<li>Simular</li>
+<li>Evaluar</li>
 </ul>
+<p>Puede parecer un proceso sencillo, pero en la práctica puede resultar bastante complejo&amp;mdash sobre todo cuando se leen artículos de investigación y se intenta interpretar los resultados. En primer lugar, en la mayoría de los artículos de investigación no suele proporcionarse ni describirse explícitamente el modelo seleccionado. A menudo se deja al lector la tarea de averiguar cuál era el modelo supuesto. Al principio, esto puede ser bastante difícil, pero como la mayoría de las tareas, a medida que adquiera experiencia en este curso y lea más investigaciones, descubrirá que hay un conjunto común de modelos que suelen utilizar las personas investigadoras.</p>
+<p>El modelo que utilice en la simulación Monte Carlo está directamente relacionado con la hipótesis que formule sobre una pregunta de investigación. A menudo, los investigadores formulan explícitamente hipótesis sobre sus preguntas de investigación. Las hipótesis no son más que enunciados de posibles explicaciones para un conjunto de datos observados. Por ejemplo, una posible explicación para el conjunto observado de lanzamientos de monedas es:</p>
+<blockquote>
+<p>La moneda utilizada para generar el conjunto de lanzamientos observados es una moneda “justa”, lo que produciría (a largo plazo) una distribución uniforme de caras y colas.</p>
+</blockquote>
+<p>Una complicación que puede encontrar es que muchas personas profesionaes en estadística y personas investigadoras escriben sus hipótesis matemáticamente. La ventaja de escribir una hipótesis matemáticamente es que define explícitamente el modelo que se utilizará en la simulación de Monte Carlo. Consideremos la hipótesis de que la moneda utilizada para generar el conjunto de lanzamientos observados es una moneda “justa” que produce una distribución uniforme de cara y cruz. Recordemos que producir una distribución uniforme de caras y colas significa que las caras y las colas tienen la misma probabilidad según este modelo (es decir, una división 50:50). Podríamos expresar esta hipótesis más matemáticamente como:</p>
+<blockquote>
+<p>El modelo produce caras (y colas) con una probabilidad de 0,5.</p>
+</blockquote>
+<p>Simbólicamente, expresaríamos esta hipótesis como:</p>
+<p><span class="math display">\[
+H_0: \pi_{\mathrm{Cara,~Cruz}} = 0.5
+\]</span></p>
+<p>El símbolo <span class="math inline">\(H_0\)</span> es común e indica una hipótesis sobre un modelo. Aquí, <span class="math inline">\(\pi\)</span> es la letra griega pi y significa “probabilidad” o “proporción”. (Normalmente, en la notación simbólica para hipótesis, pi no es la constante matemática de 3,14). Las personas profesionales en estadística suelen utilizar letras griegas para identificar las probabilidades de los resultados de un modelo.<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a> En esta hipótesis, estamos estableciendo que el modelo que estamos evaluando genera caras (y cruces) con una probabilidad de 0,5. Observe cómo el modelo está completamente definido utilizando la notación matemática. La hipótesis establece que el modelo tiene dos resultados potenciales (cara y cruz), y que la probabilidad de cada uno es 0,5. Es genial, ¿no?</p>
 </div>
-<div id="participación-en-el-proceso-de-aprendizaje" class="section level3 unnumbered hasAnchor">
-<h3>Participación en el Proceso de Aprendizaje<a href="introducción.html#participación-en-el-proceso-de-aprendizaje" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>El manual de laboratorio, el profesorado y asistentes del cruso son recursos que están a tu disposición para ayudarte a aprender la materia. Al final, sin embargo, tendrás que hacer todo el trabajo duro asociado con el aprendizaje real de ese material. Para superar con éxito este proceso, es fundamental que participes activamente en él. Venir a clase, participar en las actividades y discusiones, leer, completar las tareas y hacer preguntas son esenciales para el éxito del aprendizaje.</p>
-<p>Aprender cualquier cosa nueva requiere tiempo y esfuerzo, y esto es especialmente cierto en el caso de la estadística, ya que no se trata sólo de aprender una serie de métodos, sino más bien una forma disciplinada de pensar sobre el mundo. Cambiar los hábitos mentales requiere una práctica continua. También requerirá mucha paciencia y persistencia.</p>
-<p>A medida que vayas aprendiendo y utilizando las habilidades, conceptos e ideas que se presentan en este material, te darás cuenta de que piensas en los datos y las pruebas de una manera diferente. Esto puede llevarte a tomar decisiones u opciones diferentes. Pero, aunque este curso no cambie tu mundo de la noche a la mañana, al menos serás capaz de pensar críticamente sobre las inferencias y conclusiones extraídas de los datos.</p>
+<div id="outline-and-goals-of-unit-2" class="section level3 unnumbered hasAnchor">
+<h3>Outline and Goals of Unit 2<a href="modelizando-variación-muestral.html#outline-and-goals-of-unit-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>En las lecturas, actividades del curso y asignaciones de la Unidad 2, explorarás el proceso de evaluación de hipótesis estadísticas. Se te presentarán varios modelos comunes utilizados por investigadores y estadísticos. También utilizarás TinkerPlots™ para generar datos simulados para estudiar la variación en los resultados que se esperarían bajo estos modelos. Muchos de estos modelos están directamente relacionados con los modelos de azar que has explorado en el curso hasta este punto. Por ejemplo, ya deberías ser capaz de utilizar TinkerPlots™ para producir resultados que se esperarían de 100 lanzamientos de una moneda “justa”.</p>
+<p>Además de aprender sobre algunos de los modelos más comunes utilizados en la investigación, también aprenderás a describir y cuantificar formalmente la variación en una distribución. Esto es útil para evaluar si un resultado concreto de los datos observados es compatible con los resultados obtenidos a partir de un modelo determinado. Por último, aprenderás conceptos erróneos comunes sobre la evaluación de modelos (por ejemplo, nunca podemos decir que un modelo produjo los datos, sólo que produce resultados compatibles con los datos), y cómo utilizar el lenguaje probabilístico al dar una “respuesta” a una pregunta de investigación.</p>
 
 </div>
 </div>
 <div class="footnotes">
 <hr />
-<ol start="1">
-<li id="fn1"><p>Vea <em>Joy of Stats</em> en línea en <a href="http://www.gapminder.org/videos/the-joy-of-stats/">http://www.gapminder.org/videos/the-joy-of-stats/</a><a href="introducción.html#fnref1" class="footnote-back">↩︎</a></p></li>
+<ol start="4">
+<li id="fn4"><p><strong>Letras griegas frente a romanas</strong> <br /> Letras griegas se utilizan cuando se describen los parámetros de un modelo. Por el contrario, las letras romanas se utilizan para describir los resultados observados. Por ejemplo, regrese a la situación en la que los datos observados consistieron en 53 caras y 47 cruces de 100 lanzamientos de una moneda. <br /><br /> Aquí diríamos <span class="math inline">\(p_{\mathrm{cara}} = 0,53\)</span>. La hipótesis sobre el modelo que estamos evaluando produce cara con una probabilidad de 0,5, por lo que <span class="math inline">\(\pi_{\mathrm{cara,~cruz}} = 0,5\)</span>. <br /><br /> En lugar de usar las letras romanas, algunos estadísticos prefieren poner un “sombrero” en la letra griega para referirse al resultado observado. Por ejemplo, <span class="math inline">\(\hat{\pi}_{\mathrm{Cara}}=0,53\)</span>. <br /><br /> En este curso no nos interesa tanto qué notación utilice para expresar el resultado observado en los datos reales. De hecho, podría ser menos confuso si solo escribe, <em>el resultado observado es 0.53</em>.<a href="modelizando-variación-muestral.html#fnref4" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
@@ -214,8 +230,8 @@ $(document).ready(function()
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="modelización-y-simulación.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="simulación-de-monte-carlo.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="describiendo-distribuciones.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -269,6 +285,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

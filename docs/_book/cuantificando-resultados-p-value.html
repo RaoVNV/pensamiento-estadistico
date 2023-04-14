@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Introducción | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre</title>
-  <meta name="description" content="Introducción | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
+  <title>Cuantificando Resultados: p-Value | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre</title>
+  <meta name="description" content="Cuantificando Resultados: p-Value | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
   <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Introducción | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
+  <meta property="og:title" content="Cuantificando Resultados: p-Value | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Introducción | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
+  <meta name="twitter:title" content="Cuantificando Resultados: p-Value | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
   
   
   
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="modelización-y-simulación.html"/>
+<link rel="prev" href="variación-experimental-y-la-prueba-de-aleatoriedad.html"/>
+<link rel="next" href="evidencia-de-validez-interna-y-asignación-aleatoria.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -174,39 +174,61 @@ $(document).ready(function()
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="introducción" class="section level1 unnumbered hasAnchor">
-<h1>Introducción<a href="introducción.html#introducción" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Aprender estadística es sexy. Hal Varian, economista jefe de Google, así lo cree. Durante una <a href="http://www.mckinsey.com/industries/high-tech/our-insights/hal-varian-on-how-the-web-challenges-managers">entrevista en McKinsey Quarterly</a>, Varian declaró: “Sigo diciendo que el trabajo sexy de los próximos diez años será el de profesional en estadística. La gente cree que bromeo, pero ¿quién hubiera imaginado que las personas profesionales en ingenieria informática sería el trabajo sexy de los noventa?”. Varian tampoco es la única persona que expresa este sentimiento. Hans Rosling, en el documental de la BBC de 2010 Joy of Stats<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> se refirió a la estadística como el “tema más sexy que existe”.</p>
-<p>Se crea o no que es la asignatura más sexy, es incontrovertible que el uso de estadísticas y datos prevalece en la actual era de la información. A casi todos los habitantes del planeta les vendrá bien aprender algunas nociones básicas de estadística. Esto es cierto porque la estadística constituye la base de nuestro mundo cotidiano tanto como la ciencia, la tecnología y la política. Google, Netflix, Twitter, Facebook, OKCupid, Match.com, Amazon, iTunes y el Gobierno Federal son sólo algunas de las empresas y organizaciones que utilizan la estadística a diario. El periodismo, las ciencias políticas, la biología, la sociología, la psicología, el diseño gráfico, la economía, las ciencias del deporte y la danza son disciplinas que han hecho uso de la metodología estadística.</p>
-<div id="materiales-del-curso" class="section level3 unnumbered hasAnchor">
-<h3>Materiales del curso<a href="introducción.html#materiales-del-curso" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Los materiales de este sitio web y del manual de laboratorio te presentarán las ideas fundamentales que subyacen a la disciplina estadística. Además, se han diseñado pensando en tu aprendizaje. Por ejemplo, muchas de las actividades de clase se han desarrollado utilizando principios pedagógicos, como las actividades en grupos pequeños y la discusión, que han demostrado en la investigación que mejoran el aprendizaje de las personas estudiantes.</p>
-<p>Las lecturas del curso deben realizarse fuera de clase y están pensadas para ayudarte a aprender y ampliar las ideas, habilidades y conceptos que aprende en el aula. Las lecturas en sí no son todas lecturas “tradicionales” en el sentido de palabras escritas en la pantalla, sino que a menudo enlazan con videoclips, blogs y otro material multimedia.</p>
+<div id="cuantificando-resultados-p-value" class="section level1 unnumbered hasAnchor">
+<h1>Cuantificando Resultados: p-Value<a href="cuantificando-resultados-p-value.html#cuantificando-resultados-p-value" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Además de calcular la gama de resultados probables del modelo, las personas profesionales en estadística también suelen proporcionar una cuantificación de la probabilidad del resultado observado dado el modelo hipotético. Esta cuantificación se denomina valor <span class="math inline">\(p\)</span> (<span class="math inline">\(p\)</span> significa probabilidad).</p>
+<p>Para calcular un valor <span class="math inline">\(p\)</span>, se cuenta el número de resultados que son al menos tan extremos como el resultado observado y se divide por el número total de resultados.</p>
+<p><span class="math display">\[
+p = \frac{\mathrm{cantidad~de~resultados~al~menos~tan~extremos~como~el~observado}}{\mathrm{catidad~total~de~resultado~simulados}}
+\]</span></p>
+<p>Este valor se presenta como un valor decimal. El valor <span class="math inline">\(p\)</span> Cuantifica la probabilidad de observar un resultado al menos tan extremo como el resultado observado según el modelo hipotético.</p>
+<p>Para ilustrarlo este concepto, volveremos a examinar los resultados de la simulación del estudio <em>Privación del sueño</em>. Recordemos que en esa actividad, los datos observados tenían una diferencia de medias de 15,9. A continuación se muestra un gráfico de 100 diferencias de medias simuladas con el modelo “sin efecto”. Se muestra una línea vertical en la diferencia observada de 15,9.</p>
+<p><img src="img/sleep-deprivation-simulation.png" width="70%" style="display: block; margin: auto;" /></p>
+<p>Como 15,9 está a la derecha de 0 (es decir, está en el lado derecho del gráfico), los resultados <em>más extremos que el resultado observado</em> están a la derecha de 15,9. (Si el resultado observado estuviera a la izquierda de 0, los resultados más extremos serían los más negativos que el resultado observado). (Si el resultado observado estuviera a la izquierda de 0, los resultados más extremos serían los más negativos que el resultado observado). Aquí hay dos resultados simulados de 100 que son al menos tan extremos como 15,9 (<span class="math inline">\(\geq 15,9\)</span>). Informaríamos del valor <span class="math inline">\(p\)</span> como 0,02.</p>
+<div id="ajuste-por-resultados-de-simulación" class="section level3 unnumbered hasAnchor">
+<h3>Ajuste por Resultados de Simulación<a href="cuantificando-resultados-p-value.html#ajuste-por-resultados-de-simulación" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>En los estudios de simulación, realizamos un pequeño ajuste en el cálculo del valor <span class="math inline">\(p\)</span>; sumamos 1 tanto al numerador como al denominador:</p>
+<p><span class="math display">\[
+p = \frac{\mathrm{cantidad~de~resultados~al~menos~tan~extremos~como~el~observado + 1}}{\mathrm{catidad~total~de~resultado~simulados + 1}}
+\]</span></p>
+<p>Este ajuste asegura que nunca obtengamos un valor <span class="math inline">\(p\)</span> de 0. Considere el valor <span class="math inline">\(p\)</span> si nuestro resultado observado hubiera sido 18 (en lugar de 15,9). Hay 0 resultados que son al menos tan extremos como 18 (<span class="math inline">\(\geq 18\)</span>). Sin realizar el ajuste de simulación, obtendríamos un valor <span class="math inline">\(p\)</span> de 0. Esto implica que es imposible obtener un resultado al menos tan extremo como 18 con el modelo “sin efecto”. El problema es que sólo hemos realizado 100 pruebas de la simulación. Si hubiéramos realizado esta simulación para todas las aleatorizaciones posibles de los datos, habríamos visto resultados <span class="math inline">\(\geq 18\)</span>. Por lo tanto, informar de un valor <span class="math inline">\(p\)</span> de 0 es engañoso. El valor <span class="math inline">\(p\)</span> que se debe reportar es,</p>
+<p><span class="math display">\[
+p = \frac{0 + 1}{100 + 1} = 0.0099
+\]</span></p>
+<p>Tras el ajuste, el valor <span class="math inline">\(p\)</span> sigue siendo bastante pequeño, lo que indica que si hubiéramos visto un resultado observado de 18, diríamos que es incoherente con el modelo de “sin efecto”. De hecho, se encuentra en el 0,01 exterior (1%) de los resultados simulados a partir del modelo hipotético.</p>
+<p>Volviendo al valor <span class="math inline">\(p\)</span> calculado a partir del valor observado de 15,9,</p>
+<p><span class="math display">\[
+p = \frac{2 + 1}{100 + 1} = 0.0297
+\]</span></p>
+<p>Podemos interpretar el valor <span class="math inline">\(p\)</span> de 0,030 como una indicación de que la diferencia observada de 15,9 se sitúa en el 0,03 (3%) exterior de los resultados simulados a partir del modelo hipotético. Es bastante improbable que veamos un resultado tan extremo como 15,9, o más extremo, con el modelo hipotético de “ningún efecto”.</p>
 </div>
-<div id="software-tinkerplots-3trade" class="section level3 unnumbered hasAnchor">
-<h3>Software TinkerPlots 3&amp;trade<a href="introducción.html#software-tinkerplots-3trade" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Gran parte del material presentado en el manual de laboratorio requiere el uso de TinkerPlots 3™. Este software puede descargarse (para Mac o PC), y puede adquirirse una licencia en <a href="http://www.tinkerplots.com/">http://www.tinkerplots.com/</a>.</p>
+<div id="valor-p-como-evidencia" class="section level3 unnumbered hasAnchor">
+<h3>Valor p como Evidencia<a href="cuantificando-resultados-p-value.html#valor-p-como-evidencia" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Los valores <span class="math inline">\(p\)</span> grandes indican que los datos observados son más compatibles con los resultados del modelo, mientras que los valores <span class="math inline">\(p\)</span> pequeños indican que los datos observados no son muy compatibles con los resultados del modelo. Como investigadores, nuestro objetivo suele ser traducir estas pruebas cuantitativas en apoyo del modelo hipotético. Por ejemplo, en el estudio <em>Privación del sueño</em>, obtuvimos un valor <span class="math inline">\(p\)</span> de 0,03. Esto sugiere un bajo grado de compatibilidad entre los datos observados y el modelo. Esto sugiere un bajo grado de compatibilidad entre los datos observados (nuestra evidencia empírica) y el modelo hipotetizado de “ningún efecto”.</p>
+<p>Sin embargo, la cuestión científica más amplia sobre si la privación de sueño tiene un efecto perjudicial en el aprendizaje es difícil de determinar a partir de un valor <span class="math inline">\(p\)</span>. No hay reglas fijas para medir la fuerza de las pruebas en contra del modelo hipotético, porque lo que cuenta como prueba en una disciplina o contexto científico puede no contar en otra disciplina o contexto científico. Y, aunque hubiera reglas sobre el grado de evidencia necesario, seguiría siendo necesario evaluar otros criterios, como las pruebas de validez interna y externa, y el tamaño de la muestra. Aun así, los resultados de un solo estudio no suelen ser lo bastante convincentes para que la mayoría de los científicos saquen conclusiones definitivas. Sólo a través de hallazgos consistentes que surgen de múltiples estudios (lo que puede llevar décadas) podemos tener pruebas convincentes sobre la respuesta a la pregunta científica más amplia.</p>
 </div>
-<div id="manual-de-laboratorio-y-conjuntos-de-datos" class="section level3 unnumbered hasAnchor">
-<h3>Manual de Laboratorio y Conjuntos de Datos<a href="introducción.html#manual-de-laboratorio-y-conjuntos-de-datos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Trabajarás con el manual de laboratorio todos los días en clase. Por lo tanto, deberás traer una copia del manual de laboratorio (física o electrónica) a clase todos los días. Para descargar una copia en PDF del manual de laboratorio, haga clic en este enlace: <a href="https://github.com/zief0002/statistical-thinking/blob/master/statistical-thinking-v4_3.pdf?raw=true">https://github.com/zief0002/statistical-thinking/blob/master/statistical-thinking-v4_3.pdf?raw=true</a>.</p>
-<p>Hay varios conjuntos de datos utilizados en el manual de laboratorio, así como en las tareas de EPSY 3264. Para descargar en su ordenador un archivo ZIP que incluye todos los conjuntos de datos, haga clic en uno de los enlaces siguientes. Una vez descargado el archivo ZIP en su ordenador, haga doble clic en el archivo ZIP para descomprimirlo y acceder a los materiales.</p>
+<div id="seis-principlios-sobre-valores-p" class="section level3 unnumbered hasAnchor">
+<h3>Seis Principlios sobre Valores p<a href="cuantificando-resultados-p-value.html#seis-principlios-sobre-valores-p" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Debido a que son tan omnipresentes en la literatura de investigación de cualquier campo, y debido a que a menudo son mal interpretados (incluso por doctores, investigadores y profesores de matemáticas) es importante ser consciente de lo que un valor <span class="math inline">\(p\)</span> le dice, y lo que es más importante, lo que no le dice. Con este fin, la American Statistical Association publicó una <a href="http://amstat.tandfonline.com/doi/abs/10.1080/00031305.2016.1154108#.Vt2XIOaE2MN">declaración sobre los valores <span class="math inline">\(p\)</span></a> en la que enumeraba seis principios:<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a>.</p>
 <ul>
-<li>Archivos de datos <a href="https://github.com/zief0002/statistical-thinking/blob/master/tp3-data.zip?raw=true">TinkerPlots 3</a></li>
+<li><strong>Principio 1:</strong> Los valores <span class="math inline">\(P\)</span> pueden indicar la incompatibilidad de los datos con un modelo estadístico específico.</li>
+<li><strong>Principio 2:</strong> Los valores <span class="math inline">\(P\)</span> no miden la probabilidad de que la hipótesis estudiada sea cierta, ni la probabilidad de que los datos se hayan producido únicamente por azar.</li>
+<li><strong>Principio 3:</strong> Las conclusiones científicas y las decisiones empresariales o políticas no deben basarse únicamente en si un valor <span class="math inline">\(p\)</span> supera un umbral específico.</li>
+<li><strong>Principio 4:</strong> Una inferencia adecuada requiere información completa y transparencia.</li>
+<li><strong>Principio 5:</strong> Un valor <span class="math inline">\(p\)</span> no mide el tamaño de un efecto ni la importancia de un resultado.</li>
+<li><strong>Principio 6:</strong> Por sí mismo, un valor <span class="math inline">\(p\)</span> no proporciona una buena medida de la evidencia con respecto a un modelo o hipótesis.</li>
 </ul>
-</div>
-<div id="participación-en-el-proceso-de-aprendizaje" class="section level3 unnumbered hasAnchor">
-<h3>Participación en el Proceso de Aprendizaje<a href="introducción.html#participación-en-el-proceso-de-aprendizaje" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>El manual de laboratorio, el profesorado y asistentes del cruso son recursos que están a tu disposición para ayudarte a aprender la materia. Al final, sin embargo, tendrás que hacer todo el trabajo duro asociado con el aprendizaje real de ese material. Para superar con éxito este proceso, es fundamental que participes activamente en él. Venir a clase, participar en las actividades y discusiones, leer, completar las tareas y hacer preguntas son esenciales para el éxito del aprendizaje.</p>
-<p>Aprender cualquier cosa nueva requiere tiempo y esfuerzo, y esto es especialmente cierto en el caso de la estadística, ya que no se trata sólo de aprender una serie de métodos, sino más bien una forma disciplinada de pensar sobre el mundo. Cambiar los hábitos mentales requiere una práctica continua. También requerirá mucha paciencia y persistencia.</p>
-<p>A medida que vayas aprendiendo y utilizando las habilidades, conceptos e ideas que se presentan en este material, te darás cuenta de que piensas en los datos y las pruebas de una manera diferente. Esto puede llevarte a tomar decisiones u opciones diferentes. Pero, aunque este curso no cambie tu mundo de la noche a la mañana, al menos serás capaz de pensar críticamente sobre las inferencias y conclusiones extraídas de los datos.</p>
+<!-- Principle 3 is especially poignant, as many reserachers use the criterion of 0.05 when evaluating $p$-values to indicate whether a result is statistically significant ($p \leq 0.05$) or not. In fact, this use was so pervasive and problematic, that the journal *Basic and Applied Social Psychology* [banned the use of $p$-values](http://www.nature.com/news/psychology-journal-bans-p-values-1.17001) in its published articles. It also led to many jokes about $p$-values, including this [XKCD](https://xkcd.com) comic. -->
+<!-- <center> -->
+<!-- ![](https://imgs.xkcd.com/comics/p_values.png) -->
+<!-- </center> -->
 
 </div>
 </div>
 <div class="footnotes">
 <hr />
-<ol start="1">
-<li id="fn1"><p>Vea <em>Joy of Stats</em> en línea en <a href="http://www.gapminder.org/videos/the-joy-of-stats/">http://www.gapminder.org/videos/the-joy-of-stats/</a><a href="introducción.html#fnref1" class="footnote-back">↩︎</a></p></li>
+<ol start="4">
+<li id="fn4"><p>Yaddanapudi (2016) <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5187603/">publicó un artículo</a> en el <em>Journal of Anaesthesiology, Clinical Pharmacology</em> en el que explica cada uno de estos seis principios para médicos-científicos en ejercicio utilizando un ejemplo de eficacia del tratamiento de un fármaco<a href="cuantificando-resultados-p-value.html#fnref4" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
@@ -214,8 +236,8 @@ $(document).ready(function()
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="modelización-y-simulación.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="variación-experimental-y-la-prueba-de-aleatoriedad.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="evidencia-de-validez-interna-y-asignación-aleatoria.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -269,6 +291,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

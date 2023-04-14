@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Introducción | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre</title>
-  <meta name="description" content="Introducción | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
+  <title>Incertidumbre y Sesgo | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre</title>
+  <meta name="description" content="Incertidumbre y Sesgo | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
   <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Introducción | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
+  <meta property="og:title" content="Incertidumbre y Sesgo | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Introducción | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
+  <meta name="twitter:title" content="Incertidumbre y Sesgo | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
   
   
   
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="modelización-y-simulación.html"/>
+<link rel="prev" href="estimando-la-incertidumbre.html"/>
+
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -136,8 +136,10 @@ $(document).ready(function()
 <ul>
 <li class="chapter" data-level="" data-path="variación-muestral-y-el-la-prueba-de-bootstrap.html"><a href="variación-muestral-y-el-la-prueba-de-bootstrap.html#variación-muestral"><i class="fa fa-check"></i>Variación Muestral</a></li>
 <li class="chapter" data-level="" data-path="variación-muestral-y-el-la-prueba-de-bootstrap.html"><a href="variación-muestral-y-el-la-prueba-de-bootstrap.html#bootstrapping"><i class="fa fa-check"></i>Bootstrapping</a></li>
-<li class="chapter" data-level="" data-path="variación-muestral-y-el-la-prueba-de-bootstrap.html"><a href="variación-muestral-y-el-la-prueba-de-bootstrap.html#outline-and-goals-of-unit-4"><i class="fa fa-check"></i>Outline and Goals of Unit 4</a></li>
-<li class="chapter" data-level="" data-path="variación-muestral-y-el-la-prueba-de-bootstrap.html"><a href="variación-muestral-y-el-la-prueba-de-bootstrap.html#sesgo-estadístico"><i class="fa fa-check"></i>Sesgo Estadístico</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="evidencia-de-validez-eterna-y-muestreo-aleatorio.html"><a href="evidencia-de-validez-eterna-y-muestreo-aleatorio.html"><i class="fa fa-check"></i>Evidencia de Validez Eterna y Muestreo Aleatorio</a>
+<ul>
+<li class="chapter" data-level="" data-path="evidencia-de-validez-eterna-y-muestreo-aleatorio.html"><a href="evidencia-de-validez-eterna-y-muestreo-aleatorio.html#sesgo-estadístico"><i class="fa fa-check"></i>Sesgo Estadístico</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="pruebas-de-validez-e-inferencias.html"><a href="pruebas-de-validez-e-inferencias.html"><i class="fa fa-check"></i>Pruebas de validez e inferencias</a>
 <ul>
@@ -154,7 +156,6 @@ $(document).ready(function()
 <ul>
 <li class="chapter" data-level="" data-path="estimando-la-incertidumbre.html"><a href="estimando-la-incertidumbre.html#cuantificando-la-incertidumbre-intervalos-de-compatibilidad"><i class="fa fa-check"></i>Cuantificando la Incertidumbre: Intervalos de compatibilidad</a></li>
 <li class="chapter" data-level="" data-path="estimando-la-incertidumbre.html"><a href="estimando-la-incertidumbre.html#cuantificando-la-incertidumbre-margen-de-error"><i class="fa fa-check"></i>Cuantificando la Incertidumbre: Margen de error</a></li>
-<li class="chapter" data-level="" data-path="estimando-la-incertidumbre.html"><a href="estimando-la-incertidumbre.html#esquema-y-objetivos-de-la-unidad-5"><i class="fa fa-check"></i>Esquema y objetivos de la Unidad 5</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="incertidumbre-y-sesgo.html"><a href="incertidumbre-y-sesgo.html"><i class="fa fa-check"></i>Incertidumbre y Sesgo</a></li>
 </ul>
@@ -174,48 +175,39 @@ $(document).ready(function()
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="introducción" class="section level1 unnumbered hasAnchor">
-<h1>Introducción<a href="introducción.html#introducción" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Aprender estadística es sexy. Hal Varian, economista jefe de Google, así lo cree. Durante una <a href="http://www.mckinsey.com/industries/high-tech/our-insights/hal-varian-on-how-the-web-challenges-managers">entrevista en McKinsey Quarterly</a>, Varian declaró: “Sigo diciendo que el trabajo sexy de los próximos diez años será el de profesional en estadística. La gente cree que bromeo, pero ¿quién hubiera imaginado que las personas profesionales en ingenieria informática sería el trabajo sexy de los noventa?”. Varian tampoco es la única persona que expresa este sentimiento. Hans Rosling, en el documental de la BBC de 2010 Joy of Stats<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> se refirió a la estadística como el “tema más sexy que existe”.</p>
-<p>Se crea o no que es la asignatura más sexy, es incontrovertible que el uso de estadísticas y datos prevalece en la actual era de la información. A casi todos los habitantes del planeta les vendrá bien aprender algunas nociones básicas de estadística. Esto es cierto porque la estadística constituye la base de nuestro mundo cotidiano tanto como la ciencia, la tecnología y la política. Google, Netflix, Twitter, Facebook, OKCupid, Match.com, Amazon, iTunes y el Gobierno Federal son sólo algunas de las empresas y organizaciones que utilizan la estadística a diario. El periodismo, las ciencias políticas, la biología, la sociología, la psicología, el diseño gráfico, la economía, las ciencias del deporte y la danza son disciplinas que han hecho uso de la metodología estadística.</p>
-<div id="materiales-del-curso" class="section level3 unnumbered hasAnchor">
-<h3>Materiales del curso<a href="introducción.html#materiales-del-curso" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Los materiales de este sitio web y del manual de laboratorio te presentarán las ideas fundamentales que subyacen a la disciplina estadística. Además, se han diseñado pensando en tu aprendizaje. Por ejemplo, muchas de las actividades de clase se han desarrollado utilizando principios pedagógicos, como las actividades en grupos pequeños y la discusión, que han demostrado en la investigación que mejoran el aprendizaje de las personas estudiantes.</p>
-<p>Las lecturas del curso deben realizarse fuera de clase y están pensadas para ayudarte a aprender y ampliar las ideas, habilidades y conceptos que aprende en el aula. Las lecturas en sí no son todas lecturas “tradicionales” en el sentido de palabras escritas en la pantalla, sino que a menudo enlazan con videoclips, blogs y otro material multimedia.</p>
+<div id="incertidumbre-y-sesgo" class="section level1 unnumbered hasAnchor">
+<h1>Incertidumbre y Sesgo<a href="incertidumbre-y-sesgo.html#incertidumbre-y-sesgo" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Dado que la estimación estadística es un método de inferencia, tenemos que sopesar las pruebas de validez del mismo modo que lo hicimos para las pruebas de hipótesis. Que la estimación sea “buena” depende de cómo se haya extraído la muestra. Si se utilizó un método sesgado para extraer la muestra, es probable que el intervalo de compatibilidad esté sesgado. Volvamos a ilustrarlo con nuestro ejemplo de las llaves.</p>
+<div style="float: left; margin-right: 5px;">
+<p><img src="img/uncertainty-and-bias-02.png" width="45%" />
+<img src="img/uncertainty-and-bias-01.png" width="45%" /></p>
 </div>
-<div id="software-tinkerplots-3trade" class="section level3 unnumbered hasAnchor">
-<h3>Software TinkerPlots 3&amp;trade<a href="introducción.html#software-tinkerplots-3trade" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Gran parte del material presentado en el manual de laboratorio requiere el uso de TinkerPlots 3™. Este software puede descargarse (para Mac o PC), y puede adquirirse una licencia en <a href="http://www.tinkerplots.com/">http://www.tinkerplots.com/</a>.</p>
+<div style="clear: both;">
+
+<p>La figura de la izquierda es una metáfora del intervalo de compatibilidad resultante de un método de muestreo insesgado, como el muestreo aleatorio. La figura de la derecha es una metáfora del intervalo de compatibilidad resultante de un método de muestreo sesgado, como el muestreo de conveniencia. Recuerde que el objetivo de la estimación es ofrecer un intervalo de valores probables para el parámetro de población (las claves). Si se utiliza un método de muestreo sesgado, el intervalo de compatibilidad resultante será probablemente erróneo (sesgado).</p>
+<p>No debes confundir incertidumbre con sesgo. En nuestro ejemplo de las llaves, recuerde que la cantidad de incertidumbre se muestra por el tamaño del círculo amarillo. En las figuras anteriores, la incertidumbre de los métodos de muestreo sesgado e insesgado era la misma. Ahora, considere las siguientes figuras.</p>
+<div style="float: left; margin-right: 5px;">
+<p><img src="img/uncertainty-and-bias-03.png" width="45%" />
+<img src="img/uncertainty-and-bias-04.png" width="45%" /></p>
 </div>
-<div id="manual-de-laboratorio-y-conjuntos-de-datos" class="section level3 unnumbered hasAnchor">
-<h3>Manual de Laboratorio y Conjuntos de Datos<a href="introducción.html#manual-de-laboratorio-y-conjuntos-de-datos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Trabajarás con el manual de laboratorio todos los días en clase. Por lo tanto, deberás traer una copia del manual de laboratorio (física o electrónica) a clase todos los días. Para descargar una copia en PDF del manual de laboratorio, haga clic en este enlace: <a href="https://github.com/zief0002/statistical-thinking/blob/master/statistical-thinking-v4_3.pdf?raw=true">https://github.com/zief0002/statistical-thinking/blob/master/statistical-thinking-v4_3.pdf?raw=true</a>.</p>
-<p>Hay varios conjuntos de datos utilizados en el manual de laboratorio, así como en las tareas de EPSY 3264. Para descargar en su ordenador un archivo ZIP que incluye todos los conjuntos de datos, haga clic en uno de los enlaces siguientes. Una vez descargado el archivo ZIP en su ordenador, haga doble clic en el archivo ZIP para descomprimirlo y acceder a los materiales.</p>
-<ul>
-<li>Archivos de datos <a href="https://github.com/zief0002/statistical-thinking/blob/master/tp3-data.zip?raw=true">TinkerPlots 3</a></li>
-</ul>
-</div>
-<div id="participación-en-el-proceso-de-aprendizaje" class="section level3 unnumbered hasAnchor">
-<h3>Participación en el Proceso de Aprendizaje<a href="introducción.html#participación-en-el-proceso-de-aprendizaje" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>El manual de laboratorio, el profesorado y asistentes del cruso son recursos que están a tu disposición para ayudarte a aprender la materia. Al final, sin embargo, tendrás que hacer todo el trabajo duro asociado con el aprendizaje real de ese material. Para superar con éxito este proceso, es fundamental que participes activamente en él. Venir a clase, participar en las actividades y discusiones, leer, completar las tareas y hacer preguntas son esenciales para el éxito del aprendizaje.</p>
-<p>Aprender cualquier cosa nueva requiere tiempo y esfuerzo, y esto es especialmente cierto en el caso de la estadística, ya que no se trata sólo de aprender una serie de métodos, sino más bien una forma disciplinada de pensar sobre el mundo. Cambiar los hábitos mentales requiere una práctica continua. También requerirá mucha paciencia y persistencia.</p>
-<p>A medida que vayas aprendiendo y utilizando las habilidades, conceptos e ideas que se presentan en este material, te darás cuenta de que piensas en los datos y las pruebas de una manera diferente. Esto puede llevarte a tomar decisiones u opciones diferentes. Pero, aunque este curso no cambie tu mundo de la noche a la mañana, al menos serás capaz de pensar críticamente sobre las inferencias y conclusiones extraídas de los datos.</p>
+<p>La figura de la izquierda es una metáfora de un intervalo de compatibilidad que tiene una pequeña incertidumbre (gran tamaño de la muestra) como resultado de un método de muestreo sesgado. La figura de la derecha es una metáfora de un intervalo de compatibilidad que tiene una gran incertidumbre (tamaño de muestra pequeño) como resultado de un método de muestreo no sesgado. En términos de estimación de dónde están las llaves reales, el intervalo de compatibilidad representado en la figura de la derecha sería mejor. Esta es una lección importante: **El tamaño de la muestra sólo importa si el método de muestreo es insesgado.</p>
 
 </div>
-</div>
-<div class="footnotes">
-<hr />
-<ol start="1">
-<li id="fn1"><p>Vea <em>Joy of Stats</em> en línea en <a href="http://www.gapminder.org/videos/the-joy-of-stats/">http://www.gapminder.org/videos/the-joy-of-stats/</a><a href="introducción.html#fnref1" class="footnote-back">↩︎</a></p></li>
-</ol>
-</div>
+
+
+
+
+
+
+
+
             </section>
 
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="modelización-y-simulación.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="estimando-la-incertidumbre.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

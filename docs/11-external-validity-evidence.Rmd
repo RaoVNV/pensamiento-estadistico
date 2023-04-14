@@ -1,17 +1,17 @@
-# External Validity Evidence and Random Sampling {-}
+# Evidencia de Validez Eterna y Muestreo Aleatorio {-}
 
-In statistical inference, generalization refers to the process of using sample data to draw conclusions about the larger population from which the sample was drawn. The sample data provides statisticians with an estimate of the exact “truth” about the population. For example, data collected from 1,000 Americans about their voting preferences may be used to infer the voting preferences of Americans in general. Statisticians are typically concerned with making inferences about some summary measure of the population, a mean or population percentage. (*Some vocabulary:* Population summary measures are called **parameters**. Sample estimates of parameters are referred to as **statistics**.)
+En la inferencia estadística, la generalización se refiere al proceso de utilizar datos de muestra para extraer conclusiones sobre la población más amplia de la que se extrajo la muestra. Los datos de la muestra proporcionan a las personas profesionales en estadística una estimación de la "verdad" exacta sobre la población. Por ejemplo, los datos recogidos de 1.000 estadounidenses sobre sus preferencias de voto pueden utilizarse para inferir las preferencias de voto de toda la población estadounidense. A las personas profesionales en estadística les suele interesar hacer inferencias sobre alguna medida resumen de la población, una media o un porcentaje de población. (*Vocabulario:* Las medidas de resumen de la población se denominan **parámetros**. Las estimaciones muestrales de los parámetros se denominan **estadísticos**).
 
-How useful is a sample statistic when it comes to estimating a population parameter? Can we draw reasonable inference about a population from sample data? This question is at the heart of weighing evidence about external validity. External validity is the degree to which generalizations to the larger population are accurate and meaningful. 
+¿Hasta qué punto es útil un estadístico muestral a la hora de estimar un parámetro poblacional? ¿Se pueden hacer inferencias razonables sobre una población a partir de los datos de una muestra? Esta pregunta es el núcleo de la ponderación de las pruebas sobre la validez externa. La validez externa es el grado en que las generalizaciones a una población más amplia son precisas y significativas.
 
-There are two statistical aspects we need to consider when we evaluate evidence for external validity: sampling variation and bias. Sampling variation is the idea that statistics from different samples vary. For example, to use the earlier example, different samples of 1,000 Americans would produce different estimates of voting preferences. This variation needs to be accounted for when estimates are given. One way of thinking about sampling variation is to map it to the quality of precision. (We will focus more on this in Unit 5.)  
+Hay dos aspectos estadísticos que debemos tener en cuenta al evaluar las pruebas de validez externa: la variación muestral y el sesgo. La variación muestral es la idea de que las estadísticas de diferentes muestras varían. Por ejemplo, siguiendo con el ejemplo anterior, diferentes muestras de 1.000 estadounidenses producirían diferentes estimaciones de las preferencias de voto. Esta variación debe tenerse en cuenta a la hora de realizar las estimaciones. Una forma de pensar en la variación del muestreo es relacionarla con la calidad de la precisión. (Nos centraremos más en esto en la Unidad 5).  
 
-The second statistical characteristic we need to attend to is bias. Statistical bias is when sample statistics differ systematically from the population parameter. The key here is the word “systematically”. This implies that there is something in the underlying process (aside from random variation) that is affecting the estimation process. 
+La segunda característica estadística a la que debemos prestar atención es el sesgo. El sesgo estadístico se produce cuando los estadísticos de la muestra difieren sistemáticamente del parámetro de la población. La clave aquí es la palabra "sistemáticamente". Esto implica que hay algo en el proceso subyacente (aparte de la variación aleatoria) que afecta al proceso de estimación. 
 
 
-### Statistical Bias {-}
+### Sesgo Estadístico {-}
 
-To help you think about bias, imagine a person, Arthur Dent, has lost his keys. The actual location of the keys, the Library, is akin to the population parameter. Arthur believes he lost his keys at the Supermarket and searches several places around the Supermarket. The locations where Arthur searches are like sample statistics. 
+Para ayudarte a pensar en el sesgo, imagine que una persona, Arthur Dent, ha perdido sus llaves. La ubicación real de las llaves, la Biblioteca, es similar al parámetro de población. Arthur cree que ha perdido las llaves en el supermercado y busca en varios lugares alrededor del supermercado. Los lugares en los que Arthur busca son como las estadísticas muestrales. 
 
 <br />
 
@@ -21,7 +21,7 @@ knitr::include_graphics("img/bias-keys.png")
 
 <br />
 
-Figure \@ref(fig:bias-keys) is a metaphor for the concept of statistical bias. Arthur's search locations (sample statistics) are systematically in the wrong place. On average, where Arthur searched (the middle of the yellow circle) is not the actual location of the keys. Compare this with the search locations in Figure \@ref(fig:unbiased-keys).
+La figura \@ref(fig:bias-keys) es una metáfora del concepto de sesgo estadístico. Las ubicaciones de búsqueda de Arthur (estadísticas muestrales) están sistemáticamente en el lugar equivocado. Por término medio, el lugar en el que Arthur buscó (el centro del círculo amarillo) no es la ubicación real de las teclas. Compárelo con los lugares de búsqueda de la figura \ref(fig:unbiased-keys).
 
 <br />
 
@@ -31,11 +31,11 @@ knitr::include_graphics("img/unbiased-keys.png")
 
 <br />
 
-Figure \@ref(fig:unbiased-keys) is a metaphor for unbiasedness. On average, where Arthur searched is the location of the keys. There are a couple of other concepts that this metaphor can help us think about.
+La figura \@ref(fig:unbiased-keys) es una metáfora del insesgamiento. En promedio, donde Arthur buscó es la ubicación de las claves. Hay un par de conceptos más sobre los que esta metáfora puede ayudarnos a pensar.
 
-1. Even in Figure \@ref(fig:unbiased-keys), none of the actual search locations were right at the keys. Some of the locations were too far to the left of the keys, and others were too far to the right of the keys. However, ON AVERAGE, the search locations "found" the keys. The way we define unbiased is that the AVERAGE of the statistics is at the population parameter.
+1. Incluso en la figura \ref(fig:unbiased-keys), ninguna de las ubicaciones reales de búsqueda estaba justo en las llaves. Algunos estaban demasiado a la izquierda y otros demasiado a la derecha. Sin embargo, EN PROMEDIO, las posiciones de búsqueda "encontraron" las llaves. La forma en que definimos insesgado es que la MEDIA de las estadísticas está en el parámetro de población.
 
-2. Average has nothing to do with the size of the yellow circle. (The size of the circle is related to the amount of sampling variation, a concept we will deal with in Unit 5.) The two figures below also illustrate unbiasedness (left) and bias (right), despite the size of the yellow circle.
+2. La media no tiene nada que ver con el tamaño del círculo amarillo. (El tamaño del círculo está relacionado con la cantidad de variación muestral, un concepto que trataremos en la Unidad 5). Las dos figuras siguientes también ilustran el insesgamiento (izquierda) y el sesgo (derecha), a pesar del tamaño del círculo amarillo.
 
 <div style="float: left; margin-right: 5px;">
 <img src="img/unbiased-keys-02.png" width="45%" />
@@ -43,10 +43,10 @@ Figure \@ref(fig:unbiased-keys) is a metaphor for unbiasedness. On average, wher
 </div>
 
 <div style="clear: both;">
-3. The last concept about bias to point out is that bias (or unbiasedness) is a property of the sampling method. The reason the search locations were not in the right place is because the method Arthur used to pick the search locations was biased. He thought he lost his keys in the Supermarket, so that is where he looked. 
+3. El último concepto sobre el sesgo que hay que señalar es que el sesgo (o la falta de sesgo) es una propiedad del método de muestreo. La razón por la que los lugares de búsqueda no estaban en el lugar correcto es que el método utilizado por Arthur para elegir los lugares de búsqueda estaba sesgado. Pensó que había perdido las llaves en el supermercado, así que buscó allí. 
 </div>
 
-An unbiased sampling method is random sampling. Random sampling uses chance to select the sampling units (participants) from the larger population. When random sampling has been employed in a study, the unbiasedness of the sampling method is strong evidence for external validity; we have a much higher belief in generalizations to the larger population. In our validity barometer we would be in the upper-third (depending on other factors such as sample size).
+Un método de muestreo insesgado es el muestreo aleatorio o probabilístico. El muestreo aleatorio utiliza el azar para seleccionar las unidades de muestreo (participantes) de la población general. Cuando se ha empleado el muestreo aleatorio en un estudio, el insesgamiento del método de muestreo es una prueba contundente de validez externa; creemos mucho más en las generalizaciones a la población más amplia. En nuestro barómetro de validez estaríamos en el tercio superior (dependiendo de otros factores como el tamaño de la muestra).
 
 <br />
 
@@ -56,4 +56,4 @@ knitr::include_graphics("img/external-validity-evidence-barometer.png")
 
 <br />
 
-In this course, we will discuss and utilize [simple random sampling](https://en.wikipedia.org/wiki/Simple_random_sample). To draw a simple random sample we need a list of EVERY member of the population. This list is called the *sampling frame*. (Obtaining a sampling frame can be very difficult. Try obtaining a list of everyone who lives in the United States!) Then we employ randomness to draw out sampling units, with the caveat that each unit in the sampling frame has an equal chance of being drawn. 
+En este curso, analizaremos y utilizaremos el [muestreo aleatorio simple](https://en.wikipedia.org/wiki/Simple_random_sample). Para extraer una muestra aleatoria simple necesitamos una lista de TODOS los miembros de la población. Esta lista se denomina *marco de muestreo* o *marco muestral*. (Obtener un marco de muestreo puede ser muy difícil. Intente obtener una lista de todas las personas que viven en Estados Unidos). A continuación, empleamos el azar para extraer las unidades de muestreo, con la salvedad de que cada unidad del marco de muestreo tiene las mismas probabilidades de ser extraída. 

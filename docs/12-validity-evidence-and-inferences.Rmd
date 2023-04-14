@@ -1,14 +1,14 @@
-# Validity Evidence and Inferences {-}
+# Pruebas de validez e inferencias {-}
 
-How subjects are selected from the larger population (sampling) and how those selected subjects are then assigned to experimental conditions (design) both play a large role in the inferences that can be drawn. These two facets are directly related to questions about [external validity](https://www.socialresearchmethods.net/kb/external.php) and [internal validity](https://www.socialresearchmethods.net/kb/intval.php), respectively.
+La manera en que se seleccionan los sujetos de la población general (muestreo) y el modo en que se asignan los sujetos seleccionados a las condiciones experimentales (diseño) desempeñan un papel importante en las inferencias que pueden extraerse. Estas dos facetas están directamente relacionadas con las cuestiones de [validez externa](https://www.socialresearchmethods.net/kb/external.php) y [validez interna](https://www.socialresearchmethods.net/kb/intval.php), respectivamente.
 
-Validity is the degree to which inferences and conclusions are meaningful and accurate. It is important that you note that the validation is about the inferences, not the study. (You should never claim a study is valid.) Unfortunately, it is almost impossible to know whether the inferences we draw are valid or not. Therefore, the best we can do is to provide evidence that supports the claims of validity and present that evidence to people. In research studies there are two major types of validity evidence that should be considered:
+La validez es el grado en que las inferencias y conclusiones son significativas y precisas. Es importante que tenga en cuenta que la validación se refiere a las inferencias, no al estudio. (Por desgracia, es casi imposible saber si las inferencias que hacemos son válidas o no.) Por lo tanto, lo mejor que podemos hacer es aportar pruebas que respalden las afirmaciones de validez y presentar esas pruebas a la gente. En los estudios de investigación hay dos tipos principales de pruebas de validez que deben tenerse en cuenta:
 
-- **Internal Validity Evidence:** This is evidence that supports the drawing of cause-and-effect conclusions. Generally these types of conclusions are only appropriate when a study has employed random assignment. Read more at [https://www.socialresearchmethods.net/kb/intval.php](https://www.socialresearchmethods.net/kb/intval.php).
+- **Pruebas de validez interna:** Se trata de pruebas que respaldan la extracción de conclusiones de causa y efecto. Por lo general, este tipo de conclusiones sólo son apropiadas cuando un estudio ha empleado la asignación aleatoria. Más información en [https://www.socialresearchmethods.net/kb/intval.php](https://www.socialresearchmethods.net/kb/intval.php).
 
-- **External Validity Evidence:** This is evidence that supports the drawing of generalizable conclusions. Generally these types of conclusions are only appropriate when a study has employed random sampling. Read more at [https://www.socialresearchmethods.net/kb/external.php](https://www.socialresearchmethods.net/kb/external.php).
+- **Pruebas de validez externa:** Se trata de pruebas que respaldan la extracción de conclusiones generalizables. Por lo general, este tipo de conclusiones sólo son apropiadas cuando un estudio ha empleado un muestreo aleatorio. Más información en [https://www.socialresearchmethods.net/kb/external.php](https://www.socialresearchmethods.net/kb/external.php).
 
-Much like evidence used in a court of law, it is useful to think about validity evidence on a continuum. For example, after reading about the sampling and design of a particular study you might envision the following two "barometers" of the internal and external validity evidence for a study's inferences:
+Al igual que las pruebas utilizadas en un tribunal, resulta útil considerar las pruebas de validez en un continuo. Por ejemplo, después de leer sobre el muestreo y el diseño de un estudio concreto, puede imaginar los dos "barómetros" siguientes de las pruebas de validez interna y externa de las inferencias de un estudio:
 
 <br />
 
@@ -18,50 +18,49 @@ knitr::include_graphics("img/validity-evidence-continuum.png")
 
 <br />
 
-The inferences drawn from this study may generalize, but are probably not causal. As you read research studies (and work on the class activities) you will learn how to situate the yellow dot along these two continuums by considering the sampling and design plans used in the study.
+Las inferencias extraídas de este estudio pueden generalizar, pero probablemente no sean causales. A medida que leas los estudios de investigación (y trabajes en las actividades de clase) aprenderás a situar el punto amarillo a lo largo de estos dos continuos teniendo en cuenta los planes de muestreo y diseño utilizados en el estudio.
 
-### Studies of Peanut Allergies {-}
+### Estudios sobre las alergias al cacahuete {-}
 
-Below, you will be presented with excerpts of the research design from three different studies of peanut allergies. The researchers who conducted these studies all used different study designs. After reading the excerpts of each study, try to create the two barometers to situate the internal and external validity evidence. This will help us consider the inferences and conclusions that can be appropriately drawn.
+A continuación se presentan extractos del diseño de investigación de tres estudios diferentes sobre la alergia a los cacahuetes. Los investigadores que llevaron a cabo estos estudios utilizaron diseños de estudio diferentes. Después de leer los extractos de cada estudio, intente crear los dos barómetros para situar las pruebas de validez interna y externa. Esto nos ayudará a considerar las inferencias y conclusiones que pueden extraerse adecuadamente.
 
-Remember there are two primary questions that you should ask when evaluating a study’s design: (1) How were the study participants selected from the population? This helps us think about the degree of external validity evidence, and (2) How were the selected study participants assigned to conditions? This helps us situate the internal validity evidence.
+Recuerde que hay dos preguntas principales que debe plantearse al evaluar el diseño de un estudio: (1) ¿Cómo se seleccionaron los participantes del estudio entre la población? Esto nos ayuda a pensar en el grado de evidencia de la validez externa, y (2) ¿Cómo se asignaron las condiciones a las personas participantes del estudio seleccionados? Esto nos ayuda a situar las pruebas de validez interna.
 
-### Study Design #1 {-}
+### Diseño #1 {-}
 
-Consider the research design of this study, published in the *New England Journal of Medicine*.^[Du Toit, G., et al. (2015). Randomized trial of peanut consumption in infants at risk for peanut allergy. *New England Journal of Medicine, 372*(9), 803&ndash;813.]
+Considere el diseño de la investigación de este estudio, publicado en el *New England Journal of Medicine*.^[Du Toit, G., et al. (2015). Ensayo aleatorizado de consumo de cacahuete en lactantes con riesgo de alergia al cacahuete. *New England Journal of Medicine, 372*(9), 803&ndash;813.]
 
 <div class="excerpt">
-**Randomized Trial of Peanut Consumption in Infants at Risk for Peanut Allergy**
+**Ensayo aleatorizado del consumo de cacahuete en lactantes con riesgo de alergia al cacahuete**
 
-To study whether peanut consumption was related to peanut allergies, researchers enrolled 640 infants (aged 4 to 11 months) with severe eczema, egg allergy, or both into the LEAP study. These infants were all enrolled from a single site in the United Kingdom.
+Para estudiar si el consumo de cacahuete estaba relacionado con las alergias al cacahuete, las personas investigadoras inscribieron a 640 lactantes (de 4 a 11 meses de edad) con eczema grave, alergia al huevo, o ambos en el estudio LEAP. Todas las personas participantes se inscribieron en un único centro de salud del Reino Unido.
 
-Participants were stratified into two study cohorts (on the basis of the results of a skin-prick test for peanut allergy) and then participants in each study cohort were randomly assigned to a group in which dietary peanut would be consumed or a group in which its consumption would be avoided. The primary outcome was the proportion of participants with peanut allergy at 60 months of age.
+Se estratificó a las personas participantes en dos cohortes de estudio (en función de los resultados de una prueba cutánea de alergia al cacahuete) y, a continuación, se asignó aleatoriamente a las personas participantes de cada cohorte de estudio a un grupo en el que se consumiría cacahuete dietético, o a un grupo en el que se evitaría su consumo. El resultado primario fue la proporción de participantes con alergia al cacahuete a los 60 meses de edad.
 
-Among the 530 infants in one cohort, the prevalence of peanut allergy at 60 months was 13.7% in the avoidance group and 1.9% in the consumption group. The absolute difference in risk of 11.8% represents an 86.1% relative reduction in the prevalence of peanut allergy. In the other cohort (98 infants), the prevalence of peanut allergy was 35.3% in the avoidance group and 10.6% in the consumption group.
+Entre las 530 personas lactantes de una cohorte, la prevalencia de alergia al cacahuete a los 60 meses fue del 13,7% en el grupo de evitación y del 1,9% en el grupo de consumo. La diferencia absoluta en el riesgo del 11,8% representa una reducción relativa del 86,1% en la prevalencia de la alergia al cacahuete. En la otra cohorte (98 lactantes), la prevalencia de alergia al cacahuete fue del 35,3% en el grupo de evitación y del 10,6% en el grupo de consumo.
 
-These findings suggest that high-risk children who consumed peanut products from infancy until they were 5 years old are less likely to develop a peanut allergy than those who avoided peanuts, according to the LEAP randomized trial.
+Estos hallazgos sugieren que las personas participantes de alto riesgo que consumieron productos de maní desde la infancia hasta los 5 años tienen menos probabilidades de desarrollar una alergia al maní que aquellas que evitaron los cacahuetes, según el ensayo aleatorizado LEAP.
 </div>
  
 
-When you read about a study design, try to initially identify
+Cuando lea sobre el diseño de un estudio, intente identificar inicialmente
 
 
-- The population the researchers would like to generalize their results to. 
-- The sample used in the study AND how participants were sampled.
-- Any control/treatment groups AND how participants were assigned to these groups.
-- Response/outcome variable AND how this variable was measured.
-- Results and statistical evidence
-
-Based on the excerpt,
+- La población a la que las personas investigadoras desean generalizar sus resultados. 
+- La muestra utilizada en el estudio Y cómo se muestrearon a las personas participantes.
+- Los grupos de control/tratamiento Y cómo se asignaron las personas participantes a estos grupos.
+- La variable de respuesta/resultado Y cómo se midió esta variable.
+- Resultados y pruebas estadísticas
 
 
-- The population the researcher would like to generalize results to encompasses high-risk children who consume peanut products from infancy until they were 5 years old.
-- The sample included 640 infants (aged 4 to 11 months at enrollment) from the United Kingdom. All 640 infants had severe eczema, egg allergy, or both. They were all enrolled at a single site. These infants were NOT randomly sampled. Although the excerpt doesn't say, they were likely volunteered (by their parents) to be a part of the study.
-- The study employed a cohort design (a replication study) in which infants in each cohort were randomly assigned to treatment (consume a peanut protein–containing bar) or control (avoid peanuts). The first cohort included 540 infants and the replication cohort included 98 infants.
-- The response/outcome being measured is the prevalence of peanut allergy after 60 months of the treatment. In other words, it was the percentage of the treatment (or control) group that had a peanut allergy after 5 years.
-- In the first cohort, the treatment group had a LOWER percentage of infants who developed a peanut allergy than the control group (1.9% vs. 13.7%). This finding was replicated in the replication cohort which found that only 10.6% of the treatment group had a peanut allergy after 60 months versus 35.3% of the control group. No *p*-values or other inferential evidence are provided.
+Basándose en el extracto sobre el diseño de este estudio, intente identificar
 
-Given this information, what would your validity evidence barometers look like? 
+La población a la que la persona investigadora desea generalizar los resultados engloba a las personas de alto riesgo que consumen productos derivados del cacahuete. Estas personas NO fueron seleccionadas al azar. Aunque el extracto no lo dice, es probable que sus padres se ofrecieran voluntariamente a participar en el estudio.
+- El estudio empleó un diseño de cohortes (un estudio de replicación) en el que las personas de cada cohorte fueron asignados aleatoriamente al tratamiento (consumir una barrita que contenía proteína de cacahuete) o al control (evitar los cacahuetes). La primera cohorte incluyó 540 lactantes y la cohorte de replicación incluyó 98 lactantes.
+- La respuesta/resultado que se midió fue la prevalencia de la alergia al cacahuete tras 60 meses de tratamiento. En otras palabras, era el porcentaje del grupo de tratamiento (o control) que tenía alergia al cacahuete al cabo de 5 años.
+- En la primera cohorte, el grupo de tratamiento presentó un porcentaje MENOR de lactantes que desarrollaron alergia al cacahuete que el grupo de control (1,9% frente a 13,7%). Este hallazgo se repitió en la cohorte de replicación, que descubrió que sólo el 10,6% del grupo de tratamiento tenía alergia al cacahuete después de 60 meses, frente al 35,3% del grupo de control. No se proporcionan valores *p* ni otras pruebas inferenciales.
+
+Teniendo en cuenta esta información, ¿cómo serían sus barómetros de pruebas de validez? 
 
 <br />
 
@@ -71,48 +70,48 @@ knitr::include_graphics("img/validity-evidence-peanut-01.png")
 
 <br />
 
-The level of internal validity evidence is pretty high. The study used random assignment to place the infants in to the control and treatment groups. Furthermore, it replicated this design using a cohort study. Lastly, the sample sizes were pretty large, so the random assignment probably worked pretty well to make the groups statistically identical. Based on all of this, the researchers have a pretty good claim for cause-and-effect about the consumption of peanuts reducing the prevalence of peanut allergies.
+El nivel de evidencia de validez interna es bastante alto. El estudio utilizó la asignación aleatoria para colocar a las personas lactantes en los grupos de control y tratamiento. Además, reprodujo este diseño utilizando un estudio de cohortes. Por último, el tamaño de las muestras era bastante grande, por lo que la asignación aleatoria probablemente funcionó bastante bien para que los grupos fueran estadísticamente idénticos. Basándose en todo esto, las personas investigadoras tienen una afirmación bastante buena de causa-efecto acerca de que el consumo de cacahuetes reduce la prevalencia de las alergias al cacahuete.
 
-The degree of external validity evidence, however, is pretty low. Infants were not randomly sampled from the population of high-risk infants. They constitute a [convenience sample](http://research-methodology.net/sampling-in-primary-data-collection/convenience-sampling/). This makes it likely that the sample does not represent the population on all characteristics. For example, to volunteer for the study, the infants might have been identified as high-risk at the same medical center. This might mean their parents are of a similar socio-economic status, or live in similar neighborhoods, etc. which may not represent the larger population. This severely limits the generalizability of these results to the larger population of high-risk infants.
+Sin embargo, el grado de evidencia de validez externa es bastante bajo. No se tomaron muestras aleatorias de la población de lactantes de alto riesgo. Constituyen una [muestra de conveniencia](http://research-methodology.net/sampling-in-primary-data-collection/convenience-sampling/). Esto hace probable que la muestra no represente a la población en todas sus características. Por ejemplo, para participar voluntariamente en el estudio, los bebés podrían haber sido identificados como de alto riesgo en el mismo centro médico. Esto podría significar que sus padres tienen un nivel socioeconómico similar, o viven en barrios similares, etc., lo que podría no representar a la población en general. Esto limita seriamente la generalizabilidad de estos resultados a la población más amplia de lactantes de alto riesgo.
 
 
-### Study Design #2 {-}
+### Diseño #2 {-}
 
-Consider the research design of this study, published in the *Journal of Allergy and Clinical Immunology*.^[Sicherer, S. H., Wood, R. A., Stablein, D., Lindblad, R., Burks, A. W., Liu, A. H., Jones, S. M., Fleischer, D. M., Leung, D. Y., &amp; Sampson, H. A. (2010). Maternal consumption of peanut during pregnancy is associated with peanut sensitization in atopic infants. *Journal of Allergy and Clinical Immunology, 126*(6), 1191&ndash;1197.]
+Considere el diseño de investigación de este estudio, publicado en el *Journal of Allergy and Clinical Immunology*.^[Sicherer, S. H., Wood, R. A., Stablein, D., Lindblad, R., Burks, A. W., Liu, A. H., Jones, S. M., Fleischer, D. M., Leung, D. Y., &amp; Sampson, H. A. (2010). Maternal consumption of peanut during pregnancy is associated with peanut sensitization in atopic infants. *Journal of Allergy and Clinical Immunology, 126*(6), 1191&ndash;1197.]
 
 
 <div class="excerpt">
-**Maternal Consumption of Peanut during Pregnancy is Associated with Peanut Sensitization in Atopic Infants**
+**El consumo de cacahuete por parte de la madre durante el embarazo se asocia con la sensibilización al cacahuete en lactantes atópicos**.
 
-To identify factors associated with peanut sensitization, we evaluated 503 infants between 3 to 15 months of age with likely milk or egg allergy but no previous diagnosis of peanut allergy. The infants were enrolled in the study from five sites: Mount Sinai School of Medicine, New York; Duke University Medical Center, Durham, NC; Johns Hopkins University School of Medicine, Baltimore, MD; National Jewish Health, Denver, CO, and the Arkansas Children’s Hospital, Little Rock, AR. 
+Para identificar los factores asociados a la sensibilización al cacahuete, evaluamos a 503 lactantes de entre 3 y 15 meses de edad con probable alergia a la leche o al huevo pero sin diagnóstico previo de alergia al cacahuete. Las personas lactantes se inscribieron en el estudio en cinco centros: Mount Sinai School of Medicine, Nueva York; Duke University Medical Center, Durham, Carolina del Norte; Johns Hopkins University School of Medicine, Baltimore, Maryland; National Jewish Health, Denver, Colorado, y Arkansas Children's Hospital, Little Rock, Arkansas. 
 
-The infants' mothers were queried about the frequency of their peanut ingestion during each trimester of pregnancy, as well as during breastfeeding. The research found that frequent consumption of peanut during pregnancy was strongly associated with peanut sensitization/allergy (*p < .001*). The also did analyses in which they controlled for infants' gender and race, two factors thought to be associated with peanut allergies. The analyses indicated that even after controlling for these factors, frequency of peanut consumption during pregnancy was strongly, positively associated with peanut sensitization/allergy (*p < .001*).
+Se preguntó a las madres de las personas lactantes sobre la frecuencia con que consumían cacahuetes durante cada trimestre del embarazo y durante la lactancia. La investigación descubrió que el consumo frecuente de cacahuete durante el embarazo estaba fuertemente asociado con la sensibilización/alergia al cacahuete (*p < .001*). También se realizaron análisis en los que se controlaron el sexo y la raza de los lactantes, dos factores que se cree que están relacionados con las alergias al cacahuete.  Los análisis indicaron que, incluso después de controlar estos factores, la frecuencia de consumo de cacahuetes durante el embarazo se asociaba fuerte y positivamente con la sensibilización/alergia a los cacahuetes (*p < 0,001*).
 </div>
 
  
-Based on the excerpt about this study design, try to identify
+Basándose en el extracto sobre el diseño de este estudio, intente identificar
 
 
-- The population the researchers would like to generalize their results to. 
-- The sample used in the study AND how participants were sampled.
-- Any control/treatment groups AND how participants were assigned to these groups.
-- Response/outcome variable AND how this variable was measured.
-- Results and statistical evidence. (Hint: There are several comparisons reported.)
+- La población a la que las personas investigadoras desean generalizar sus resultados. 
+- La muestra utilizada en el estudio Y cómo se tomaron las muestras de las personas participantes.
+- Los grupos de control/tratamiento Y cómo se asignaron los participantes a estos grupos.
+- La variable de respuesta/resultado Y cómo se midió esta variable.
+- Resultados y evidencia estadística. (Sugerencia: se informa de varias comparaciones).
 
 <div class="msg_list">
 <button class="msg_head">Click Here to<br />Show/Hide Responses.</button>
 
 <div class="msg_body">
-- The population the researchers would like to generalize their results to is all atopic infants.
-- The sample included 503 atopic infants (aged 3 to 15 months) with no previous peanut allergies who were enrolled from one of the five sites. Although the excerpt doesn't say, they were likely volunteered (by their parents) to be a part of the study.
-- The study was observational in nature; the researchers did NOT assign the mothers to eat a certain amount of peanuts during their pregnancies. (You will read more about oservational studies in *Observational Studies and the Bootstrap Test*.)
-- The response/outcome being measured in each comparison is whether or not the infant had a peanut sensitization/allergy.
-- The researchers found statistical evidence of an association between maternal consumption of peanuts during pregnancy and peanut allergies in infants. This association was not very compatible with the hypothesis of no association between the frequency of peanut consumption and peanut allergies (*p < .001*). This result was also seen after the accounted for gender and racial differences. 
+- La población a la que las personas investigadoras desean generalizar sus resultados es la de todos los lactantes atópicos.
+- La muestra incluyó 503 lactantes atópicos (de 3 a 15 meses) sin alergias previas al cacahuete que se inscribieron en uno de los cinco centros. Aunque el extracto no lo dice, es probable que sus padres se ofrecieran voluntariamente a participar en el estudio.
+- El estudio fue de carácter observacional; los investigadores NO obligaron a las madres a comer una determinada cantidad de cacahuetes durante el embarazo. (Encontrará más información sobre los estudios observacionales en *Estudios observacionales y la prueba de Bootstrap*).
+- La respuesta/resultado que se mide en cada comparación es si el lactante presentó o no sensibilización/alergia al cacahuete.
+- Los investigadores hallaron pruebas estadísticas de una asociación entre el consumo materno de cacahuetes durante el embarazo y las alergias a los cacahuetes en los lactantes. Esta asociación no era muy compatible con la hipótesis de ausencia de asociación entre la frecuencia de consumo de cacahuetes y las alergias al cacahuete (*p < .001*). Este resultado también se observó después de tener en cuenta las diferencias raciales y de género. 
 </div>
 
 </div>
 
-Given this information, what would your validity evidence barometers look like? 
+Teniendo en cuenta esta información, ¿cómo serían sus barómetros de pruebas de validez? 
 
 <div class="msg_list">
 <button class="msg_head">Click Here to<br />Show/Hide Barometers.</button>
@@ -125,51 +124,51 @@ knitr::include_graphics("img/validity-evidence-peanut-02.png")
 
 <br />
 
-The level of internal validity evidence is low. The study did not use random assignment to assign the frequency of peanuts that mothers would eat during their pregnancies. The researchers improved the level of their internal validity evidence by controlling for infant sex and race. Although this is stronger evidence for cause-and-effect than not controlling for anything, there are still many alternative factors (aside from frequency of maternal peanut ingestion) that might explain the differences in infants' peanut allergies.
+El nivel de evidencia de validez interna es bajo. El estudio no utilizó la asignación aleatoria para asignar la frecuencia de consumo de cacahuetes de las madres durante el embarazo. Las personas investigadoras mejoraron el nivel de sus pruebas de validez interna controlando el sexo y la raza del bebé. Aunque se trata de una prueba de causa-efecto más sólida que no controlar nada, sigue habiendo muchos factores alternativos (aparte de la frecuencia de ingestión de cacahuetes por parte de la madre) que podrían explicar las diferencias en las alergias a los cacahuetes de los lactantes.
 
-The degree of external validity evidence is also pretty low. Infants were not randomly sampled from the population of atopic infants. They weren't even randomly sampled from the five sites. They constitute a [convenience sample](http://research-methodology.net/sampling-in-primary-data-collection/convenience-sampling/). This makes it likely that the sample does not represent the population. (It is likely systematically biased.) This severely limits the generalizability of these results to the larger population of atopic infants.
+El grado de evidencia de validez externa también es bastante bajo. No se tomaron muestras aleatorias de la población de lactantes atópicos. Ni siquiera fueron muestreados aleatoriamente de los cinco centros. Constituyen una [muestra de conveniencia](http://research-methodology.net/sampling-in-primary-data-collection/convenience-sampling/). Esto hace probable que la muestra no represente a la población. (Es probable que esté sistemáticamente sesgada.) Esto limita gravemente la generalizabilidad de estos resultados a la población más amplia de lactantes atópicos.
 </div>
 
 </div>
 
 
 
-### Study Design #3 {-}
+### Diseño #3 {-}
 
-Lastly, consider the research design of this study, published in the *Journal of Allergy and Clinical Immunology*.^[Sicherer, S. H., Mu&ntilde;oz-Furlong, A., &amp; Sampson, H. A. (2003). Prevalence of peanut and tree nut allergy in the United States determined by means of a random digit dial telephone survey: A 5-year follow-up study. *Journal of Allergy and Clinical Immunology, 112*(6), 1203&ndash;1207.]
+Por último, considere el diseño de la investigación de este estudio, publicado en el *Journal of Allergy and Clinical Immunology*.^[Sicherer, S. H., Mu&ntilde;oz-Furlong, A., &amp; Sampson, H. A. (2003). Prevalence of peanut and tree nut allergy in the United States determined by means of a random digit dial telephone survey: A 5-year follow-up study. *Journal of Allergy and Clinical Immunology, 112*(6), 1203&ndash;1207.]
 
 <div class="excerpt">
-**Prevalence of Peanut and Tree Nut Allergy in the United States Determined by Means of a Random Digit Dial Telephone Survey: A 5-Year Follow-Up Study**
+**Prevalencia de la alergia a los cacahuetes y los frutos secos en Estados Unidos determinada mediante una encuesta telefónica de marcación aleatoria: Un estudio de seguimiento de 5 años**
 
-To study whether the prevalence of peanut allergy among the general population of the United States has changed over time, researchers contacted 9252 households by telephone in 2002 to conduct a survey about peanut allergies. (These telephone numbers constituted a random sample of phone numbers and excluded nonresidential numbers. Households were called at different times of the day and on different days to optimize contact with a resident. At least 10 attempts were made to contact a resident of each household.)
+Para estudiar si la prevalencia de la alergia a los cacahuetes entre la población general de Estados Unidos ha cambiado con el tiempo, las personas investigadoras contactaron telefónicamente con 9.252 hogares en 2002 para realizar una encuesta sobre la alergia a los cacahuetes. (Estos números de teléfono constituían una muestra aleatoria de números de teléfono y excluían los números no residenciales. Se llamó a los hogares a diferentes horas del día y en diferentes días para optimizar el contacto con un residente. Se realizaron al menos 10 intentos de contactar con un residente de cada hogar).
 
-Of the households contacted, 4855 agreed to participate. These households represented a census of 13,493 individuals. The results from this survey were compared to the results from a comparable survey carried out in 1997. These comparisons indicated that the rate of peanut allergy among adults reported in 1997 (0.4%) was not statistically different from the rate reported in 2002 (0.8%). In children the researchers found a difference between the reported rates in 1997 (0.6%) and those in 2002 (1.2%; *p = 0.05*). The researchers concluded that the rate of peanut allergy among children has doubled from 1997 to 2002.
+De los hogares contactados, 4.855 aceptaron participar. Estos hogares representaban una muestra de 13.493 personas Los resultados de esta encuesta se compararon con los de una encuesta comparable realizada en 1997. Estas comparaciones indicaron que la tasa de alergia a los cacahuetes entre las personas adultas notificada en 1997 (0,4%) no era estadísticamente diferente de la notificada en 2002 (0,8%). En las niñas y niños, las personas investigadoras encontraron una diferencia entre las tasas notificadas en 1997 (0,6%) y las de 2002 (1,2%; *p = 0,05*). Se concluyó que la tasa de alergia al cacahuete entre las niñas y niños se ha duplicado de 1997 a 2002.
 </div>
  
 
-Based on the excerpt about this study design, try to identify
+Basándose en el extracto sobre el diseño de este estudio, intente identificar
 
-- The population the researchers would like to generalize their results to. 
-- The sample used in the study AND how participants were sampled.
-- Any control/treatment groups AND how participants were assigned to these groups.
-- Response/outcome variable AND how this variable was measured.
-- Results and statistical evidence. (Hint: There are several comparisons reported.)
+- La población a la que las personas investigadoras desean generalizar sus resultados. 
+- La muestra utilizada en el estudio Y cómo se tomaron las muestras de las personas participantes.
+- Los grupos de control/tratamiento Y cómo se asignaron las personas participantes a estos grupos.
+- La variable de respuesta/resultado Y cómo se midió esta variable.
+- Resultados y pruebas estadísticas. (Sugerencia: se informa de varias comparaciones).
 
 
 <div class="msg_list">
 <button class="msg_head">Click Here to<br />Show/Hide Responses.</button>
 
 <div class="msg_body">
-- The population the researchers would like to generalize their results to is all household in the United States.
-- The sample included 4855 households.
-- The study was observational in nature; the researchers did NOT assign households to have peanut allergies.
-- The response/outcome being measured in each comparison is the number of adults and children in the household with a peanut allergy.
-- The researchers found statistical evidence of a difference in rates of peanut allergies for children between 1997 and 2002. This difference was not very compatible with the hypothesized model of no difference between rates in 1997 and 2002 (*p = .05*).  
+- La población a la que las personas investigadoras quieren generalizar sus resultados son todos los hogares de Estados Unidos.
+- La muestra incluyó 4855 hogares.
+- El estudio fue de carácter observacional; las personas investigadoras NO asignaron hogares alérgicos a los cacahuetes.
+- La respuesta/resultado que se mide en cada comparación es el número de adultos y niños de la familia con alergia a los cacahuetes.
+- Las personas investigadoras encontraron pruebas estadísticas de una diferencia en las tasas de alergia a los cacahuetes en las niñas y  niños entre 1997 y 2002. Esta diferencia no era muy compatible con el modelo hipotetizado de ausencia de diferencias entre las tasas de 1997 y 2002 (*p = .05*).  
 </div>
 
 </div>
 
-Given this information, what would your validity evidence barometers look like? 
+Teniendo en cuenta esta información, ¿cómo serían sus barómetros de pruebas de validez? 
 
 <div class="msg_list">
 <button class="msg_head">Click Here to<br />Show/Hide Barometers.</button>
@@ -182,9 +181,9 @@ knitr::include_graphics("img/validity-evidence-peanut-03.png")
 
 <br />
 
-The level of internal validity evidence is low. Since the researchers are not trying to attribute a causal reason for any differences in peanut allergies, this is not much of a concern.
+El nivel de pruebas de validez interna es bajo. Dado que las personas investigadoras no intentan atribuir una razón causal a ninguna diferencia en las alergias a los cacahuetes, esto no es muy preocupante.
 
-The degree of external validity evidence is also pretty low. Although telephone numbers were initially randomly sampled, many households did not respond. This wrecks the randomness. Also, many people in the U.S. do not have telephones, or are on a no-call list. This severely limits the generalizations.
+El grado de evidencia de validez externa también es bastante bajo. Aunque los números de teléfono se seleccionaron inicialmente al azar, muchos hogares no respondieron. Esto echa por tierra la aleatoriedad. Además, muchas personas en EE.UU. no tienen teléfono o están en una lista de personas a las que no se puede llamar. Esto limita mucho las generalizaciones.
 </div>
 
 </div>

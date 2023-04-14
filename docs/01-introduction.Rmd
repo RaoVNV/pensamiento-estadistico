@@ -1,22 +1,34 @@
 # Introducción {-}
 
-Aprender estadísticas es sexy. Hal Varian, economista de Google, así lo cree. Durante una [entrevista en McKinsey Quarterly](http://www.mckinsey.com/industries/high-tech/our-insights/hal-varian-on-how-the-web-challenges-managers), Varian declaró: "Sigo diciendo que el trabajo sexy en los próximos diez años será el de estadístico. La gente piensa que estoy bromeando, pero ¿quién hubiera imaginado que los ingenieros informáticos serían el trabajo sexy de la década de 1990?" Varian tampoco es la única persona que expresa este sentimiento. Hans Rosling en el documental de la BBC de 2010 Joy of Stats^[Vea *Joy of Stats* en línea en [http://www.gapminder.org/videos/the-joy-of-stats/](http://www.gapminder .org/videos/the-joy-of-stats/)] se refirió a las estadísticas como el "tema más atractivo".
+Aprender estadística es sexy. Hal Varian, economista jefe de Google, así lo cree. Durante una [entrevista en McKinsey Quarterly](http://www.mckinsey.com/industries/high-tech/our-insights/hal-varian-on-how-the-web-challenges-managers), Varian declaró: "Sigo diciendo que el trabajo sexy de los próximos diez años será el de profesional en estadística. La gente cree que bromeo, pero ¿quién hubiera imaginado que las personas profesionales en ingenieria informática sería el trabajo sexy de los noventa?". Varian tampoco es la única persona que expresa este sentimiento. Hans Rosling, en el documental de la BBC de 2010 Joy of Stats^[Vea *Joy of Stats* en línea en [http://www.gapminder.org/videos/the-joy-of-stats/](http://www.gapminder.org/videos/the-joy-of-stats/)] se refirió a la estadística como el "tema más sexy que existe".
 
-Si crees que es el tema más sexy o no, es indiscutible que el uso de estadísticas y datos prevalece en la era de la información actual. Casi todas las personas del mundo se beneficiarán al aprender algunas ideas fundamentales de las estadísticas. Esto es cierto porque las estadísticas forman la base de nuestro mundo cotidiano tanto como la ciencia, la tecnología y la política. Google, Netflix, Twitter, Facebook, OKCupid, Match.com, Amazon, iTunes y el gobierno federal son solo algunas de las empresas y organizaciones que usan estadísticas a diario. El periodismo, las ciencias políticas, la biología, la sociología, la psicología, el diseño gráfico, la economía, las ciencias del deporte y la danza son disciplinas que han hecho uso de la metodología estadística.
+Se crea o no que es la asignatura más sexy, es incontrovertible que el uso de estadísticas y datos prevalece en la actual era de la información. A casi todos los habitantes del planeta les vendrá bien aprender algunas nociones básicas de estadística. Esto es cierto porque la estadística constituye la base de nuestro mundo cotidiano tanto como la ciencia, la tecnología y la política. Google, Netflix, Twitter, Facebook, OKCupid, Match.com, Amazon, iTunes y el Gobierno Federal son sólo algunas de las empresas y organizaciones que utilizan la estadística a diario. El periodismo, las ciencias políticas, la biología, la sociología, la psicología, el diseño gráfico, la economía, las ciencias del deporte y la danza son disciplinas que han hecho uso de la metodología estadística.
 
-### Material del curso {-}
+### Materiales del curso {-}
 
-Los materiales en este sitio le presentarán las ideas fundamentales que subyacen a la disciplina de la estadística. Además, han sido diseñados pensando en tu aprendizaje. Las lecturas del curso deben completarse fuera de clase y están destinadas a ayudarlo a aprender y ampliar las ideas, habilidades y conceptos que aprende en el aula. Las lecturas en sí mismas no son todas lecturas "tradicionales" en el sentido de palabras escritas en la pantalla, sino que a menudo se vinculan a videoclips, blogs y otro material multimedia.
+Los materiales de este sitio web y del manual de laboratorio te presentarán las ideas fundamentales que subyacen a la disciplina estadística. Además, se han diseñado pensando en tu aprendizaje. Por ejemplo, muchas de las actividades de clase se han desarrollado utilizando principios pedagógicos, como las actividades en grupos pequeños y la discusión, que han demostrado en la investigación que mejoran el aprendizaje de las personas estudiantes. 
 
-### Manual de Laboratorio {-}
+Las lecturas del curso deben realizarse fuera de clase y están pensadas para ayudarte a aprender y ampliar las ideas, habilidades y conceptos que aprende en el aula. Las lecturas en sí no son todas lecturas "tradicionales" en el sentido de palabras escritas en la pantalla, sino que a menudo enlazan con videoclips, blogs y otro material multimedia. 
 
-Este texto debe ir acompañado de un manual de laboratorio, diseñado para ayudarlo a aplicar las ideas fundamentales de la estadística. Sin embargo, este texto también se puede utilizar como un recurso independiente para ayudar a explicar aspectos clave de las estadísticas.
+### Software TinkerPlots 3&trade {-}
 
-El gran parte del material presentado en el manual de laboratorio requiere el uso de TinkerPlots&trade;. Algunos de los capítulos de este texto se refieren a Tinkerplots, pero Tinkerplots no es necesario para utilizar este texto.
+Gran parte del material presentado en el manual de laboratorio requiere el uso de TinkerPlots 3&trade;. Este software puede descargarse (para Mac o PC), y puede adquirirse una licencia en [http://www.tinkerplots.com/](http://www.tinkerplots.com/).
+
+
+### Manual de Laboratorio y Conjuntos de Datos {-}
+
+Trabajarás con el manual de laboratorio todos los días en clase. Por lo tanto, deberás traer una copia del manual de laboratorio (física o electrónica) a clase todos los días. Para descargar una copia en PDF del manual de laboratorio, haga clic en este enlace: [https://github.com/zief0002/statistical-thinking/blob/master/statistical-thinking-v4_3.pdf?raw=true](https://github.com/zief0002/statistical-thinking/blob/master/statistical-thinking-v4_3.pdf?raw=true).
+
+Hay varios conjuntos de datos utilizados en el manual de laboratorio, así como en las tareas de EPSY 3264. Para descargar en su ordenador un archivo ZIP que incluye todos los conjuntos de datos, haga clic en uno de los enlaces siguientes. Una vez descargado el archivo ZIP en su ordenador, haga doble clic en el archivo ZIP para descomprimirlo y acceder a los materiales.
+
+- Archivos de datos [TinkerPlots 3](https://github.com/zief0002/statistical-thinking/blob/master/tp3-data.zip?raw=true)
+
 
 
 ### Participación en el Proceso de Aprendizaje {-}
 
-Aprender algo nuevo requiere tiempo y esfuerzo, y esto es especialmente cierto en el aprendizaje de estadísticas, ya que no solo estás aprendiendo un conjunto de métodos, sino una forma disciplinada de pensar sobre el mundo. Cambiar sus hábitos mentales requerirá práctica continua. También requerirá mucha paciencia y persistencia.
+El manual de laboratorio, el profesorado y asistentes del cruso son recursos que están a tu disposición para ayudarte a aprender la materia. Al final, sin embargo, tendrás que hacer todo el trabajo duro asociado con el aprendizaje real de ese material. Para superar con éxito este proceso, es fundamental que participes activamente en él. Venir a clase, participar en las actividades y discusiones, leer, completar las tareas y hacer preguntas son esenciales para el éxito del aprendizaje.
 
-A medida que participe y utilice las habilidades, los conceptos y las ideas presentados en el material, se encontrará pensando en los datos y la evidencia de una manera diferente. Esto puede llevarlo a tomar decisiones o elecciones diferentes. Pero, incluso si este curso no cambia su mundo de la noche a la mañana, al menos podrá pensar críticamente sobre las inferencias y conclusiones extraídas de los datos.
+Aprender cualquier cosa nueva requiere tiempo y esfuerzo, y esto es especialmente cierto en el caso de la estadística, ya que no se trata sólo de aprender una serie de métodos, sino más bien una forma disciplinada de pensar sobre el mundo. Cambiar los hábitos mentales requiere una práctica continua. También requerirá mucha paciencia y persistencia. 
+
+A medida que vayas aprendiendo y utilizando las habilidades, conceptos e ideas que se presentan en este material, te darás cuenta de que piensas en los datos y las pruebas de una manera diferente. Esto puede llevarte a tomar decisiones u opciones diferentes. Pero, aunque este curso no cambie tu mundo de la noche a la mañana, al menos serás capaz de pensar críticamente sobre las inferencias y conclusiones extraídas de los datos.

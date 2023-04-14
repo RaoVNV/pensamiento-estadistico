@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Pruebas de validez e inferencias | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre</title>
+  <meta name="description" content="Pruebas de validez e inferencias | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
+  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Pruebas de validez e inferencias | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Pruebas de validez e inferencias | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="evidencia-de-validez-eterna-y-muestreo-aleatorio.html"/>
+<link rel="next" href="estudios-observacioneles-y-el-la-prueba-de-bootstrap.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script type="text/javascript" src="jquery.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function()
+{
+  //hide the all of the element with class msg_body
+  $(".msg_body").hide();
+  //toggle the componenet with class msg_body
+  $(".msg_head").click(function()
+  {
+    $(this).next(".msg_body").slideToggle(600);
+  });
+});
+</script>
+
+
+<link href="https://fonts.googleapis.com/css?family=Alegreya|Cormorant+SC|EB+Garamond|News+Cycle|Playfair+Display" rel="stylesheet">
+
+
+
+
+<link rel="stylesheet" href="statistical-thinking.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Materia Frontal</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#licencias-y-atribución"><i class="fa fa-check"></i>Licencias y atribución</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#colofón"><i class="fa fa-check"></i>Colofón</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="introducción.html"><a href="introducción.html"><i class="fa fa-check"></i>Introducción</a>
+<ul>
+<li class="chapter" data-level="" data-path="introducción.html"><a href="introducción.html#materiales-del-curso"><i class="fa fa-check"></i>Materiales del curso</a></li>
+<li class="chapter" data-level="" data-path="introducción.html"><a href="introducción.html#software-tinkerplots-3trade"><i class="fa fa-check"></i>Software TinkerPlots 3&amp;trade</a></li>
+<li class="chapter" data-level="" data-path="introducción.html"><a href="introducción.html#manual-de-laboratorio-y-conjuntos-de-datos"><i class="fa fa-check"></i>Manual de Laboratorio y Conjuntos de Datos</a></li>
+<li class="chapter" data-level="" data-path="introducción.html"><a href="introducción.html#participación-en-el-proceso-de-aprendizaje"><i class="fa fa-check"></i>Participación en el Proceso de Aprendizaje</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="modelización-y-simulación.html"><a href="modelización-y-simulación.html"><i class="fa fa-check"></i>Modelización y simulación</a>
+<ul>
+<li class="chapter" data-level="" data-path="modelización-y-simulación.html"><a href="modelización-y-simulación.html#esquema-y-objetivos-de-la-unidad-1"><i class="fa fa-check"></i>Esquema y Objetivos de la Unidad 1</a></li>
+<li class="chapter" data-level="" data-path="modelización-y-simulación.html"><a href="modelización-y-simulación.html#aleatoriedad"><i class="fa fa-check"></i>Aleatoriedad</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="generación-de-datos-a-partir-de-modelos.html"><a href="generación-de-datos-a-partir-de-modelos.html"><i class="fa fa-check"></i>Generación de Datos a partir de Modelos</a></li>
+<li class="chapter" data-level="" data-path="simulación-de-monte-carlo.html"><a href="simulación-de-monte-carlo.html"><i class="fa fa-check"></i>Simulación de Monte Carlo</a>
+<ul>
+<li class="chapter" data-level="" data-path="simulación-de-monte-carlo.html"><a href="simulación-de-monte-carlo.html#ejemplo-de-estudio-de-simulación-monte-carlo"><i class="fa fa-check"></i>Ejemplo de estudio de simulación Monte Carlo</a></li>
+<li class="chapter" data-level="" data-path="simulación-de-monte-carlo.html"><a href="simulación-de-monte-carlo.html#supuestos-de-la-simulación-monte-carlo"><i class="fa fa-check"></i>Supuestos de la simulación Monte Carlo</a></li>
+<li class="chapter" data-level="" data-path="simulación-de-monte-carlo.html"><a href="simulación-de-monte-carlo.html#la-simulación-monte-carlo-simulation-en-la-práctica"><i class="fa fa-check"></i>La Simulación Monte Carlo Simulation en la Práctica</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="modelizando-variación-muestral.html"><a href="modelizando-variación-muestral.html"><i class="fa fa-check"></i>Modelizando Variación Muestral</a>
+<ul>
+<li class="chapter" data-level="" data-path="modelizando-variación-muestral.html"><a href="modelizando-variación-muestral.html#procesos-de-simulacion-para-evaluar-hipotesis"><i class="fa fa-check"></i>Procesos de Simulacion para Evaluar Hipotesis</a></li>
+<li class="chapter" data-level="" data-path="modelizando-variación-muestral.html"><a href="modelizando-variación-muestral.html#outline-and-goals-of-unit-2"><i class="fa fa-check"></i>Outline and Goals of Unit 2</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="describiendo-distribuciones.html"><a href="describiendo-distribuciones.html"><i class="fa fa-check"></i>Describiendo Distribuciones</a>
+<ul>
+<li class="chapter" data-level="" data-path="describiendo-distribuciones.html"><a href="describiendo-distribuciones.html#forma"><i class="fa fa-check"></i>Forma</a></li>
+<li class="chapter" data-level="" data-path="describiendo-distribuciones.html"><a href="describiendo-distribuciones.html#posición"><i class="fa fa-check"></i>Posición</a></li>
+<li class="chapter" data-level="" data-path="describiendo-distribuciones.html"><a href="describiendo-distribuciones.html#variación"><i class="fa fa-check"></i>Variación</a></li>
+<li class="chapter" data-level="" data-path="describiendo-distribuciones.html"><a href="describiendo-distribuciones.html#uniéndolo-todo"><i class="fa fa-check"></i>Uniéndolo todo</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="variación-experimental-y-la-prueba-de-aleatoriedad.html"><a href="variación-experimental-y-la-prueba-de-aleatoriedad.html"><i class="fa fa-check"></i>Variación Experimental y la Prueba de Aleatoriedad</a>
+<ul>
+<li class="chapter" data-level="" data-path="variación-experimental-y-la-prueba-de-aleatoriedad.html"><a href="variación-experimental-y-la-prueba-de-aleatoriedad.html#variación-experimental"><i class="fa fa-check"></i>Variación Experimental</a></li>
+<li class="chapter" data-level="" data-path="variación-experimental-y-la-prueba-de-aleatoriedad.html"><a href="variación-experimental-y-la-prueba-de-aleatoriedad.html#esquema-y-objetivos-de-la-unidad-3"><i class="fa fa-check"></i>Esquema y objetivos de la Unidad 3</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="cuantificando-resultados-p-value.html"><a href="cuantificando-resultados-p-value.html"><i class="fa fa-check"></i>Cuantificando Resultados: p-Value</a>
+<ul>
+<li class="chapter" data-level="" data-path="cuantificando-resultados-p-value.html"><a href="cuantificando-resultados-p-value.html#ajuste-por-resultados-de-simulación"><i class="fa fa-check"></i>Ajuste por Resultados de Simulación</a></li>
+<li class="chapter" data-level="" data-path="cuantificando-resultados-p-value.html"><a href="cuantificando-resultados-p-value.html#valor-p-como-evidencia"><i class="fa fa-check"></i>Valor p como Evidencia</a></li>
+<li class="chapter" data-level="" data-path="cuantificando-resultados-p-value.html"><a href="cuantificando-resultados-p-value.html#seis-principlios-sobre-valores-p"><i class="fa fa-check"></i>Seis Principlios sobre Valores p</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="evidencia-de-validez-interna-y-asignación-aleatoria.html"><a href="evidencia-de-validez-interna-y-asignación-aleatoria.html"><i class="fa fa-check"></i>Evidencia de Validez Interna y Asignación Aleatoria</a></li>
+<li class="chapter" data-level="" data-path="variación-muestral-y-el-la-prueba-de-bootstrap.html"><a href="variación-muestral-y-el-la-prueba-de-bootstrap.html"><i class="fa fa-check"></i>Variación Muestral y el la Prueba de Bootstrap</a>
+<ul>
+<li class="chapter" data-level="" data-path="variación-muestral-y-el-la-prueba-de-bootstrap.html"><a href="variación-muestral-y-el-la-prueba-de-bootstrap.html#variación-muestral"><i class="fa fa-check"></i>Variación Muestral</a></li>
+<li class="chapter" data-level="" data-path="variación-muestral-y-el-la-prueba-de-bootstrap.html"><a href="variación-muestral-y-el-la-prueba-de-bootstrap.html#bootstrapping"><i class="fa fa-check"></i>Bootstrapping</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="evidencia-de-validez-eterna-y-muestreo-aleatorio.html"><a href="evidencia-de-validez-eterna-y-muestreo-aleatorio.html"><i class="fa fa-check"></i>Evidencia de Validez Eterna y Muestreo Aleatorio</a>
+<ul>
+<li class="chapter" data-level="" data-path="evidencia-de-validez-eterna-y-muestreo-aleatorio.html"><a href="evidencia-de-validez-eterna-y-muestreo-aleatorio.html#sesgo-estadístico"><i class="fa fa-check"></i>Sesgo Estadístico</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="pruebas-de-validez-e-inferencias.html"><a href="pruebas-de-validez-e-inferencias.html"><i class="fa fa-check"></i>Pruebas de validez e inferencias</a>
+<ul>
+<li class="chapter" data-level="" data-path="pruebas-de-validez-e-inferencias.html"><a href="pruebas-de-validez-e-inferencias.html#estudios-sobre-las-alergias-al-cacahuete"><i class="fa fa-check"></i>Estudios sobre las alergias al cacahuete</a></li>
+<li class="chapter" data-level="" data-path="pruebas-de-validez-e-inferencias.html"><a href="pruebas-de-validez-e-inferencias.html#diseño-1"><i class="fa fa-check"></i>Diseño #1</a></li>
+<li class="chapter" data-level="" data-path="pruebas-de-validez-e-inferencias.html"><a href="pruebas-de-validez-e-inferencias.html#diseño-2"><i class="fa fa-check"></i>Diseño #2</a></li>
+<li class="chapter" data-level="" data-path="pruebas-de-validez-e-inferencias.html"><a href="pruebas-de-validez-e-inferencias.html#diseño-3"><i class="fa fa-check"></i>Diseño #3</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="estudios-observacioneles-y-el-la-prueba-de-bootstrap.html"><a href="estudios-observacioneles-y-el-la-prueba-de-bootstrap.html"><i class="fa fa-check"></i>Estudios Observacioneles y el la Prueba de Bootstrap</a>
+<ul>
+<li class="chapter" data-level="" data-path="estudios-observacioneles-y-el-la-prueba-de-bootstrap.html"><a href="estudios-observacioneles-y-el-la-prueba-de-bootstrap.html#analizando-datos-de-estudios-observacionales"><i class="fa fa-check"></i>Analizando Datos de Estudios Observacionales</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="estimando-la-incertidumbre.html"><a href="estimando-la-incertidumbre.html"><i class="fa fa-check"></i>Estimando la Incertidumbre</a>
+<ul>
+<li class="chapter" data-level="" data-path="estimando-la-incertidumbre.html"><a href="estimando-la-incertidumbre.html#cuantificando-la-incertidumbre-intervalos-de-compatibilidad"><i class="fa fa-check"></i>Cuantificando la Incertidumbre: Intervalos de compatibilidad</a></li>
+<li class="chapter" data-level="" data-path="estimando-la-incertidumbre.html"><a href="estimando-la-incertidumbre.html#cuantificando-la-incertidumbre-margen-de-error"><i class="fa fa-check"></i>Cuantificando la Incertidumbre: Margen de error</a></li>
+<li class="chapter" data-level="" data-path="estimando-la-incertidumbre.html"><a href="estimando-la-incertidumbre.html#esquema-y-objetivos-de-la-unidad-5"><i class="fa fa-check"></i>Esquema y objetivos de la Unidad 5</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="incertidumbre-y-sesgo.html"><a href="incertidumbre-y-sesgo.html"><i class="fa fa-check"></i>Incertidumbre y Sesgo</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="pruebas-de-validez-e-inferencias" class="section level1 unnumbered hasAnchor">
+<h1>Pruebas de validez e inferencias<a href="pruebas-de-validez-e-inferencias.html#pruebas-de-validez-e-inferencias" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>La manera en que se seleccionan los sujetos de la población general (muestreo) y el modo en que se asignan los sujetos seleccionados a las condiciones experimentales (diseño) desempeñan un papel importante en las inferencias que pueden extraerse. Estas dos facetas están directamente relacionadas con las cuestiones de <a href="https://www.socialresearchmethods.net/kb/external.php">validez externa</a> y <a href="https://www.socialresearchmethods.net/kb/intval.php">validez interna</a>, respectivamente.</p>
+<p>La validez es el grado en que las inferencias y conclusiones son significativas y precisas. Es importante que tenga en cuenta que la validación se refiere a las inferencias, no al estudio. (Por desgracia, es casi imposible saber si las inferencias que hacemos son válidas o no.) Por lo tanto, lo mejor que podemos hacer es aportar pruebas que respalden las afirmaciones de validez y presentar esas pruebas a la gente. En los estudios de investigación hay dos tipos principales de pruebas de validez que deben tenerse en cuenta:</p>
+<ul>
+<li><p><strong>Pruebas de validez interna:</strong> Se trata de pruebas que respaldan la extracción de conclusiones de causa y efecto. Por lo general, este tipo de conclusiones sólo son apropiadas cuando un estudio ha empleado la asignación aleatoria. Más información en <a href="https://www.socialresearchmethods.net/kb/intval.php">https://www.socialresearchmethods.net/kb/intval.php</a>.</p></li>
+<li><p><strong>Pruebas de validez externa:</strong> Se trata de pruebas que respaldan la extracción de conclusiones generalizables. Por lo general, este tipo de conclusiones sólo son apropiadas cuando un estudio ha empleado un muestreo aleatorio. Más información en <a href="https://www.socialresearchmethods.net/kb/external.php">https://www.socialresearchmethods.net/kb/external.php</a>.</p></li>
+</ul>
+<p>Al igual que las pruebas utilizadas en un tribunal, resulta útil considerar las pruebas de validez en un continuo. Por ejemplo, después de leer sobre el muestreo y el diseño de un estudio concreto, puede imaginar los dos “barómetros” siguientes de las pruebas de validez interna y externa de las inferencias de un estudio:</p>
+<p><br /></p>
+<p><img src="img/validity-evidence-continuum.png" width="70%" style="display: block; margin: auto;" /></p>
+<p><br /></p>
+<p>Las inferencias extraídas de este estudio pueden generalizar, pero probablemente no sean causales. A medida que leas los estudios de investigación (y trabajes en las actividades de clase) aprenderás a situar el punto amarillo a lo largo de estos dos continuos teniendo en cuenta los planes de muestreo y diseño utilizados en el estudio.</p>
+<div id="estudios-sobre-las-alergias-al-cacahuete" class="section level3 unnumbered hasAnchor">
+<h3>Estudios sobre las alergias al cacahuete<a href="pruebas-de-validez-e-inferencias.html#estudios-sobre-las-alergias-al-cacahuete" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A continuación se presentan extractos del diseño de investigación de tres estudios diferentes sobre la alergia a los cacahuetes. Los investigadores que llevaron a cabo estos estudios utilizaron diseños de estudio diferentes. Después de leer los extractos de cada estudio, intente crear los dos barómetros para situar las pruebas de validez interna y externa. Esto nos ayudará a considerar las inferencias y conclusiones que pueden extraerse adecuadamente.</p>
+<p>Recuerde que hay dos preguntas principales que debe plantearse al evaluar el diseño de un estudio: (1) ¿Cómo se seleccionaron los participantes del estudio entre la población? Esto nos ayuda a pensar en el grado de evidencia de la validez externa, y (2) ¿Cómo se asignaron las condiciones a las personas participantes del estudio seleccionados? Esto nos ayuda a situar las pruebas de validez interna.</p>
+</div>
+<div id="diseño-1" class="section level3 unnumbered hasAnchor">
+<h3>Diseño #1<a href="pruebas-de-validez-e-inferencias.html#diseño-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Considere el diseño de la investigación de este estudio, publicado en el <em>New England Journal of Medicine</em>.<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a></p>
+<div class="excerpt">
+<p><strong>Ensayo aleatorizado del consumo de cacahuete en lactantes con riesgo de alergia al cacahuete</strong></p>
+<p>Para estudiar si el consumo de cacahuete estaba relacionado con las alergias al cacahuete, las personas investigadoras inscribieron a 640 lactantes (de 4 a 11 meses de edad) con eczema grave, alergia al huevo, o ambos en el estudio LEAP. Todas las personas participantes se inscribieron en un único centro de salud del Reino Unido.</p>
+<p>Se estratificó a las personas participantes en dos cohortes de estudio (en función de los resultados de una prueba cutánea de alergia al cacahuete) y, a continuación, se asignó aleatoriamente a las personas participantes de cada cohorte de estudio a un grupo en el que se consumiría cacahuete dietético, o a un grupo en el que se evitaría su consumo. El resultado primario fue la proporción de participantes con alergia al cacahuete a los 60 meses de edad.</p>
+<p>Entre las 530 personas lactantes de una cohorte, la prevalencia de alergia al cacahuete a los 60 meses fue del 13,7% en el grupo de evitación y del 1,9% en el grupo de consumo. La diferencia absoluta en el riesgo del 11,8% representa una reducción relativa del 86,1% en la prevalencia de la alergia al cacahuete. En la otra cohorte (98 lactantes), la prevalencia de alergia al cacahuete fue del 35,3% en el grupo de evitación y del 10,6% en el grupo de consumo.</p>
+<p>Estos hallazgos sugieren que las personas participantes de alto riesgo que consumieron productos de maní desde la infancia hasta los 5 años tienen menos probabilidades de desarrollar una alergia al maní que aquellas que evitaron los cacahuetes, según el ensayo aleatorizado LEAP.</p>
+</div>
+<p>Cuando lea sobre el diseño de un estudio, intente identificar inicialmente</p>
+<ul>
+<li>La población a la que las personas investigadoras desean generalizar sus resultados.</li>
+<li>La muestra utilizada en el estudio Y cómo se muestrearon a las personas participantes.</li>
+<li>Los grupos de control/tratamiento Y cómo se asignaron las personas participantes a estos grupos.</li>
+<li>La variable de respuesta/resultado Y cómo se midió esta variable.</li>
+<li>Resultados y pruebas estadísticas</li>
+</ul>
+<p>Basándose en el extracto sobre el diseño de este estudio, intente identificar</p>
+<p>La población a la que la persona investigadora desea generalizar los resultados engloba a las personas de alto riesgo que consumen productos derivados del cacahuete. Estas personas NO fueron seleccionadas al azar. Aunque el extracto no lo dice, es probable que sus padres se ofrecieran voluntariamente a participar en el estudio.
+- El estudio empleó un diseño de cohortes (un estudio de replicación) en el que las personas de cada cohorte fueron asignados aleatoriamente al tratamiento (consumir una barrita que contenía proteína de cacahuete) o al control (evitar los cacahuetes). La primera cohorte incluyó 540 lactantes y la cohorte de replicación incluyó 98 lactantes.
+- La respuesta/resultado que se midió fue la prevalencia de la alergia al cacahuete tras 60 meses de tratamiento. En otras palabras, era el porcentaje del grupo de tratamiento (o control) que tenía alergia al cacahuete al cabo de 5 años.
+- En la primera cohorte, el grupo de tratamiento presentó un porcentaje MENOR de lactantes que desarrollaron alergia al cacahuete que el grupo de control (1,9% frente a 13,7%). Este hallazgo se repitió en la cohorte de replicación, que descubrió que sólo el 10,6% del grupo de tratamiento tenía alergia al cacahuete después de 60 meses, frente al 35,3% del grupo de control. No se proporcionan valores <em>p</em> ni otras pruebas inferenciales.</p>
+<p>Teniendo en cuenta esta información, ¿cómo serían sus barómetros de pruebas de validez?</p>
+<p><br /></p>
+<p><img src="img/validity-evidence-peanut-01.png" width="70%" style="display: block; margin: auto;" /></p>
+<p><br /></p>
+<p>El nivel de evidencia de validez interna es bastante alto. El estudio utilizó la asignación aleatoria para colocar a las personas lactantes en los grupos de control y tratamiento. Además, reprodujo este diseño utilizando un estudio de cohortes. Por último, el tamaño de las muestras era bastante grande, por lo que la asignación aleatoria probablemente funcionó bastante bien para que los grupos fueran estadísticamente idénticos. Basándose en todo esto, las personas investigadoras tienen una afirmación bastante buena de causa-efecto acerca de que el consumo de cacahuetes reduce la prevalencia de las alergias al cacahuete.</p>
+<p>Sin embargo, el grado de evidencia de validez externa es bastante bajo. No se tomaron muestras aleatorias de la población de lactantes de alto riesgo. Constituyen una <a href="http://research-methodology.net/sampling-in-primary-data-collection/convenience-sampling/">muestra de conveniencia</a>. Esto hace probable que la muestra no represente a la población en todas sus características. Por ejemplo, para participar voluntariamente en el estudio, los bebés podrían haber sido identificados como de alto riesgo en el mismo centro médico. Esto podría significar que sus padres tienen un nivel socioeconómico similar, o viven en barrios similares, etc., lo que podría no representar a la población en general. Esto limita seriamente la generalizabilidad de estos resultados a la población más amplia de lactantes de alto riesgo.</p>
+</div>
+<div id="diseño-2" class="section level3 unnumbered hasAnchor">
+<h3>Diseño #2<a href="pruebas-de-validez-e-inferencias.html#diseño-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Considere el diseño de investigación de este estudio, publicado en el <em>Journal of Allergy and Clinical Immunology</em>.<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a></p>
+<div class="excerpt">
+<p><strong>El consumo de cacahuete por parte de la madre durante el embarazo se asocia con la sensibilización al cacahuete en lactantes atópicos</strong>.</p>
+<p>Para identificar los factores asociados a la sensibilización al cacahuete, evaluamos a 503 lactantes de entre 3 y 15 meses de edad con probable alergia a la leche o al huevo pero sin diagnóstico previo de alergia al cacahuete. Las personas lactantes se inscribieron en el estudio en cinco centros: Mount Sinai School of Medicine, Nueva York; Duke University Medical Center, Durham, Carolina del Norte; Johns Hopkins University School of Medicine, Baltimore, Maryland; National Jewish Health, Denver, Colorado, y Arkansas Children’s Hospital, Little Rock, Arkansas.</p>
+<p>Se preguntó a las madres de las personas lactantes sobre la frecuencia con que consumían cacahuetes durante cada trimestre del embarazo y durante la lactancia. La investigación descubrió que el consumo frecuente de cacahuete durante el embarazo estaba fuertemente asociado con la sensibilización/alergia al cacahuete (<em>p &lt; .001</em>). También se realizaron análisis en los que se controlaron el sexo y la raza de los lactantes, dos factores que se cree que están relacionados con las alergias al cacahuete. Los análisis indicaron que, incluso después de controlar estos factores, la frecuencia de consumo de cacahuetes durante el embarazo se asociaba fuerte y positivamente con la sensibilización/alergia a los cacahuetes (<em>p &lt; 0,001</em>).</p>
+</div>
+<p>Basándose en el extracto sobre el diseño de este estudio, intente identificar</p>
+<ul>
+<li>La población a la que las personas investigadoras desean generalizar sus resultados.</li>
+<li>La muestra utilizada en el estudio Y cómo se tomaron las muestras de las personas participantes.</li>
+<li>Los grupos de control/tratamiento Y cómo se asignaron los participantes a estos grupos.</li>
+<li>La variable de respuesta/resultado Y cómo se midió esta variable.</li>
+<li>Resultados y evidencia estadística. (Sugerencia: se informa de varias comparaciones).</li>
+</ul>
+<div class="msg_list">
+<button class="msg_head">
+Click Here to<br />Show/Hide Responses.
+</button>
+<div class="msg_body">
+<ul>
+<li>La población a la que las personas investigadoras desean generalizar sus resultados es la de todos los lactantes atópicos.</li>
+<li>La muestra incluyó 503 lactantes atópicos (de 3 a 15 meses) sin alergias previas al cacahuete que se inscribieron en uno de los cinco centros. Aunque el extracto no lo dice, es probable que sus padres se ofrecieran voluntariamente a participar en el estudio.</li>
+<li>El estudio fue de carácter observacional; los investigadores NO obligaron a las madres a comer una determinada cantidad de cacahuetes durante el embarazo. (Encontrará más información sobre los estudios observacionales en <em>Estudios observacionales y la prueba de Bootstrap</em>).</li>
+<li>La respuesta/resultado que se mide en cada comparación es si el lactante presentó o no sensibilización/alergia al cacahuete.</li>
+<li>Los investigadores hallaron pruebas estadísticas de una asociación entre el consumo materno de cacahuetes durante el embarazo y las alergias a los cacahuetes en los lactantes. Esta asociación no era muy compatible con la hipótesis de ausencia de asociación entre la frecuencia de consumo de cacahuetes y las alergias al cacahuete (<em>p &lt; .001</em>). Este resultado también se observó después de tener en cuenta las diferencias raciales y de género.</li>
+</ul>
+</div>
+</div>
+<p>Teniendo en cuenta esta información, ¿cómo serían sus barómetros de pruebas de validez?</p>
+<div class="msg_list">
+<button class="msg_head">
+Click Here to<br />Show/Hide Barometers.
+</button>
+<div class="msg_body">
+<p><img src="img/validity-evidence-peanut-02.png" width="70%" style="display: block; margin: auto;" /></p>
+<p><br /></p>
+<p>El nivel de evidencia de validez interna es bajo. El estudio no utilizó la asignación aleatoria para asignar la frecuencia de consumo de cacahuetes de las madres durante el embarazo. Las personas investigadoras mejoraron el nivel de sus pruebas de validez interna controlando el sexo y la raza del bebé. Aunque se trata de una prueba de causa-efecto más sólida que no controlar nada, sigue habiendo muchos factores alternativos (aparte de la frecuencia de ingestión de cacahuetes por parte de la madre) que podrían explicar las diferencias en las alergias a los cacahuetes de los lactantes.</p>
+<p>El grado de evidencia de validez externa también es bastante bajo. No se tomaron muestras aleatorias de la población de lactantes atópicos. Ni siquiera fueron muestreados aleatoriamente de los cinco centros. Constituyen una <a href="http://research-methodology.net/sampling-in-primary-data-collection/convenience-sampling/">muestra de conveniencia</a>. Esto hace probable que la muestra no represente a la población. (Es probable que esté sistemáticamente sesgada.) Esto limita gravemente la generalizabilidad de estos resultados a la población más amplia de lactantes atópicos.</p>
+</div>
+</div>
+</div>
+<div id="diseño-3" class="section level3 unnumbered hasAnchor">
+<h3>Diseño #3<a href="pruebas-de-validez-e-inferencias.html#diseño-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Por último, considere el diseño de la investigación de este estudio, publicado en el <em>Journal of Allergy and Clinical Immunology</em>.<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a></p>
+<div class="excerpt">
+<p><strong>Prevalencia de la alergia a los cacahuetes y los frutos secos en Estados Unidos determinada mediante una encuesta telefónica de marcación aleatoria: Un estudio de seguimiento de 5 años</strong></p>
+<p>Para estudiar si la prevalencia de la alergia a los cacahuetes entre la población general de Estados Unidos ha cambiado con el tiempo, las personas investigadoras contactaron telefónicamente con 9.252 hogares en 2002 para realizar una encuesta sobre la alergia a los cacahuetes. (Estos números de teléfono constituían una muestra aleatoria de números de teléfono y excluían los números no residenciales. Se llamó a los hogares a diferentes horas del día y en diferentes días para optimizar el contacto con un residente. Se realizaron al menos 10 intentos de contactar con un residente de cada hogar).</p>
+<p>De los hogares contactados, 4.855 aceptaron participar. Estos hogares representaban una muestra de 13.493 personas Los resultados de esta encuesta se compararon con los de una encuesta comparable realizada en 1997. Estas comparaciones indicaron que la tasa de alergia a los cacahuetes entre las personas adultas notificada en 1997 (0,4%) no era estadísticamente diferente de la notificada en 2002 (0,8%). En las niñas y niños, las personas investigadoras encontraron una diferencia entre las tasas notificadas en 1997 (0,6%) y las de 2002 (1,2%; <em>p = 0,05</em>). Se concluyó que la tasa de alergia al cacahuete entre las niñas y niños se ha duplicado de 1997 a 2002.</p>
+</div>
+<p>Basándose en el extracto sobre el diseño de este estudio, intente identificar</p>
+<ul>
+<li>La población a la que las personas investigadoras desean generalizar sus resultados.</li>
+<li>La muestra utilizada en el estudio Y cómo se tomaron las muestras de las personas participantes.</li>
+<li>Los grupos de control/tratamiento Y cómo se asignaron las personas participantes a estos grupos.</li>
+<li>La variable de respuesta/resultado Y cómo se midió esta variable.</li>
+<li>Resultados y pruebas estadísticas. (Sugerencia: se informa de varias comparaciones).</li>
+</ul>
+<div class="msg_list">
+<button class="msg_head">
+Click Here to<br />Show/Hide Responses.
+</button>
+<div class="msg_body">
+<ul>
+<li>La población a la que las personas investigadoras quieren generalizar sus resultados son todos los hogares de Estados Unidos.</li>
+<li>La muestra incluyó 4855 hogares.</li>
+<li>El estudio fue de carácter observacional; las personas investigadoras NO asignaron hogares alérgicos a los cacahuetes.</li>
+<li>La respuesta/resultado que se mide en cada comparación es el número de adultos y niños de la familia con alergia a los cacahuetes.</li>
+<li>Las personas investigadoras encontraron pruebas estadísticas de una diferencia en las tasas de alergia a los cacahuetes en las niñas y niños entre 1997 y 2002. Esta diferencia no era muy compatible con el modelo hipotetizado de ausencia de diferencias entre las tasas de 1997 y 2002 (<em>p = .05</em>).<br />
+</li>
+</ul>
+</div>
+</div>
+<p>Teniendo en cuenta esta información, ¿cómo serían sus barómetros de pruebas de validez?</p>
+<div class="msg_list">
+<button class="msg_head">
+Click Here to<br />Show/Hide Barometers.
+</button>
+<div class="msg_body">
+<p><img src="img/validity-evidence-peanut-03.png" width="70%" style="display: block; margin: auto;" /></p>
+<p><br /></p>
+<p>El nivel de pruebas de validez interna es bajo. Dado que las personas investigadoras no intentan atribuir una razón causal a ninguna diferencia en las alergias a los cacahuetes, esto no es muy preocupante.</p>
+<p>El grado de evidencia de validez externa también es bastante bajo. Aunque los números de teléfono se seleccionaron inicialmente al azar, muchos hogares no respondieron. Esto echa por tierra la aleatoriedad. Además, muchas personas en EE.UU. no tienen teléfono o están en una lista de personas a las que no se puede llamar. Esto limita mucho las generalizaciones.</p>
+</div>
+</div>
+
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="4">
+<li id="fn4"><p>Du Toit, G., et al. (2015). Ensayo aleatorizado de consumo de cacahuete en lactantes con riesgo de alergia al cacahuete. <em>New England Journal of Medicine, 372</em>(9), 803–813.<a href="pruebas-de-validez-e-inferencias.html#fnref4" class="footnote-back">↩︎</a></p></li>
+<li id="fn5"><p>Sicherer, S. H., Wood, R. A., Stablein, D., Lindblad, R., Burks, A. W., Liu, A. H., Jones, S. M., Fleischer, D. M., Leung, D. Y., &amp; Sampson, H. A. (2010). Maternal consumption of peanut during pregnancy is associated with peanut sensitization in atopic infants. <em>Journal of Allergy and Clinical Immunology, 126</em>(6), 1191–1197.<a href="pruebas-de-validez-e-inferencias.html#fnref5" class="footnote-back">↩︎</a></p></li>
+<li id="fn6"><p>Sicherer, S. H., Muñoz-Furlong, A., &amp; Sampson, H. A. (2003). Prevalence of peanut and tree nut allergy in the United States determined by means of a random digit dial telephone survey: A 5-year follow-up study. <em>Journal of Allergy and Clinical Immunology, 112</em>(6), 1203–1207.<a href="pruebas-de-validez-e-inferencias.html#fnref6" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="evidencia-de-validez-eterna-y-muestreo-aleatorio.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="estudios-observacioneles-y-el-la-prueba-de-bootstrap.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

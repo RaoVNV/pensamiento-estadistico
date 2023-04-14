@@ -1,16 +1,15 @@
-# Estimating Uncertainty {-}
+# Estimando la Incertidumbre {-}
 
-> Far better an approximate answer to the right question &hellip; than an exact answer to the wrong question.^[Tukey, J. (1962). The future of data analysis. *Annals of Mathematical Statistics 33*(1), 1&ndash;67.]
+> Mucho mejor una respuesta aproximada a la pregunta correcta &hellip; que una respuesta exacta a la pregunta equivocada.^[Tukey, J. (1962). The future of data analysis. *Annals of Mathematical Statistics 33*(1), 1&ndash;67.]
+
+Aparte del contraste de hipótesis, uno de los usos más comunes de la inferencia estadística es la estimación de parámetros desconocidos utilizando datos de muestra. Las encuestas son una de las aplicaciones en las que se utiliza la estimación estadística. Por ejemplo, [Gallup](http://www.gallup.com/) y el [Pew Research Center](http://www.pewresearch.org/) son organizaciones que utilizan la estimación estadística para ofrecer resultados de las actitudes y opiniones del público sobre temas que van desde la política y la economía hasta la concienciación social y la salud y el bienestar. Los resultados de sus encuestas aparecen a diario en casi todos los periódicos, blogs de noticias y sitios web del mundo.
+
+La estimación estadística no sólo la utilizan las personas encuestadoras. Profesionales en biología, ciencias sociales y medicina utilizan la estimación estadística para cuantificar las características de la población. Por ejemplo, el Departamento de Recursos Naturales de Minnesota calcula cada año las poblaciones de varias especies de animales, aves y peces. Estas estimaciones se utilizan para ayudar a establecer normativas de caza y pesca, así como para asignar recursos.^[Aquí está el [Informe sobre la población de lobos en 2016](http://files.dnr.state.mn.us/wildlife/wolves/2016/survey-wolf.pdf).]
 
 
-Aside from hypothesis testing, one of the most common uses of statistical inference is the estimation of unknown parameters using sample data. Polling is one application where statistical estimation is used. For example, [Gallup](http://www.gallup.com/) and the [Pew Research Center](http://www.pewresearch.org/) are organizations that use statistical estimation to provide snapshots of public attitudes and opinions on topics from politics and the economy, to social awareness and health and well-being. The results of their polls are seen on a daily basis in almost every newspaper, news blog and website across the world.
+### Cuantificando la Incertidumbre: Intervalos de compatibilidad {-}
 
-Statistical estimation is used by more than pollsters. Biologists, social scientists, and medical researchers use statistical estimation to quantify population characteristics. For example, each year the Minnesota Department of Natural Resources estimates the populations of various species of animal, bird, and fish. These estimates are used to help set hunting and fishing regulations, as well as to allocate resources.^[Here is the [Wolf Population report for 2016](http://files.dnr.state.mn.us/wildlife/wolves/2016/survey-wolf.pdf).]
-
-
-### Quantifying Uncertainty: Compatibility Intervals {-}
-
-When statisticians report sample estimates, they typically provide the value of the estimate along with the quantification of uncertainty in this estimate. This uncertainty measurement gives us an indication of the "precision" of the estimate. For example, consider again the example of the person who lost his keys. In those pictures, recall, the places where he searched for his keys (the red x's) represents that sample data. 
+Cuando profesionales en estadística reportan estimaciones muestrales, suelen proporcionar el valor de la estimación junto con la cuantificación de la incertidumbre en esta estimación. Esta medida de la incertidumbre nos da una indicación de la "precisión" de la estimación. Por ejemplo, consideremos de nuevo el ejemplo de la persona que perdió sus llaves. En esas imágenes, recuerde, los lugares donde buscó las llaves (las x rojas) representan los datos de la muestra. 
 
 <br />
 
@@ -20,60 +19,53 @@ knitr::include_graphics("img/uncertainty-keys.png")
 
 <br />
 
-One estimate that can be made from that data is the "mean" location.^[In two-dimensional space, like on a map, the "mean" is referred to as a [centroid](https://en.wikipedia.org/wiki/Centroid).] This location is marked with a big blue dot. This estimate is the one-location best guess about where the actual keys (the population parameter) are located. The yellow area represents the uncertainty; other places where the keys might be aside from the on-location best guess. Interpreting this uncertainty gives him a range of locations where the actual keys might be; the compatibility interval. 
+Una estimación que puede hacerse a partir de esos datos es la ubicación "media"^[En el espacio bidimensional, como en un mapa, la "media" se denomina [centroide](https://en.wikipedia.org/wiki/Centroid).]. Esta ubicación está marcada con un gran punto azul. Esta estimación es la mejor suposición sobre dónde se encuentran las claves reales (el parámetro de población). El área amarilla representa la incertidumbre, es decir, otros lugares en los que podrían estar las llaves, aparte de la mejor estimación en una localización. La interpretación de esta incertidumbre le da un rango de ubicaciones donde podrían estar las llaves reales: el intervalo de compatibilidad. 
 
-### Quantification of Uncertainty: Margin of Error {-}
+### Cuantificando la Incertidumbre: Margen de error {-}
 
-Compatibility intervals are often reported using the sample estimate (statistic) and a margin of error. For example, consider the following poll results reported in the [New York Times on June 30, 2011](http://query.nytimes.com/gst/fullpage.html?res=980DE0DF1530F933A05755C0A9679D8B63):
+Los intervalos de compatibilidad se comunican a menudo utilizando la estimación de la muestra (estadística) y un margen de error. Por ejemplo, considere los siguientes resultados de encuestas publicados en el [New York Times el 30 de junio de 2011](http://query.nytimes.com/gst/fullpage.html?res=980DE0DF1530F933A05755C0A9679D8B63):
 
-> As the housing market slumped over the last few years with a speed and magnitude not seen since the Great Depression, aspects of homeownership have been debated as never before. There are tough questions about the role the government should take…includ[ing] how much of a down payment lenders should demand. Whether buyers need to come up with a 20 percent down payment—the standard for decades, but beyond the reach of many families now—is hotly debated. Fifty-eight percent of respondents say lenders should require this, while 36 percent say they should not. The nationwide telephone poll was conducted June 24&ndash;28 with 979 adults and has a margin of sampling error of plus or minus three percentage points for all adults.
+> A medida que el mercado de la vivienda se desplomaba en los últimos años con una rapidez y una magnitud que no se veían desde la Gran Depresión, los aspectos de la propiedad de la vivienda se han debatido como nunca antes. Hay preguntas difíciles sobre el papel que debe desempeñar el gobierno... incluida la cuantía del pago inicial que deben exigir las personas prestamistas. La necesidad de que las personas compradoras aporten un pago inicial del 20% -la norma durante décadas, pero fuera del alcance de muchas familias en la actualidad- es objeto de un acalorado debate. El 58% de las personas encuestadas opina que las personas prestamistas deberían exigirlo, mientras que el 36% dice que no. La encuesta telefónica nacional se realizó el 24 y 28 de junio a 979 personas adultas y tiene un margen de error de muestreo de más o menos tres puntos porcentuales para todas las personas adultos.
 
+En este artículo, el porcentaje de personas adultas en Estados Unidos que creen que las personas prestamistas deberían exigir un pago inicial del 20% para la compra de una vivienda es el siguiente:
 
-In this article, the percentage of all adults in the United States who believe that lenders should require a 20% down payment on a house was reported as:
+- **Estimación Muestral:** 58%
+- **Margen de Error:** 3%
 
-- **Sample estimate:** 58%
-- **Margin of error:** 3%
-
-Although the compatibility interval isn't directly reported, it can be computed using the sample estimate and margin of error as,
+Aunque el intervalo de compatibilidad no se indica directamente, puede calcularse utilizando la estimación muestral y el margen de error como,
 
 $$
-\mathrm{Sample~Estimate} \pm \mathrm{Margin~of~Error}
+\mathrm{Estimación~Muestral} \pm \mathrm{Margen~de~Error}
 $$
 
-In this example,
+En este ejemplo,
 
 $$
 58\% \pm 3\% = \left[55\%,~61\%\right]
 $$
 
-Statisticians refer to this as a **compatibility interval** because it gives an interval of plausible values for the percentage of all adults in the United States who believe that lenders should require a 20% down payment on a house that are compatible with the observed data. Based on the observed data, the best estimate for the "truth" (the population parameter) is that 58% of all adults in the United States believe that lenders should require a 20% down payment on a house. However, because of the uncertainty associated with random sampling, it may be that anywhere between 55% and 61% of all adults in the United States believe that lenders should require a 20% down payment on a house. 
+Los estadísticos lo denominan **intervalo de compatibilidad** porque proporciona un intervalo de valores plausibles para el porcentaje de todas las personas adultas de Estados Unidos que creen que las personas prestamistas deberían exigir un pago inicial del 20% por una vivienda que son compatibles con los datos observados. A partir de los datos observados, la mejor estimación de la "verdad" (el parámetro poblacional) es que el 58% de todos las personas adultas de Estados Unidos creen que las personas prestamistas deberían exigir un pago inicial del 20% por una vivienda. Sin embargo, debido a la incertidumbre asociada al muestreo aleatorio, puede ser que entre el 55% y el 61% de todas las personas adultas de Estados Unidos crean que las personas prestamistas deberían exigir un pago inicial del 20% por una vivienda. 
 
-In the interpretation above, we associated the amount of uncertainty with variation because of random sampling. It turns out that the margin of error is directly related to the quantification of sampling error. In fact,  
+En la interpretación anterior, asociábamos la cantidad de incertidumbre con la variación debida al muestreo aleatorio. Resulta que el margen de error está directamente relacionado con la cuantificación del error de muestreo. De hecho,  
 
 $$
-\mathrm{Margin~of~Error} = 2 \times \mathrm{Standard~Error}
+\mathrm{Margen~de~Error} = 2 \times \mathrm{Error~Estándar}
 $$
 
-While statistians tend to use two standard errors to compute the uncertainty estimate, this is a somewhat arbitrary choice. Some researchers choose one or three standard errors.
+Aunque las personas profesionales en estadística tienden a utilizar dos errores estándar para calcular la estimación de la incertidumbre, se trata de una elección un tanto arbitraria. Algunas personas investigadoras eligen uno o tres errores estándar.
 
 
-####  What is the Standard Error?
+####  ¿Qué es el Error Estándar?
 
-The standard error is just a fancy name for the standard deviation when the distribution is composed of statistics (e.g., means, percentages). In other words, the standard deviation of a set of simulated results. That means, in practice, we can use bootstrapping to model the sampling variation, obtain the standard deviation of the bootstrapped results, and use that along with the estimate from the observed data to obtain a compatibility interval.
+El error estándar es sólo un nombre elegante para la desviación estándar cuando la distribución se compone de estadísticas (por ejemplo, promedios, porcentajes). En otras palabras, la desviación estándar de un conjunto de resultados simulados. Esto significa que, en la práctica, podemos utilizar el bootstrap para modelizar la variación del muestreo, obtener la desviación típica de los resultados bootstrap y utilizarla junto con la estimación de los datos observados para obtener un intervalo de compatibilidad.
 
-As you interpret compatibility intervals, there are a couple things to keep in mind.
+Al interpretar los intervalos de compatibilidad, hay que tener en cuenta un par de cosas.
 
-- The compatibility interval is being used to estimate the population parameter.
-- The compatibility interval gives a range of compatible values for the population parameter. 
-- Each value in the range is not equally compatible with the data (Values in the middle of the range are more compatible with the data than values at the ends of the range.) Moreover, the values outside the range are not incompatibile with the data; just far, far less compatible.
+- El intervalo de compatibilidad se utiliza para estimar el parámetro de una población.
+- El intervalo de compatibilidad da un rango de valores compatibles para el parámetro de población. 
+- Cada valor del intervalo no es igualmente compatible con los datos (los valores en el centro del intervalo son más compatibles con los datos que los valores en los extremos del intervalo). Además, los valores fuera del intervalo no son incompatibles con los datos; sólo son mucho, mucho menos compatibles.
 
-To further help you understand ideas related to the standard error and the margin of error, we would like you to read Chapter 10 (*What is a Margin of Error?*) from a short pamphlet put together by the American Statistical Association’s Section on Survey Research. 
+Para ayudarte a comprender mejor las ideas relacionadas con el error típico y el margen de error, te recomendamos leer el capítulo 10 (*¿Qué es un margen de error?*) de un breve folleto elaborado por la Sección de Investigación de Encuestas de la Asociación Americana de Estadística. 
 
-- It is available at [http://www.prm.nau.edu/prm447/asa%20brochures/margin.pdf](http://www.prm.nau.edu/prm447/asa%20brochures/margin.pdf).
-
-
-### Outline and Goals of Unit 5 {-}
-
-In the readings, course activities, and assignments in Unit 5, you will explore the use of bootstrapping to make statistical estimates using TinkerPlots&trade;. You will also learn about how sample size affects the precision/uncertainty of statistical estimates. Lastly, you will learn about the connections between hypothesis testing and estimation. 
-
+- Disponible en [http://www.prm.nau.edu/prm447/asa%20brochures/margin.pdf](http://www.prm.nau.edu/prm447/asa%20brochures/margin.pdf).
 

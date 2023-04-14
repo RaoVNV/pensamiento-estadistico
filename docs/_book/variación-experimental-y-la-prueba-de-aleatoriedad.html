@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Introducción | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre</title>
-  <meta name="description" content="Introducción | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
+  <title>Variación Experimental y la Prueba de Aleatoriedad | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre</title>
+  <meta name="description" content="Variación Experimental y la Prueba de Aleatoriedad | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
   <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Introducción | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
+  <meta property="og:title" content="Variación Experimental y la Prueba de Aleatoriedad | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Introducción | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
+  <meta name="twitter:title" content="Variación Experimental y la Prueba de Aleatoriedad | Pensamiento Estadístico: Un Enfoque de Simulación para Modelar la Incertidumbre" />
   
   
   
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="modelización-y-simulación.html"/>
+<link rel="prev" href="describiendo-distribuciones.html"/>
+<link rel="next" href="cuantificando-resultados-p-value.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -174,39 +174,43 @@ $(document).ready(function()
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="introducción" class="section level1 unnumbered hasAnchor">
-<h1>Introducción<a href="introducción.html#introducción" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Aprender estadística es sexy. Hal Varian, economista jefe de Google, así lo cree. Durante una <a href="http://www.mckinsey.com/industries/high-tech/our-insights/hal-varian-on-how-the-web-challenges-managers">entrevista en McKinsey Quarterly</a>, Varian declaró: “Sigo diciendo que el trabajo sexy de los próximos diez años será el de profesional en estadística. La gente cree que bromeo, pero ¿quién hubiera imaginado que las personas profesionales en ingenieria informática sería el trabajo sexy de los noventa?”. Varian tampoco es la única persona que expresa este sentimiento. Hans Rosling, en el documental de la BBC de 2010 Joy of Stats<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> se refirió a la estadística como el “tema más sexy que existe”.</p>
-<p>Se crea o no que es la asignatura más sexy, es incontrovertible que el uso de estadísticas y datos prevalece en la actual era de la información. A casi todos los habitantes del planeta les vendrá bien aprender algunas nociones básicas de estadística. Esto es cierto porque la estadística constituye la base de nuestro mundo cotidiano tanto como la ciencia, la tecnología y la política. Google, Netflix, Twitter, Facebook, OKCupid, Match.com, Amazon, iTunes y el Gobierno Federal son sólo algunas de las empresas y organizaciones que utilizan la estadística a diario. El periodismo, las ciencias políticas, la biología, la sociología, la psicología, el diseño gráfico, la economía, las ciencias del deporte y la danza son disciplinas que han hecho uso de la metodología estadística.</p>
-<div id="materiales-del-curso" class="section level3 unnumbered hasAnchor">
-<h3>Materiales del curso<a href="introducción.html#materiales-del-curso" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Los materiales de este sitio web y del manual de laboratorio te presentarán las ideas fundamentales que subyacen a la disciplina estadística. Además, se han diseñado pensando en tu aprendizaje. Por ejemplo, muchas de las actividades de clase se han desarrollado utilizando principios pedagógicos, como las actividades en grupos pequeños y la discusión, que han demostrado en la investigación que mejoran el aprendizaje de las personas estudiantes.</p>
-<p>Las lecturas del curso deben realizarse fuera de clase y están pensadas para ayudarte a aprender y ampliar las ideas, habilidades y conceptos que aprende en el aula. Las lecturas en sí no son todas lecturas “tradicionales” en el sentido de palabras escritas en la pantalla, sino que a menudo enlazan con videoclips, blogs y otro material multimedia.</p>
-</div>
-<div id="software-tinkerplots-3trade" class="section level3 unnumbered hasAnchor">
-<h3>Software TinkerPlots 3&amp;trade<a href="introducción.html#software-tinkerplots-3trade" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Gran parte del material presentado en el manual de laboratorio requiere el uso de TinkerPlots 3™. Este software puede descargarse (para Mac o PC), y puede adquirirse una licencia en <a href="http://www.tinkerplots.com/">http://www.tinkerplots.com/</a>.</p>
-</div>
-<div id="manual-de-laboratorio-y-conjuntos-de-datos" class="section level3 unnumbered hasAnchor">
-<h3>Manual de Laboratorio y Conjuntos de Datos<a href="introducción.html#manual-de-laboratorio-y-conjuntos-de-datos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Trabajarás con el manual de laboratorio todos los días en clase. Por lo tanto, deberás traer una copia del manual de laboratorio (física o electrónica) a clase todos los días. Para descargar una copia en PDF del manual de laboratorio, haga clic en este enlace: <a href="https://github.com/zief0002/statistical-thinking/blob/master/statistical-thinking-v4_3.pdf?raw=true">https://github.com/zief0002/statistical-thinking/blob/master/statistical-thinking-v4_3.pdf?raw=true</a>.</p>
-<p>Hay varios conjuntos de datos utilizados en el manual de laboratorio, así como en las tareas de EPSY 3264. Para descargar en su ordenador un archivo ZIP que incluye todos los conjuntos de datos, haga clic en uno de los enlaces siguientes. Una vez descargado el archivo ZIP en su ordenador, haga doble clic en el archivo ZIP para descomprimirlo y acceder a los materiales.</p>
+<div id="variación-experimental-y-la-prueba-de-aleatoriedad" class="section level1 unnumbered hasAnchor">
+<h1>Variación Experimental y la Prueba de Aleatoriedad<a href="variación-experimental-y-la-prueba-de-aleatoriedad.html#variación-experimental-y-la-prueba-de-aleatoriedad" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<blockquote>
+<p>La naturaleza de hacer ciencia, ya sea natural o social, exige inevitablemente la comparación. Los métodos estadísticos están en el centro de esta comparación, ya que no sólo nos ayudan a comprender el mundo que nos rodea, sino que a menudo definen cómo debe llevarse a cabo nuestra investigación.<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a></p>
+</blockquote>
+<p>Hacer inferencia sobre las diferencias entre grupos es algo casi cotidiano en la vida de la mayoría de las personas. En cualquier hora de un día cualquiera, la televisión, la radio y las redes sociales abundan en comparaciones. Por ejemplo, los científicos de datos de OKCupid, un sitio de citas en línea, examinaron si las personas que realizan muchas publicaciones en Twitter tienen relaciones más cortas en la vida real que los demás.<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a></p>
+<p>Las comparaciones entre grupos son el núcleo de muchas cuestiones interesantes que se plantean personas en psicología, medicina, educación e ingeniería. Las cuestiones sobre las diferencias entre grupos suelen estudiarse mediante experimentos científicos. Cuando se plantea un experimento científico para examinar las diferencias entre grupos, el diseño del estudio desempeña un papel muy importante. Para entenderlo mejor, pensemos en una persona investigadora que estudia la eficacia de un nuevo medicamento para el resfriado. Supongamos que la esta persona cuenta con 100 personas (cada una con un resfriado) que se ofrecen voluntarias para participar en su estudio. Pensemos en cómo podría diseñar su estudio.</p>
 <ul>
-<li>Archivos de datos <a href="https://github.com/zief0002/statistical-thinking/blob/master/tp3-data.zip?raw=true">TinkerPlots 3</a></li>
+<li><strong>Diseño 1:</strong> Suministrar el medicamento contra el resfriado a los 100 persona voluntaria.</li>
+<li><strong>Diseño 2:</strong> Suministrar el medicamento contra el resfriado a las primeras 50 personas voluntarias (grupo de tratamiento) y nada a las otras 50 personas voluntarias (grupo de control).</li>
+<li><strong>Diseño 3:</strong> Elige al azar a 50 de las personas voluntarias a los que da el medicamento para el resfriado (grupo de tratamiento) y no se les da nada a las otras 50 personas voluntarias (grupo de control).</li>
 </ul>
+<p>Los tres diseños se han utilizado, y se siguen utilizando, en estudios de investigación. Cada uno de los diseños tiene sus pros y sus contras, y todos son útiles en función de lo que se quiera saber.</p>
+<p>En el Diseño 1, es difícil juzgar la eficacia de la medicación. Por ejemplo, ¿qué pasaría si 60 de las personas voluntarias no tuvieran síntomas de resfriado al cabo de cuatro días? ¿Funcionó la medicación? Quizá piense: “¿qué habría pasado si no hubieran recibido ninguna medicación?”. Es una gran pregunta. En este diseño, no lo sabemos.</p>
+<p>El diseño 2 ofrece a la persona investigadora un grupo de comparación. Puede comparar el número de personas voluntarias de cada grupo que no tienen síntomas de resfriado después de cuatro días. Este es un diseño mejor que el Diseño 1 para examinar la eficacia. Pero, ¿qué pasaría si descubriera que después de cuatro días, 35 de las personas voluntarias que recibieron la medicación no tenían síntomas, mientras que sólo 25 de las personas voluntarias que no recibieron medicación no tenían síntomas? ¿Son suficientes pruebas para afirmar que la medicación contra el resfriado es eficaz? Probablemente no. Quizá la mayoría de las personas voluntarias del grupo de tratamiento ya estaban en fases avanzadas de su resfriado. Tal vez tenían un sistema inmunitario más robusto que el del grupo de control (por ejemplo, debido a unos hábitos de ejercicio o nutrición diferentes). Se pueden imaginar muchas razones por las que el grupo de tratamiento mostraría una mejoría más rápida que el grupo de control.</p>
+<p>El Diseño 3 tiene la misma ventaja del grupo de comparación que el Diseño 2. La gran diferencia, sin embargo, es que las personas voluntarias fueron asignados a los grupos al azar. Al asignar los participantes al azar, la persona que investiga “iguala” los grupos de tratamiento y de control. Esto significa que los grupos tienen, en promedio, los MISMOS hábitos nutricionales, los MISMOS hábitos de ejercicio y lo MISMO en todo lo demás. Esto significa que lo único que difiere entre los dos grupos es que el grupo de tratamiento recibió la medicación para el resfriado y el grupo de control no. Si la persona investigadora utiliza este tipo de diseño, puede sacar conclusiones mucho más sólidas sobre el PORQUÉ mejoró el grupo de tratamiento: ¡fue gracias a la medicación para el resfriado!</p>
+<div id="variación-experimental" class="section level3 unnumbered hasAnchor">
+<h3>Variación Experimental<a href="variación-experimental-y-la-prueba-de-aleatoriedad.html#variación-experimental" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Supongamos que nuestra hipotética persona investigadora utilizó un diseño fuerte en el que asignó aleatoriamente a sus personas voluntarias a los grupos de tratamiento y control. Después de cuatro días, descubrió que 35 de las 50 personas voluntarias del grupo de tratamiento no presentaban síntomas y que 27 de las 50 del grupo de control no presentaban síntomas. ¿Podría concluir que la medicación para el resfriado es eficaz porque 8 voluntarios más del grupo de tratamiento no tenían síntomas?</p>
+<p>En realidad, no. Y la razón es la variación experimental. Consideremos la situación en la que el tratamiento no tiene absolutamente NINGÚN EFECTO. En otras palabras, no hace nada. En ese supuesto, los grupos de tratamiento y de control deberían mejorar aproximadamente al mismo ritmo. En el supuesto de que el tratamiento no tenga ningún efecto, las diferencias entre el grupo de tratamiento y el de control no dependen del medicamento para el resfriado. Se deben únicamente al azar. De forma similar a los estudios que vimos en la Unidad 2, tenemos que averiguar cuánta variación aleatoria se espera antes de poder decir si la diferencia de 8 personas voluntarias es realmente una mejora.</p>
+<p>Una diferencia clave entre este tipo de estudio y los de la Unidad 2 es que la variación aleatoria surge de la asignación a grupos en estos estudios, mientras que en la Unidad 2, la variación aleatoria surgió debido al muestreo de una población mayor. Cuando la variación por azar se debe a la asignación de los participantes a los grupos, se denomina <em>variación experimental</em> en lugar de <em>variación por muestreo</em>.</p>
 </div>
-<div id="participación-en-el-proceso-de-aprendizaje" class="section level3 unnumbered hasAnchor">
-<h3>Participación en el Proceso de Aprendizaje<a href="introducción.html#participación-en-el-proceso-de-aprendizaje" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>El manual de laboratorio, el profesorado y asistentes del cruso son recursos que están a tu disposición para ayudarte a aprender la materia. Al final, sin embargo, tendrás que hacer todo el trabajo duro asociado con el aprendizaje real de ese material. Para superar con éxito este proceso, es fundamental que participes activamente en él. Venir a clase, participar en las actividades y discusiones, leer, completar las tareas y hacer preguntas son esenciales para el éxito del aprendizaje.</p>
-<p>Aprender cualquier cosa nueva requiere tiempo y esfuerzo, y esto es especialmente cierto en el caso de la estadística, ya que no se trata sólo de aprender una serie de métodos, sino más bien una forma disciplinada de pensar sobre el mundo. Cambiar los hábitos mentales requiere una práctica continua. También requerirá mucha paciencia y persistencia.</p>
-<p>A medida que vayas aprendiendo y utilizando las habilidades, conceptos e ideas que se presentan en este material, te darás cuenta de que piensas en los datos y las pruebas de una manera diferente. Esto puede llevarte a tomar decisiones u opciones diferentes. Pero, aunque este curso no cambie tu mundo de la noche a la mañana, al menos serás capaz de pensar críticamente sobre las inferencias y conclusiones extraídas de los datos.</p>
+<div id="esquema-y-objetivos-de-la-unidad-3" class="section level3 unnumbered hasAnchor">
+<h3>Esquema y objetivos de la Unidad 3<a href="variación-experimental-y-la-prueba-de-aleatoriedad.html#esquema-y-objetivos-de-la-unidad-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>El siguiente esquema describe las lecturas del curso, las actividades en clase y las tareas de la Unidad 3.</p>
+<p><br /></p>
+<p><img src="img/unit-03-outline.png" width="65%" style="display: block; margin: auto auto auto 0;" /></p>
+<p><br /></p>
+<p>En las lecturas, actividades del curso y asignaciones de la Unidad 3, explorará el proceso de modelar la variación experimental para poder evaluar las diferencias observadas entre grupos. Usted aprenderá acerca de la prueba de aleatorización (un método de Monte Carlo para evaluar si un resultado observado en compatible con la variación experimental de un modelo hipotetizado) y cómo llevar a cabo esta prueba utilizando TinkerPlots™.</p>
 
 </div>
 </div>
 <div class="footnotes">
 <hr />
-<ol start="1">
-<li id="fn1"><p>Vea <em>Joy of Stats</em> en línea en <a href="http://www.gapminder.org/videos/the-joy-of-stats/">http://www.gapminder.org/videos/the-joy-of-stats/</a><a href="introducción.html#fnref1" class="footnote-back">↩︎</a></p></li>
+<ol start="4">
+<li id="fn4"><p>Liao, T. F. (2002). <em>Statistical group comparison.</em> New York: Wiley.<a href="variación-experimental-y-la-prueba-de-aleatoriedad.html#fnref4" class="footnote-back">↩︎</a></p></li>
+<li id="fn5"><p>The website <a href="http://blog.okcupid.com/">OKTrends</a> incluye una respuesta a esta pregunta, así como a muchas otras.<a href="variación-experimental-y-la-prueba-de-aleatoriedad.html#fnref5" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
@@ -214,8 +218,8 @@ $(document).ready(function()
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="modelización-y-simulación.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="describiendo-distribuciones.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="cuantificando-resultados-p-value.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

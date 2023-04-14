@@ -1,20 +1,32 @@
-# Sampling Variation and the Bootstrap Test {-}
+# Variación Muestral y el la Prueba de Bootstrap {-}
 
-In Unit 3, we discovered that, even under the null hypothesis of no group differences, group means from randomized studies vary because of experimental variation. That is, variation in the result occurs because of random assignment. Recall in Unit 2, that the chance variation was a function of the sampling process; different samples drawn from the population (model) produced different results. When results vary because of the sampling process, the chance variation is referred to as **sampling variation**.
+En la Unidad 3, descubrimos que, incluso bajo la hipótesis nula de ausencia de diferencias de grupo, las medias de grupo de los estudios aleatorizados varían debido a la variación experimental. Es decir, la variación en el resultado se produce debido a la asignación aleatoria. Recordemos que en la Unidad 2, la variación aleatoria fue una función del proceso de muestreo; diferentes muestras extraídas de la población (modelo) produjeron diferentes resultados. Cuando los resultados varían debido al proceso de muestreo, la variación aleatoria se denomina **variación muestral**.
 
-### Sampling Variation {-}
+### Variación Muestral {-}
 
-Some designs for group comparisons also are affected by sampling variation. For example, a study design that employs random sampling to obtain observations would inherently be affected by sampling variation. Consider the following study that examined whether baby names are getting shorter over time. 
+Algunos diseños para la comparación de grupos también se ven afectados por la variación del muestreo. Por ejemplo, un diseño que emplea el muestreo aleatorio para obtener observaciones se vería inherentemente afectado por la variación del muestreo. Consideremos el siguiente estudio, que examina si los nombres de los bebés son cada vez más cortos con el paso del tiempo. 
 
-> The Social Security Administration (SSA) provides historical data on names for every baby born in the United States. Researchers used the population of all names that were included at least five times in the SSA database to randomly sample 25 names from babies born in 1945 and 25 names from babies born in 1995. The length (in letters) of each name was computed, and the two samples were compared. 
+> La Administración de la Seguridad Social (SSA) proporciona datos históricos sobre los nombres de todos los bebés nacidos en Estados Unidos. Los investigadores utilizaron la población de todos los nombres que figuraban al menos cinco veces en la base de datos de la SSA para tomar muestras aleatorias de 25 nombres de bebés nacidos en 1945 y 25 nombres de bebés nacidos en 1995. Se calculó la longitud (en letras) de cada nombre y se compararon las dos muestras. 
 
 ```{r echo=FALSE, eval=FALSE}
 library(babynames)
+
 set.seed(1915)
-b1945 = babynames %>% filter(year == 1945) %>% sample_n(size = 25, replace = FALSE) %>% mutate(num_letters = stringr::str_length(name))
+
+b1945 = babynames %>% 
+  filter(year == 1945) %>% 
+  sample_n(size = 25, replace = FALSE) %>% 
+  mutate(num_letters = stringr::str_length(name))
+
 set.seed(2001)
-b1995 = babynames %>% filter(year == 1995) %>% sample_n(size = 25, replace = FALSE) %>% mutate(num_letters = stringr::str_length(name))
-allYears = rbind(b1945, b1995) %>% select(name, year, num_letters)
+b1995 = babynames %>% 
+  filter(year == 1995) %>% 
+  sample_n(size = 25, replace = FALSE) %>% 
+  mutate(num_letters = stringr::str_length(name))
+
+allYears = rbind(b1945, b1995) %>%
+  select(name, year, num_letters)
+
 write.csv(allYears, row.names = FALSE, file = "~/Desktop/babynames.csv")
 ```
 
@@ -27,20 +39,16 @@ knitr::include_graphics("img/babynames-data.png")
 
 <br />
 
-The plot above shows the distribution of name length for the two samples. Babies born in 1995 have shorter names, on average, than babies born in 1945. Is this difference in means is 0.72. Is this difference evidence that baby names are getting shorter over time?
+El gráfico anterior muestra la distribución de la longitud de los nombres en las dos muestras. Los bebés nacidos en 1995 tienen nombres más cortos, en promedio, que los bebés nacidos en 1945. Esta diferencia de medias es de 0,72. ¿Es esta diferencia una prueba de que los nombres de los bebés son cada vez más cortos?
 
-In order to answer that question, we need to understand how much variation we expect in differences of means just because of chance. Here, chance is a function of the process of random sampling; note there is no random assignment to groups (year) in these data. Similar to the randomization test, we need to specify a "no difference" model and then simulate from it. But, in the simulation, we need to model the random sampling that was used to generate the data, not randomization to groups.
+Para responder a esta pregunta, tenemos que saber cuánta variación esperamos en las diferencias de medias debido al azar. Aquí, el azar es una función del proceso de muestreo aleatorio; nótese que no hay asignación aleatoria a grupos (año) en estos datos. De forma similar a la prueba de aleatorización, necesitamos especificar un modelo de "no diferencia" y luego simular a partir de él. Pero, en la simulación, necesitamos modelar el muestreo aleatorio que se utilizó para generar los datos, no la asignación aleatoria a los grupos.
 
 ### Bootstrapping {-}
 
-If we had the larger population of all baby names from 1945 and 1995, we could combine them all and draw two random samples of size 25 from this mega-population; one sample we label "1945", and the other we label "1995". (We combine the two populations because the hypothesized model of "no differences" implies that there is really only one population; no difference between the two populations). We could do this many times, each time collecting the difference in mean name lengths between the two samples. By plotting the difference in means, and computing the standard deviation of these differences, we could quantify the amount of variation we expect just because of sampling variation.
+Si tuviéramos la población más grande de todos los nombres de bebés de 1945 y 1995, podríamos combinarlos todos y extraer dos muestras aleatorias de tamaño 25 de esta megapoblación; una muestra la etiquetamos como "1945" y la otra como "1995". (Combinamos las dos poblaciones porque el modelo hipotético de "sin diferencias" implica que en realidad sólo hay una población; ninguna diferencia entre las dos poblaciones). Podríamos hacer esto muchas veces, recogiendo cada vez la diferencia en las longitudes medias de los nombres entre las dos muestras. Trazando la diferencia de medias y calculando la desviación estándar de estas diferencias, podríamos cuantificar la cantidad de variación que esperamos sólo debido a la variación del muestreo.
 
-Unfortunately, we do not have the population of baby names from 1945 and 1995. What we do have is a random sample of those names. So, we are going to combine the names from our two samples to form a "mega-population". Then, we are going to draw two random samples of size 25 from this "mega-population". 
+Por desgracia, no disponemos de la población de nombres de bebés de 1945 y 1995. Lo que tenemos es una muestra aleatoria de esos nombres. Así que vamos a combinar los nombres de nuestras dos muestras para formar una "megapoblación". A continuación, vamos a extraer dos muestras aleatorias de tamaño 25 de esta "megapoblación". 
 
-Wait a minute. When we combined our two samples together, our "mega-population" was only 50 names big. If we draw two samples, each of size 25, from this "mega-population", isn't that all of the "mega-population"? If we do that, isn't that the same thing as the randomization test? How does that allow us to model sampling error? After all, the randomization test helps model experimental error.
+Un momento. Cuando combinamos nuestras dos muestras, nuestra "megapoblación" sólo tenía 50 nombres. Si extraemos dos muestras, cada una de tamaño 25, de esta "megapoblación", ¿no es toda la "megapoblación"? Si hacemos eso, ¿no es lo mismo que la prueba de aleatorización? ¿Cómo nos permite modelizar el error de muestreo? Después de todo, la prueba de aleatorización ayuda a modelar el error experimental.
 
-All true. We can, however, model sampling error, with one twist. When we draw our 25 names for each sample from our "mega-population", we sample WITH REPLACEMENT. In this way, we mimic drawing random samples from a larger population without actually needing the larger population. It is a really nifty method called **bootstrapping** developed by Brad Efron in the late 1970's. Efron's big discovery was that by bootstrapping (sampling with replacement) from a random sample, a person could come up with a good estimate of the sampling variation. 
-
-### Outline and Goals of Unit 4 {-}
-
-In the readings, course activities, and assignments in Unit 4, you will explore the process of modeling sampling variation to be able to evaluate observed differences between groups. You will learn about the bootstrap test (a Monte Carlo method for evaluating whether an observed result in compatible with sampling variation from a hypothesized model) and how to carry out this test using TinkerPlots&trade;. You will also learn why random sampling helps provide validity evidence for generalizing results to the population (external validity evidence). Lastly, you will learn how to evaluate group differences from observational studies.
+Todo esto es cierto. Sin embargo, podemos modelar el error de muestreo con un giro. Cuando extraemos nuestros 25 nombres para cada muestra de nuestra "megapoblación", muestreamos CON REEMPLAZO. De este modo, imitamos la extracción de muestras aleatorias de una población mayor sin necesitar realmente dicha población. Se trata de un método realmente ingenioso llamado **bootstrapping** desarrollado por Brad Efron a finales de la década de 1970. El gran descubrimiento de Efron fue que mediante el bootstrapping (muestreo con sustitución) a partir de una muestra aleatoria, se podía obtener una buena estimación de la variación muestral. 

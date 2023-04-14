@@ -1,6 +1,6 @@
-# Uncertainty and Bias {-}
+# Incertidumbre y Sesgo {-}
 
-Since statistical estimation is a method of inference, we need to weigh validity evidence the same way we did for tests of hypotheses. Whether the estimate is a "good" estimate depends on how the sample was drawn. If a biased method of drawing the sample was used, or a biased method of assigning participants to groups was used, the compatibility interval will likely be biased. Let's again illustrate using our key example.
+Dado que la estimación estadística es un método de inferencia, tenemos que sopesar las pruebas de validez del mismo modo que lo hicimos para las pruebas de hipótesis. Que la estimación sea "buena" depende de cómo se haya extraído la muestra. Si se utilizó un método sesgado para extraer la muestra, es probable que el intervalo de compatibilidad esté sesgado. Volvamos a ilustrarlo con nuestro ejemplo de las llaves.
 
 <div style="float: left; margin-right: 5px;">
 <img src="img/uncertainty-and-bias-02.png" width="45%" />
@@ -9,9 +9,9 @@ Since statistical estimation is a method of inference, we need to weigh validity
 
 <div style="clear: both;">
 
-The figure on the left is a metaphor for the compatibility interval resulting from an unbiased sampling method, such as random sampling. The figure on the right is a metaphor for the compatibility interval resulting from an biased sampling method, such as convenience sampling. Remember the goal of estimation is to give a range of likely values for the population parameter (the keys). If a biased sampling method is used the resulting compatibility interval will likely be wrong (biased).
+La figura de la izquierda es una metáfora del intervalo de compatibilidad resultante de un método de muestreo insesgado, como el muestreo aleatorio. La figura de la derecha es una metáfora del intervalo de compatibilidad resultante de un método de muestreo sesgado, como el muestreo de conveniencia. Recuerde que el objetivo de la estimación es ofrecer un intervalo de valores probables para el parámetro de población (las claves). Si se utiliza un método de muestreo sesgado, el intervalo de compatibilidad resultante será probablemente erróneo (sesgado).
 
-Don't confuse uncertainty with bias. In our key example, remember the amount of uncertainty is shown by the size of the yellow circle. In the figures above, the uncertainty for both the biased and unbiased sampling methods was the same. Now, consider the following figures.
+No debes confundir incertidumbre con sesgo. En nuestro ejemplo de las llaves, recuerde que la cantidad de incertidumbre se muestra por el tamaño del círculo amarillo. En las figuras anteriores, la incertidumbre de los métodos de muestreo sesgado e insesgado era la misma. Ahora, considere las siguientes figuras.
 
 
 <div style="float: left; margin-right: 5px;">
@@ -19,6 +19,4 @@ Don't confuse uncertainty with bias. In our key example, remember the amount of 
 <img src="img/uncertainty-and-bias-04.png" width="45%" />
 </div>
 
-The figure on the left is a metaphor for a compatibility interval that has a small amount of uncertainty (large sample size) resulting from a biased sampling method. The figure on the right is a metaphor for a compatibility interval that has a large amount of uncertainty (small sample size) resulting from an unbiased sampling method. In terms of estimating where the actual keys are, the compatibility interval represented in the right-hand figure would be better. This is an important lesson: **Sample size only matters if the sampling method is unbiased.**
-
-
+La figura de la izquierda es una metáfora de un intervalo de compatibilidad que tiene una pequeña incertidumbre (gran tamaño de la muestra) como resultado de un método de muestreo sesgado. La figura de la derecha es una metáfora de un intervalo de compatibilidad que tiene una gran incertidumbre (tamaño de muestra pequeño) como resultado de un método de muestreo no sesgado. En términos de estimación de dónde están las llaves reales, el intervalo de compatibilidad representado en la figura de la derecha sería mejor. Esta es una lección importante: **El tamaño de la muestra sólo importa si el método de muestreo es insesgado.

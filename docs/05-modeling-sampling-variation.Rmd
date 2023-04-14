@@ -1,52 +1,53 @@
-# Modeling Sampling Variation {-}
+# Modelizando Variación Muestral {-}
 
-In the course activities and homework assignments, you have been using probability models to generate random outcomes. You have also learned how to use Monte Carlo simulation to generate many data sets from a given model. This is the same kind of process that researchers, scientists, and statisticians engage in when they evaluate (or test) hypotheses about the world. 
+En las actividades y asignaciones del curso, has utilizado modelos de probabilidad para generar resultados aleatorios. También has aprendido a utilizar la simulación Monte Carlo para generar muchos conjuntos de datos a partir de un modelo dado. Este es el mismo tipo de proceso que realizan las personas investigadoras, científicas y las personas profesionales en estadística cuando evalúan (o prueban) hipótesis sobre el mundo.
 
+Para ilustrar las ideas subyacentes a las pruebas de hipótesis, piense en cómo podrías probar si una moneda es justa (no trucada). Podrías haber sugerido algo parecido a "lanzar la moneda muchas veces y llevar la cuenta del número de caras y cruces". Supongamos que lanzas la moneda 100 veces y el resultado es 53 caras y 47 cruces ¿Diría que la moneda es "injusta"? ¿Y si en lugar de eso hubieras obtenido 65 caras y 35 colas? ¿Diría ahora que la moneda es "injusta"? ¿Y si hubieras obtenido 84 caras y sólo 16 colas?
 
-To illustrate the ideas behind statistical hypothesis testing, consider how you might go about testing a coin for "fairness". You might have suggested something along the lines of "flip the coin many times and keep track of the number of heads and tails". Suppose you tossed the coin 100 times, which resulted in 53 heads and 47 tails. Would you say the coin is "unfair"? What if you had obtained 65 heads and 35 tails instead? Now would you say the coin is "unfair"? How about if you had gotten 84 heads and only 16 tails?
+El primer resultado de 53 caras y 47 cruces probablemente no te pareció tan descabellado, y probablemente te sentirías conforme diciendo que la moneda que produjo tal resultado es, muy probablemente, "justa". Por otro lado, los resultados de 65 caras y 35 cruz&mdash;y especialmente 84 caras y 16 cruz&mdash;probablemente te hicieron sentir inconforme a la hora de declarar que la moneda es "justa".
 
-The first result of 53 heads and 47 tails probably did not seem that far fetched to you, and you probably would feel at ease saying that the coin that produced such a result is most likely "fair". On the other hand, the results of 65 heads and 35 tails&mdash;and especially 84 heads and 16 tails&mdash;likely made you feel uncomfortable about declaring the coin "fair". 
+¿Por qué sucede esto? Porque tienes un modelo mental de la distribución de caras y cruces que esperas cuando la moneda realmente ES "justa". Si el resultado observado de los 100 lanzamientos de la moneda es compatible con el modelo de una moneda "justa", podría concluir que la moneda es "justa". Por ejemplo, el resultado de 53 caras de 100 lanzamientos se aproxima mucho a la proporción 50:50 de caras y cruces, y probablemente se pueda afirmar que una moneda "justa" podría haber producido el conjunto de lanzamientos en cuestión. En este caso, los datos son compatibles con el modelo de "moneda justa".
 
-Why is this? It is because you had a mental model of the distribution of heads and tails that you expect when the coin actually IS "fair". If the observed result of the 100 coin flips is compatible with the model of a "fair" coin, you might conclude that the coin is "fair". For example, the result of 53 heads from 100 flips is very close to the 50:50 split of heads and tails, and  it is probably safe to say that a “fair” coin could have produced the set of flips in question. In this case, the data are compatible with the model of "fairness".
+Si el resultado observado se desvía de lo esperado según el modelo de una moneda "justa", por ejemplo los dos resultados de 65 caras y 84 caras, se podría acabar rechazando la hipótesis de que la moneda era "justa". En estos dos casos, los datos son incompatibles (o al menos mucho menos compatibles) con el modelo de "moneda justa".
 
-If the observed result deviates from what is expected under the model of a "fair" coin, for example the two results of 65 heads and 84 heads, you might end up rejecting the hypothesis that the coin was "fair". In these two cases, the data are incompatible (or at least far less compatible) with the model of "fairness".
+Una cosa de la que te habrás dado cuenta es que esperamos variaciones en los resultados sólo por el azar (aleatoriedad). Aunque la moneda fuera realmente "justa", no esperamos obtener exactamente 50 caras cada vez que lanzamos 100 veces la moneda. Esta variación en el número de caras que obtenemos cada vez que lanzamos 100 veces la moneda se denomina **variación muestral**; es la variación que surge porque estamos generando diferentes muestras del modelo (o población). 
 
-One thing you may have realized is that we expect variation in the results just because of chance (randomness). Even if the coin really was "fair", we do not expect exactly 50 heads every time we carry out 100 flips of the coin. This variation in the number of heads we get each time we carry out 100 flips of the coin is referred to as **sampling variation**; it is the variation that arises because we are generating different samples from the model (or population). 
+Saber algo sobre cuánta variación de muestreo se espera es la forma en que podemos juzgar si los datos son compatibles o incompatibles con el modelo; es la razón por la que crees que 53 caras serían compatibles con una moneda "justa", pero 65 caras parecen menos compatibles con ese modelo, y 84 caras aún menos. Por suerte, podemos obtener una indicación de cuánta variación muestral cabe esperar utilizando la simulación de Montecarlo.
 
-Knowing something about how much sampling variation is expected is how we can judge whether data are compatible or incompatible with the model; it is why you feel 53 heads would be compatible with a "fair" coin, but 65 heads feels less compatible with that model, and  84 heads even less so. Luckily, we can get an indication of how much sampling variation is expected using Monte Carlo simulation.
+### Procesos de Simulacion para Evaluar Hipotesis {-}
 
-### Simulation Process for Evaluating Hypotheses {-}
+El proceso que utilizaremos para evaluar una hipótesis es el siguiente:
+  
+(1) Crear un modelo que se ajuste a la hipótesis que se desea evaluar.
+(2) Utilice el modelo seleccionado para generar muchos, muchos conjuntos de datos (simulación Monte Carlo). Los resultados que recoja y agrupe de estos ensayos te darán una idea de la variación que cabría esperar según el modelo hipotetizado.
+(3) Evalúe si los resultados observados en los datos reales (no en los simulados) son compatibles con los resultados esperados del modelo. Esto actúa como prueba de apoyo (o no apoyo) de la hipótesis. 
 
-The process we will use for evaluating a hypothesis is:
+Para ayudarte a recordar este proceso, puedes utilizar la siguiente simplificación:
+  
+- Modelizar
+- Simular
+- Evaluar
 
-(1) Create a model that conforms to the hypothesis to be evaluated.
-(2) Use the selected model to generate many, many sets of data (Monte Carlo simulation). The results you collect and pool together from these trials will give a picture of the variation you would expect under the hypothesized model.
-(3) Evaluate whether the results observed in the actual data (not the simulated data) are compatible with the expected results produced from the model. This acts as evidence of support (or nonsupport) for the hypothesis. 
+Puede parecer un proceso sencillo, pero en la práctica puede resultar bastante complejo&mdash sobre todo cuando se leen artículos de investigación y se intenta interpretar los resultados. En primer lugar, en la mayoría de los artículos de investigación no suele proporcionarse ni describirse explícitamente el modelo seleccionado. A menudo se deja al lector la tarea de averiguar cuál era el modelo supuesto. Al principio, esto puede ser bastante difícil, pero como la mayoría de las tareas, a medida que adquiera experiencia en este curso y lea más investigaciones, descubrirá que hay un conjunto común de modelos que suelen utilizar las personas investigadoras.
 
-To help you remember this process, you can use the more simplistic mnemonic:
+El modelo que utilice en la simulación Monte Carlo está directamente relacionado con la hipótesis que formule sobre una pregunta de investigación. A menudo, los investigadores formulan explícitamente hipótesis sobre sus preguntas de investigación. Las hipótesis no son más que enunciados de posibles explicaciones para un conjunto de datos observados. Por ejemplo, una posible explicación para el conjunto observado de lanzamientos de monedas es:
+  
+  > La moneda utilizada para generar el conjunto de lanzamientos observados es una moneda "justa", lo que produciría (a largo plazo) una distribución uniforme de caras y colas. 
 
-- Model
-- Simulate
-- Evaluate
+Una complicación que puede encontrar es que muchas personas profesionaes en estadística y personas investigadoras escriben sus hipótesis matemáticamente. La ventaja de escribir una hipótesis matemáticamente es que define explícitamente el modelo que se utilizará en la simulación de Monte Carlo. Consideremos la hipótesis de que la moneda utilizada para generar el conjunto de lanzamientos observados es una moneda "justa" que produce una distribución uniforme de cara y cruz. Recordemos que producir una distribución uniforme de caras y colas significa que las caras y las colas tienen la misma probabilidad según este modelo (es decir, una división 50:50). Podríamos expresar esta hipótesis más matemáticamente como: 
+  
+  > El modelo produce caras (y colas) con una probabilidad de 0,5. 
 
-This may sound like a straight-forward process, but in practice it can actually be quite complex&mdash;especially as you are reading research articles and trying to interpret the findings. First off, the model that is selected is often not provided, nor described, explicitly within most research articles. It is often left to the reader to figure out what the assumed model was. At first, this may be quite difficult, but like most tasks, as you gain experience in this course and as you read more research, you find that there are a common set of models that are typically used by researchers.
+Simbólicamente, expresaríamos esta hipótesis como:
 
-The model that you use in the Monte Carlo simulation is directly related to the hypothesis you make about a research question. Often researchers explicitly state hypotheses about their research questions. Hypotheses are simply statements of possible explanations for an observed set of data. For example, one possible explanation for the observed set of coin flips is:
+$$
+H_0: \pi_{\mathrm{Cara,~Cruz}} = 0.5
+$$
 
-> The coin used to generate the set of observed coin flips is a "fair" coin; which would produce (in the long run) a uniform distribution of heads and tails. 
-
-One complication that you may encounter is that many statisticians and researchers write their hypotheses mathematically. The advantage to writing a hypothesis mathematically is that it explicitly defines the model that will be used in the Monte Carlo simulation. Consider the stated hypothesis that the coin used to generate the set of observed coin flips is a "fair" coin that produces a uniform distribution of heads and tails. Recall that producing a uniform distribution of heads and tails means that heads and tails are equally likely under this model (i.e., a 50:50 split). We could express this hypothesis more mathematically as: 
-
-> The model produces heads (and tails) with a probability of 0.5. 
-
-
-In this hypothesis, we are establishing that the model we are evaluating generates heads (and tails) with a probability of 0.5. Notice how the model is completely defined using the mathematical notation. The hypothesis states that the model has two potential outcomes (heads and tails), and the probability of each is 0.5. Pretty cool, huh?  
-
-
-
+El símbolo $H_0$ es común e indica una hipótesis sobre un modelo. Aquí, $\pi$ es la letra griega pi y significa "probabilidad" o "proporción". (Normalmente, en la notación simbólica para hipótesis, pi no es la constante matemática de 3,14). Las personas profesionales en estadística suelen utilizar letras griegas para identificar las probabilidades de los resultados de un modelo.^[**Letras griegas frente a romanas** <br /> Letras griegas se utilizan cuando se describen los parámetros de un modelo. Por el contrario, las letras romanas se utilizan para describir los resultados observados. Por ejemplo, regrese a la situación en la que los datos observados consistieron en 53 caras y 47 cruces de 100 lanzamientos de una moneda. <br /><br /> Aquí diríamos $p_{\mathrm{cara}} = 0,53$. La hipótesis sobre el modelo que estamos evaluando produce cara con una probabilidad de 0,5, por lo que $\pi_{\mathrm{cara,~cruz}} = 0,5$. <br /><br /> En lugar de usar las letras romanas, algunos estadísticos prefieren poner un "sombrero" en la letra griega para referirse al resultado observado. Por ejemplo, $\hat{\pi}_{\mathrm{Cara}}=0,53$. <br /><br /> En este curso no nos interesa tanto qué notación utilice para expresar el resultado observado en los datos reales. De hecho, podría ser menos confuso si solo escribe, *el resultado observado es 0.53*.] En esta hipótesis, estamos estableciendo que el modelo que estamos evaluando genera caras (y cruces) con una probabilidad de 0,5. Observe cómo el modelo está completamente definido utilizando la notación matemática. La hipótesis establece que el modelo tiene dos resultados potenciales (cara y cruz), y que la probabilidad de cada uno es 0,5. Es genial, ¿no?  
+  
 ### Outline and Goals of Unit 2 {-}
 
-In the readings, course activities, and assignments in Unit 2, you will explore the process of evaluating statistical hypotheses. You will be introduced to several common models that used by researchers and statisticians. You will also use TinkerPlots&trade; to generate simulated data to study the variation in results that would be expected under these models. Many of these models are directly related to the chance models that you have explored in the course to this point. For example, you should already be able to use TinkerPlots&trade; to produce results that would be expected from 100 flips of a "fair" coin. 
+En las lecturas, actividades del curso y asignaciones de la Unidad 2, explorarás el proceso de evaluación de hipótesis estadísticas. Se te presentarán varios modelos comunes utilizados por investigadores y estadísticos. También utilizarás TinkerPlots&trade; para generar datos simulados para estudiar la variación en los resultados que se esperarían bajo estos modelos. Muchos de estos modelos están directamente relacionados con los modelos de azar que has explorado en el curso hasta este punto. Por ejemplo, ya deberías ser capaz de utilizar TinkerPlots&trade; para producir resultados que se esperarían de 100 lanzamientos de una moneda "justa". 
 
-Aside from learning about some of the more common models used in research, you will also learn how to describe and formally quantify the variation in a distribution. This is helpful as we evaluate whether a particular result in observed data is compatible with results produced from the given model. Lastly, you will learn about common misconceptions regarding model evaluation (e.g., we can never say a model produced the data, only that it produces results compatible with the data), and how to use probabilistic language when providing an "answer" to a research question.
-
+Además de aprender sobre algunos de los modelos más comunes utilizados en la investigación, también aprenderás a describir y cuantificar formalmente la variación en una distribución. Esto es útil para evaluar si un resultado concreto de los datos observados es compatible con los resultados obtenidos a partir de un modelo determinado. Por último, aprenderás conceptos erróneos comunes sobre la evaluación de modelos (por ejemplo, nunca podemos decir que un modelo produjo los datos, sólo que produce resultados compatibles con los datos), y cómo utilizar el lenguaje probabilístico al dar una "respuesta" a una pregunta de investigación.

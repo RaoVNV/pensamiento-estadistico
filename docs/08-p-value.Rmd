@@ -1,84 +1,67 @@
-# Quantifying Results: p-Value {-}
+# Cuantificando Resultados: p-Value {-}
 
-In addition to computing the range of likely results from the model, statisticians also typically provide a quantification of the consistency between the observed result and the expectations based on the model. This quantification is referred to as a $p$-value (the $p$ stands for probability). 
+Además de calcular la gama de resultados probables del modelo, las personas profesionales en estadística también suelen proporcionar una cuantificación de la probabilidad del resultado observado dado el modelo hipotético. Esta cuantificación se denomina valor $p$ ($p$ significa probabilidad). 
 
-To compute a $p$-value, you count the number of results that are at least as extreme as the observed result, and divide this by the total number of results. 
+Para calcular un valor $p$, se cuenta el número de resultados que son al menos tan extremos como el resultado observado y se divide por el número total de resultados. 
 
 $$
-p = \frac{\mathrm{number~of~results~at~least~as~extreme~as~observed~result}}{\mathrm{total~number~of~simulated~results}}
+p = \frac{\mathrm{cantidad~de~resultados~al~menos~tan~extremos~como~el~observado}}{\mathrm{catidad~total~de~resultado~simulados}}
 $$
 
-This value is then reported as a decimal value. It quantifies the probability of observing a result at least as extreme as the observed result under the hypothesized model. It is often interpreted as the likelihood of the observed result given the hypothesized model.
+Este valor se presenta como un valor decimal. El valor $p$ Cuantifica la probabilidad de observar un resultado al menos tan extremo como el resultado observado según el modelo hipotético.
 
-To illustrate this, we will re-examine simulation results from the *Sleep Deprivation* study. Recall in that activity, the observed data had a difference in means of 15.9. Below is a plot of 100 differences in means simulated under the "no-effect"" model. A vertical line is shown at the observed difference of 15.9.
+Para ilustrarlo este concepto, volveremos a examinar los resultados de la simulación del estudio *Privación del sueño*. Recordemos que en esa actividad, los datos observados tenían una diferencia de medias de 15,9. A continuación se muestra un gráfico de 100 diferencias de medias simuladas con el modelo "sin efecto". Se muestra una línea vertical en la diferencia observada de 15,9.
 
 ```{r out.width="70%", echo=FALSE, fig.align='center'}
 knitr::include_graphics("img/sleep-deprivation-simulation.png")
 ```
 
-Since 15.9 is to the right of 0 (i.e., it is on the right-hand side of the plot) results that are *more extreme than the observed result* are to the right of 15.9. (If the observed result was to the left of 0, more extreme results would be those more negative than the observed result.) Here there are two simulated results out of 100 that are at least as extreme as 15.9 ($\geq 15.9$). We would report the $p$-value as 0.02.
+Como 15,9 está a la derecha de 0 (es decir, está en el lado derecho del gráfico), los resultados *más extremos que el resultado observado* están a la derecha de 15,9. (Si el resultado observado estuviera a la izquierda de 0, los resultados más extremos serían los más negativos que el resultado observado). (Si el resultado observado estuviera a la izquierda de 0, los resultados más extremos serían los más negativos que el resultado observado). Aquí hay dos resultados simulados de 100 que son al menos tan extremos como 15,9 ($\geq 15,9$). Informaríamos del valor $p$ como 0,02.
 
-### Adjustment for Simulation Results {-}
+### Ajuste por Resultados de Simulación {-}
 
-In simulation studies, we make one small adjustment to the $p$-value computation; we add 1 to both the numerator and denominator:
+En los estudios de simulación, realizamos un pequeño ajuste en el cálculo del valor $p$; sumamos 1 tanto al numerador como al denominador:
 
 $$
-p = \frac{\mathrm{number~of~results~more~extreme~than~observed} + 1}{\mathrm{total~number~of~simulated~results} + 1}
+p = \frac{\mathrm{cantidad~de~resultados~al~menos~tan~extremos~como~el~observado + 1}}{\mathrm{catidad~total~de~resultado~simulados + 1}}
 $$
 
-This adjustment assures that we never get a $p$-value of 0. Consider the $p$-value if our observed result would have been 18 (instead of 15.9). There are 0 results that are at least as extreme as 18 ($\geq 18$). The problem is that we only ran 100 trials of the simulation. If we had run this simulation for all possible randomizations of the data (i.e., infinitely many times), we would have seen results $\geq 18$. So, to report a $p$-value of 0 is misleading. The $p$-value we report should be,
+Este ajuste asegura que nunca obtengamos un valor $p$ de 0. Considere el valor $p$ si nuestro resultado observado hubiera sido 18 (en lugar de 15,9). Hay 0 resultados que son al menos tan extremos como 18 ($\geq 18$). Sin realizar el ajuste de simulación, obtendríamos un valor $p$ de 0. Esto implica que es imposible obtener un resultado al menos tan extremo como 18 con el modelo "sin efecto". El problema es que sólo hemos realizado 100 pruebas de la simulación. Si hubiéramos realizado esta simulación para todas las aleatorizaciones posibles de los datos, habríamos visto resultados $\geq 18$. Por lo tanto, informar de un valor $p$ de 0 es engañoso. El valor $p$ que se debe reportar es,
 
 $$
 p = \frac{0 + 1}{100 + 1} = 0.0099
 $$
 
-After the adjustment, the $p$-value is still quite small, indicating that had we seen an observed result of 18, we would say that it is not consistent with the model of "no-effect". In fact it is in the outer 0.01 (1%) of the results simulated from the hypothesized model.
+Tras el ajuste, el valor $p$ sigue siendo bastante pequeño, lo que indica que si hubiéramos visto un resultado observado de 18, diríamos que es incoherente con el modelo de "sin efecto". De hecho, se encuentra en el 0,01 exterior (1%) de los resultados simulados a partir del modelo hipotético.
 
-Going back to the $p$-value computed from the observed value of 15.9,
+Volviendo al valor $p$ calculado a partir del valor observado de 15,9,
 
 $$
 p = \frac{2 + 1}{100 + 1} = 0.0297
 $$
 
-We can interpret the $p$-value of 0.030 as indicating that the observed difference of 15.9 is in the outer 0.03 (3%) of results simulated from the hypothesized model. It is quite unlikely that we would see a result as extreme as 15.9, or more extreme, under the hypothesized model of "no effect". Thus, this observation is not consistent with our expectations based on the hypothesized model. 
+Podemos interpretar el valor $p$ de 0,030 como una indicación de que la diferencia observada de 15,9 se sitúa en el 0,03 (3%) exterior de los resultados simulados a partir del modelo hipotético. Es bastante improbable que veamos un resultado tan extremo como 15,9, o más extremo, con el modelo hipotético de "ningún efecto". 
 
-### p-Values as Evidence {-}
+### Valor p como Evidencia {-}
 
-Large $p$-values indicate that the observed data are more consistent with the results from the model, while small $p$-values indicate that the observed data are not very consistent with the results from the model. As researchers, our goal is often to then translate this quantitative evidence into support for or against the hypothesized model. For example, in the *Sleep Deprivation* study, we obtained a $p$-value of 0.03. This suggests a low degree of consistency between the observed data (our empirical evidence) and the hypothesized model of "no effect". 
+Los valores $p$ grandes indican que los datos observados son más compatibles con los resultados del modelo, mientras que los valores $p$ pequeños indican que los datos observados no son muy compatibles con los resultados del modelo. Como investigadores, nuestro objetivo suele ser traducir estas pruebas cuantitativas en apoyo del modelo hipotético. Por ejemplo, en el estudio *Privación del sueño*, obtuvimos un valor $p$ de 0,03. Esto sugiere un bajo grado de compatibilidad entre los datos observados y el modelo. Esto sugiere un bajo grado de compatibilidad entre los datos observados (nuestra evidencia empírica) y el modelo hipotetizado de "ningún efecto". 
 
-The broader scientific question about whether sleep deprivation has a harmful effect on learning, however is difficult to ascertain from a $p$-value. There are no hard-and-fast rules for gauging how strong the evidence is against the hypothesized model because what counts as evidence in one scientific discipline or context may not count in another scientific discipline or context. And, even if there were rules about the degree of evidence needed, you would still need to evaluate other criteria such as internal and external validity evidence, and sample size. Even then, the results from a single study are not typically convincing enough for most scientists to draw definitive conclusions. It is only through consistent findings that emerge from multiple studies (which may take decades) that we may have convincing evidence about the answer to the broader scientific question.
+Sin embargo, la cuestión científica más amplia sobre si la privación de sueño tiene un efecto perjudicial en el aprendizaje es difícil de determinar a partir de un valor $p$. No hay reglas fijas para medir la fuerza de las pruebas en contra del modelo hipotético, porque lo que cuenta como prueba en una disciplina o contexto científico puede no contar en otra disciplina o contexto científico. Y, aunque hubiera reglas sobre el grado de evidencia necesario, seguiría siendo necesario evaluar otros criterios, como las pruebas de validez interna y externa, y el tamaño de la muestra. Aun así, los resultados de un solo estudio no suelen ser lo bastante convincentes para que la mayoría de los científicos saquen conclusiones definitivas. Sólo a través de hallazgos consistentes que surgen de múltiples estudios (lo que puede llevar décadas) podemos tener pruebas convincentes sobre la respuesta a la pregunta científica más amplia.
 
 
-### Six Principles about p-Values {-}
+### Seis Principlios sobre Valores p {-}
 
-Because they are so ubiquitous in the research literature for any field, and because they are often mis-interpreted (even by PhDs, researchers, and math teachers) it is important to be aware of what a $p$-value tells you, and more importantly, what it doesn't tell you. To this end, the American Statistical Association released a [statement on $p$-values](http://amstat.tandfonline.com/doi/abs/10.1080/00031305.2016.1154108#.Vt2XIOaE2MN) in which it listed six principles:^[Yaddanapudi (2016) [published a paper](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5187603/) in the *Journal of Anaesthesiology, Clinical Pharmacology* in which she explains each of these six principles for practicing physician-scientists using an example of treatment efficacy for a drug.]
+Debido a que son tan omnipresentes en la literatura de investigación de cualquier campo, y debido a que a menudo son mal interpretados (incluso por doctores, investigadores y profesores de matemáticas) es importante ser consciente de lo que un valor $p$ le dice, y lo que es más importante, lo que no le dice. Con este fin, la American Statistical Association publicó una [declaración sobre los valores $p$](http://amstat.tandfonline.com/doi/abs/10.1080/00031305.2016.1154108#.Vt2XIOaE2MN) en la que enumeraba seis principios:^[Yaddanapudi (2016) [publicó un artículo](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5187603/) en el *Journal of Anaesthesiology, Clinical Pharmacology* en el que explica cada uno de estos seis principios para médicos-científicos en ejercicio utilizando un ejemplo de eficacia del tratamiento de un fármaco].
 
-- **Principle 1:** $P$-values can indicate how incompatible the data are with a specified statistical model.
-- **Principle 2:** $P$-values do not measure the probability that the studied hypothesis is true, or the probability that the data were produced by random chance alone.
-- **Principle 3:** Scientific conclusions and business or policy decisions should not be based only on whether a $p$-value passes a specific threshold.
-- **Principle 4:** Proper inference requires full reporting and transparency.
-- **Principle 5:** A $p$-value does not measure the size of an effect or the importance of a result.
-- **Principle 6:** By itself, a $p$-value does not provide a good measure of evidence regarding a model or hypothesis.
+- **Principio 1:** Los valores $P$ pueden indicar la incompatibilidad de los datos con un modelo estadístico específico.
+- **Principio 2:** Los valores $P$ no miden la probabilidad de que la hipótesis estudiada sea cierta, ni la probabilidad de que los datos se hayan producido únicamente por azar.
+- **Principio 3:** Las conclusiones científicas y las decisiones empresariales o políticas no deben basarse únicamente en si un valor $p$ supera un umbral específico.
+- **Principio 4:** Una inferencia adecuada requiere información completa y transparencia.
+- **Principio 5:** Un valor $p$ no mide el tamaño de un efecto ni la importancia de un resultado.
+- **Principio 6:** Por sí mismo, un valor $p$ no proporciona una buena medida de la evidencia con respecto a un modelo o hipótesis.
 
 <!-- Principle 3 is especially poignant, as many reserachers use the criterion of 0.05 when evaluating $p$-values to indicate whether a result is statistically significant ($p \leq 0.05$) or not. In fact, this use was so pervasive and problematic, that the journal *Basic and Applied Social Psychology* [banned the use of $p$-values](http://www.nature.com/news/psychology-journal-bans-p-values-1.17001) in its published articles. It also led to many jokes about $p$-values, including this [XKCD](https://xkcd.com) comic. -->
 
 <!-- <center> -->
 <!-- ![](https://imgs.xkcd.com/comics/p_values.png) -->
 <!-- </center> -->
-
-### Guidelines for interpreting p-Values {-}
-
-Even though you should never interpret $p$-values against a fixed criteria, a good benchmark to help get a feel for how to interpret them in terms of consistency with a hypothesis are as follows: 
-
-- A $p$-value of less than .03 is often seen as an indication that the observed data is not consistent with the hypothesis. 
-- A $p$-value greater .03 but less than .08 is often seen as an indication that the observed data is only slightly consistent with the hypothesis. 
-- A $p$-value greater than .08 is often seen as an indication that that is relatively consistent with the hypothesis. 
-
-What do we do when we have seen observed some data that is not consistent with a hypothesis that we considered? We can not ignore the fact that we have observed something from the real world. One possibility is that the hypothesis is correct, but something else affected the study that we did not account for in our analysis. Another possibility is that the hypothesis is not correct. Scientists often focus on this second possibility, and interpret $p$-values in terms of how strongly they support the claim that the hypothesis is not correct. Re-interpreting the benchmark $p$-values above in this way suggests: 
-
-- A $p$-value of less than .03 is often seen as strong evidence against a hypothesis. 
-- A $p$-value greater .03 but less than .08 is often seen as indeterminate evidence against a hypothesis. 
-- A $p$-value greater than .08 is often seen as very weak evidence against a hypothesis.
-
-While you can use these benchmarks to help you get a feel for interpreting $p$-values, be sure to remember Principle #3 from above -- Scientific conclusions and business or policy decisions should not be based only on whether a $p$-value passes a specific threshold. These thresholds are only a guideline, but they are no substitute for being thoughtful and considering other aspects of the study and associated theories. 
-
