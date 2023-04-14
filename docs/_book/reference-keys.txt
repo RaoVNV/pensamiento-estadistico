@@ -6,5 +6,3 @@ fig:unnamed-chunk-6
 fig:bias-keys
 fig:unbiased-keys
 fig:uncertainty-keys
-qué-es-el-error-estándar
-conceptos-para-la-evaluación
